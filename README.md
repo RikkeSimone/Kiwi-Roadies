@@ -15,7 +15,7 @@ npm i
 * API's for the base map, New Zealand, travel routes, activities, DOC
 
 >Stretch Goals
-* Home by a certian date/time (this factors into your roadie as a whole)
+* Home by a certain date/time (this factors into your roadie as a whole)
 * Send/share your trip with others - screen shot, PDF, email, Export it
 * Bring in an API that writes out your name and travel journey across the client side
 * Tag pictures of your trip to sites
