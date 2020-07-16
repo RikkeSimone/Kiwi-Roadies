@@ -1,11 +1,14 @@
 const express = require('express')
-const { request } = require('../server')
+const request = require('superagent')
 const router = express.Router()
+
+const dockey = 'eOPSTyEUYA1cnX8as3KLY5Dtmx8wbxqg8dQLNweL'
 
 // /api/v1/coolstuff
 router.get('/campsites', (req, res) => {
-  console.log(request)
-  request.get('https://api.doc.govt.nz/v2/campsites', 'accept: application/json', 'x-api-key: eOPSTyEUYA1cnX8as3KLY5Dtmx8wbxqg8dQLNweL')
+  request.get('https://api.doc.govt.nz/v2/campsites')
+    .set('X-API-Key', 'eOPSTyEUYA1cnX8as3KLY5Dtmx8wbxqg8dQLNweL')
+    .set('accept', 'application/json')
     .then(response => {
       res.status(200).json(response.body)
     })
@@ -15,10 +18,3 @@ router.get('/campsites', (req, res) => {
 })
 
 module.exports = router
-
-// api.doc.govt.nz/v2
-// gets you v2 campsites
-
-// request.get('https://api.doc.govt.nz/v2' + '?q=' + 'eOPSTyEUYA1cnX8as3KLY5Dtmx8wbxqg8dQLNweL')
-
-// "https://api.doc.govt.nz/v2/campsites" -H "accept: application/json" -H "x-api-key: eOPSTyEUYA1cnX8as3KLY5Dtmx8wbxqg8dQLNweL"
