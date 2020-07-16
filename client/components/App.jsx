@@ -1,11 +1,12 @@
 import React from 'react'
 
+import Hello from './Hello'
 import MainMap from './MainMap'
 
 const App = () => (
   <div className='app-container'>
-    <h1>First map</h1>
-    <MainMap />
+    <Hello />
+    {/* <MainMap /> */}
   </div>
 )
 
