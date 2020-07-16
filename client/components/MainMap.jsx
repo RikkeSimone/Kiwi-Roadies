@@ -1,6 +1,5 @@
 import React from 'react'
-import { Map, Marker, Popup, TileLayer } from 'react-leaflet'
-import { Icon } from 'leaflet'
+import { Map, TileLayer } from 'react-leaflet'
 
 const position = [-36.8, 174.7]
 export default function App () {
@@ -11,6 +10,5 @@ export default function App () {
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
       />
     </Map>
-
   )
 }
