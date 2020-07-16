@@ -42,7 +42,6 @@
     "redux-thunk": "^2.3.0",
     "reselect": "^4.0.0",
     "webpack-merge": "^5.0.9"
-
   },
   "devDependencies": {
     "@babel/core": "^7.10.3",
