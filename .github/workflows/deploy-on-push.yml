@@ -3,7 +3,17 @@ on:
   push:
     branches: [master]
 jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install modules
+        run: npm i
+      - name: testWithJest
+        run: npm run test
+     
   build:
+    needs: [tests]
     runs-on: ubuntu-latest
     steps:
       # Checkout repo
@@ -17,4 +27,4 @@ jobs:
         env:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-        run: npx netlify-cli deploy --dir=public --prod
+        run: npx netlify-cli deploy --dir=server/public --prod
