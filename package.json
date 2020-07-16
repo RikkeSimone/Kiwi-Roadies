@@ -40,7 +40,8 @@
     "react-router-dom": "^5.2.0",
     "redux-immutablejs": "0.0.8",
     "redux-thunk": "^2.3.0",
-    "reselect": "^4.0.0"
+    "reselect": "^4.0.0",
+    "webpack-merge": "^5.0.9"
   },
   "devDependencies": {
     "@babel/core": "^7.10.3",
