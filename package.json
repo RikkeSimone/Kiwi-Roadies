@@ -36,7 +36,8 @@
     "react-immutable-proptypes": "^2.2.0",
     "react-leaflet": "^2.7.0",
     "redux-immutablejs": "0.0.8",
-    "reselect": "^4.0.0"
+    "reselect": "^4.0.0",
+    "webpack-merge": "^5.0.9"
   },
   "devDependencies": {
     "@babel/core": "^7.10.3",
