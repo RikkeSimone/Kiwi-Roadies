@@ -4,21 +4,19 @@
   "description": "React Redux using express",
   "repository": "https://github.com/matai-2020/Kiwi-Roadies",
   "main": "server/index.js",
-  "autor": "EDA Students - Ariana, Kim, Rikke, Jonty",
+  "author": "EDA Students - Ariana, Kim, Rikke, Jonty",
   "scripts": {
-    "client": "webpack",
-    "server": "node server",
     "lint": "npx eslint . --ext .js,.jsx --ignore-path .eslintignore",
     "build": "webpack --config client/webpack.prod.config.js",
     "dev:build": "webpack --config client/webpack.dev.config.js",
     "start": "node server",
     "test": "jest --verbose --noStackTrace",
+    "e2e": "cypress run",
     "test:watch": "npm test -- --watchAll",
     "dev": "run-p dev:server dev:client",
     "dev:server": "nodemon server",
-    "dev:client": "webpack --config client/webpack.dev.config.js --watch",
+    "dev:client": "webpack --config client/webpack.dev.config.js --watch"
   },
-  "author": "EDA",
   "license": "ISC",
   "babel": {
     "presets": [
@@ -50,6 +48,7 @@
     "cypress": "^4.10.0",
     "jest": "^26.1.0",
     "nodemon": "^2.0.4",
+    "npm-install-webpack-plugin": "^4.0.5",
     "npm-run-all": "^4.1.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
