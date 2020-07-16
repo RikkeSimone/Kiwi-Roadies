@@ -1,12 +1,11 @@
 import React from 'react'
 
-import Words from './Words'
-import AddWord from './AddWord'
+import MainMap from './MainMap'
 
 const App = () => (
   <div className='app-container'>
-    <Words />
-    <AddWord />
+    <h1>First map</h1>
+    <MainMap />
   </div>
 )
 
