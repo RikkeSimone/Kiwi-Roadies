@@ -28,6 +28,12 @@
       "@babel/plugin-proposal-object-rest-spread"
     ]
   },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/tests/cypress/"
+    ]
+  },
   "dependencies": {
     "express": "^4.17.1",
     "immutable": "^4.0.0-rc.12",
