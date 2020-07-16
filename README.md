@@ -8,6 +8,11 @@ To use:
 npm i
 ```
 
+View the deployed website
+```sh
+https://kiwiroadies.netlify.app/
+```
+
 > MVP
 * Pre-draw 3 kiwi roadies
 * Build the form component that generates your road trip based on your start location, end location, number of days and activies preferences
