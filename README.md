@@ -1,6 +1,6 @@
 # Kiwi Roadies
 
-> Plan your next vacation #lockdown #2020
+> #lockdown #2020
 
 ## Description
 
@@ -49,9 +49,9 @@ https://kiwiroadies.netlify.app/
 
 ## Made with ❤️ by
 
-* Ariana
-* Jonty
-* Rikke
-* Kim
+* [Ariana Mirus](https://github.com/ariana-mirus20)
+* [Jonty Terrance](https://github.com/jonty-terrence)
+* [Rikke Jorgensen](https://github.com/RikkeSimone)
+* [Kim Fitter](https://github.com/kimnewzealand)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/92c75071-bbc5-4e41-b4e7-5b7855468749/deploy-status)](https://app.netlify.com/sites/kiwiroadies/deploys)
