@@ -8,7 +8,7 @@ Kiwi Roadies is a road trip planner like no other.
 
 * It generates a real New Zealand experience.
 
-* It sources open data APIs to recomend activities, including beaches, walking tracks and Department of Conservation (DOC) campsites.
+* It sources open data APIs to recommend activities, including beaches, walking tracks and Department of Conservation (DOC) campsites.
 
 
 ## How to use
