@@ -1,35 +1,22 @@
 import React from 'react'
 // import { Button, Form } from 'semantic-ui-react'
 import { connect } from 'react-redux'
+import Dropdown from 'react-bootstrap/Dropdown'
 
 // import Loading from './Loading'
 // import Search from './Search'
 
 class RoadieForm extends React.Component {
   // state = {
-
   // }
 
   // changeHandler = (ev) => {
   //   const { value, start, end, numberDays } = ev.target
   //   this.setState({
-  //     [start]: value,
-  //     [end]: value,
-  //     [numberDays]: value
-  //   })
-  // }
-
-  // getCategory = (cat) => {
-  //   this.setState({
-  //     categoryName: cat
   //   })
   // }
 
   // componentDidMount () {
-  //   const { getCategories, showError } = this.props
-
-  //   getCategories()
-  //     .catch(showError)
   // }
 
   // onClick = () => {
@@ -44,33 +31,75 @@ class RoadieForm extends React.Component {
     //   return <Loading />
     // }
     return (
-      <div className='InputNeeds'>
-        <h1>Where would you like to go?</h1>
-        <form>
-          <label>Roadie start</label>
-          <input placeholder='start' name="start"/>
-          <label>Roadie end</label>
-          <input placeholder='end' name="end"/>
-          <label>Number of days available</label>
-          <input placeholder='numberDays' name="numberDays"/>
-          {/* { <Search changeHandler={this.getCategory} />} */}
+      <div className='form-container'>
+        <div className='dropdowncontainer'>
+          <div className ='dropdownstart'>
+            <h2>Where would you like your Roadie to start?</h2>
+            <Dropdown>
+              <Dropdown.Toggle variant="success" id="dropdown-basic">
+            Roadie Start
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu>
+                <p><Dropdown.Item href="#/action-1">Auckland</Dropdown.Item></p>
+              </Dropdown.Menu>
+            </Dropdown>
+          </div>
+
+          <div className='dropdownend'>
+            <h2>Where would you like your Roadie to end?</h2>
+            <Dropdown>
+              <Dropdown.Toggle variant="success" id="dropdown-basic">
+            Roadie End
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu>
+                <p><Dropdown.Item href="#/action-1">Thames</Dropdown.Item></p>
+                <p><Dropdown.Item href="#/action-1">Raglan</Dropdown.Item></p>
+                <p><Dropdown.Item href="#/action-1">Whangarei</Dropdown.Item></p>
+              </Dropdown.Menu>
+            </Dropdown>
+          </div>
+
+          <div className='dropdowndays'>
+            <h2>How many days would you like to be away?</h2>
+            <Dropdown>
+              <Dropdown.Toggle variant="success" id="dropdown-basic">
+              Number of Days
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu>
+                <p><Dropdown.Item href="#/action-1">1 day</Dropdown.Item></p>
+                <p><Dropdown.Item href="#/action-1">2 days</Dropdown.Item></p>
+                <p><Dropdown.Item href="#/action-1">3 days</Dropdown.Item></p>
+                <p><Dropdown.Item href="#/action-1">4 days</Dropdown.Item></p>
+                <p><Dropdown.Item href="#/action-1">5 days</Dropdown.Item></p>
+                <p><Dropdown.Item href="#/action-1">6 days</Dropdown.Item></p>
+                <p><Dropdown.Item href="#/action-1">7 days</Dropdown.Item></p>
+                <p><Dropdown.Item href="#/action-1">8 days</Dropdown.Item></p>
+                <p><Dropdown.Item href="#/action-1">9 days</Dropdown.Item></p>
+                <p><Dropdown.Item href="#/action-1">10+ days</Dropdown.Item></p>
+              </Dropdown.Menu>
+            </Dropdown>
+          </div>
+        </div>
+        <div className='submitbutton'>
+          <h2>aaaand pop it through!</h2>
           <button>Submit</button>
-        </form>
+        </div>
       </div>
     )
   }
 }
 
 // const mapDispatchToProps = {
-//   Form
 // }
 
 // const mapStateToProps = state => {
 //   return {
-//     pending: state.pending
 //   }
 // }
 
 export default connect()(RoadieForm)
 
-// export default connect(mapStateToProps, mapDispatchToProps)(Form)
+// export default connect(mapStateToProps, mapDispatchToProps)(RoadieForm)

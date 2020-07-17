@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RoadieForm contains a dropdown 1`] = `
+<DocumentFragment>
+  <div
+    class="form-container"
+  >
+    <div
+      class="dropdowncontainer"
+    >
+      <div
+        class="dropdownstart"
+      >
+        <h2>
+          Where would you like your Roadie to start?
+        </h2>
+        <div
+          class="dropdown"
+        >
+          <button
+            aria-expanded="false"
+            aria-haspopup="true"
+            class="dropdown-toggle btn btn-success"
+            id="dropdown-basic"
+            type="button"
+          >
+            Roadie Start
+          </button>
+        </div>
+      </div>
+      <div
+        class="dropdownend"
+      >
+        <h2>
+          Where would you like your Roadie to end?
+        </h2>
+        <div
+          class="dropdown"
+        >
+          <button
+            aria-expanded="false"
+            aria-haspopup="true"
+            class="dropdown-toggle btn btn-success"
+            id="dropdown-basic"
+            type="button"
+          >
+            Roadie End
+          </button>
+        </div>
+      </div>
+      <div
+        class="dropdowndays"
+      >
+        <h2>
+          How many days would you like to be away?
+        </h2>
+        <div
+          class="dropdown"
+        >
+          <button
+            aria-expanded="false"
+            aria-haspopup="true"
+            class="dropdown-toggle btn btn-success"
+            id="dropdown-basic"
+            type="button"
+          >
+            Number of Days
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="submitbutton"
+    >
+      <h2>
+        aaaand pop it through!
+      </h2>
+      <button>
+        Submit
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
