@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer contains names of website creators 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="footer"
+    >
+      Created by Kim, Ariana, Rikke and Jonty
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,7 +1,13 @@
 const express = require('express')
 
+<<<<<<< HEAD
 const router = express.Router()
 
+||||||| 67b0e68
+const dockey = 'eOPSTyEUYA1cnX8as3KLY5Dtmx8wbxqg8dQLNweL'
+
+=======
+>>>>>>> dev
 // /api/v1/coolstuff
 router.get('/campsites', (req, res) => {
   // request.get('https://api.doc.govt.nz/v2/campsites')
