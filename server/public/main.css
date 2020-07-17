@@ -2,6 +2,12 @@
   width: 100%;
   position: absolute;
   text-align: center;
+  background-image: url("./road.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.1);
 }
 
 .header {
@@ -12,6 +18,28 @@
   width: 300px;
   margin-top: 1%;
 }
+
+h1 {
+  color: white;
+}
+
+.name-form-cont {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.name-form {	
+		width: 360px;
+		color: #a3a3a3;
+		font: inherit;
+		box-shadow: 0 6px 10px 0 rgba(0, 0, 0 , .1);
+		border: 0;
+		outline: 0;
+		padding: 22px 18px;
+}
+
 
 .footer {
   position: absolute;
