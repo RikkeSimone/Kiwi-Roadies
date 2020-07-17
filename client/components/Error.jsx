@@ -3,10 +3,14 @@ import { connect } from 'react-redux'
 
 export const Error = (props) => {
   return (
-    <div className='error'>
-      <p>error message placeholder</p>
-      {props.errorMessage}
-    </div>
+    <>
+      { props.errorMessage &&
+      <div className='error'>
+        <p>error message placeholder</p>
+        {props.errorMessage}
+      </div>
+      }
+    </>
   )
 }
 
