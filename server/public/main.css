@@ -1,4 +1,28 @@
+.body {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+}
 
+.header {
+  width: 100%;
+}
+
+.logo {
+  width: 300px;
+  margin-top: 1%;
+}
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
 
 .leaflet-container {
   width: 100%;

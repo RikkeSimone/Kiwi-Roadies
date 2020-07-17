@@ -47,9 +47,9 @@ class RoadieForm extends React.Component {
       <div className='InputNeeds'>
         <h1>Where would you like to go?</h1>
         <form>
-          <label>Go from</label>
+          <label>Roadie start</label>
           <input placeholder='start' name="start"/>
-          <label>to</label>
+          <label>Roadie end</label>
           <input placeholder='end' name="end"/>
           <label>Number of days available</label>
           <input placeholder='numberDays' name="numberDays"/>
