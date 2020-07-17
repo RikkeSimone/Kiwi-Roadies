@@ -4,7 +4,11 @@ exports[`Error component for falsey for initial store value and when there is no
 <DocumentFragment>
   <div
     class="error"
-  />
+  >
+    <p>
+      error message placeholder
+    </p>
+  </div>
 </DocumentFragment>
 `;
 
@@ -12,6 +16,10 @@ exports[`Error component for truthy when store changes 1`] = `
 <DocumentFragment>
   <div
     class="error"
-  />
+  >
+    <p>
+      error message placeholder
+    </p>
+  </div>
 </DocumentFragment>
 `;

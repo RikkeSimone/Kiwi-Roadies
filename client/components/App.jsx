@@ -1,16 +1,17 @@
 import React from 'react'
 
+import Header from './Header'
+import Footer from './Footer'
 import Hello from './Hello'
-import MainMap from './MainMap'
-import Error from './Error'
+// import MainMap from './MainMap'
 
 const App = () => (
   <div className='app-container'>
-    <>
-      {/* <Hello /> */}
-      <Error />
-      {/* <MainMap /> */}
-    </>
+    <div className="body">
+      <Header />
+      <Hello />
+    </div>
+    <Footer />
   </div>
 )
 

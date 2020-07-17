@@ -2,8 +2,6 @@ const express = require('express')
 const request = require('superagent')
 const router = express.Router()
 
-const dockey = 'eOPSTyEUYA1cnX8as3KLY5Dtmx8wbxqg8dQLNweL'
-
 // /api/v1/coolstuff
 router.get('/campsites', (req, res) => {
   request.get('https://api.doc.govt.nz/v2/campsites')
