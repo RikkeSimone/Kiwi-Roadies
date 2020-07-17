@@ -1,24 +1,23 @@
 import React from 'react'
 // import { Button, Form } from 'semantic-ui-react'
 import { connect } from 'react-redux'
-// import { Redirect, useHistory } from 'react-router-dom'
 
 // import Loading from './Loading'
 // import Search from './Search'
 
-class Form extends React.Component {
+class RoadieForm extends React.Component {
   // state = {
 
   // }
 
-  changeHandler = (ev) => {
-    const { value, start, end, numberDays } = ev.target
-    this.setState({
-      [start]: value,
-      [end]: value,
-      [numberDays]: value
-    })
-  }
+  // changeHandler = (ev) => {
+  //   const { value, start, end, numberDays } = ev.target
+  //   this.setState({
+  //     [start]: value,
+  //     [end]: value,
+  //     [numberDays]: value
+  //   })
+  // }
 
   // getCategory = (cat) => {
   //   this.setState({
@@ -47,35 +46,31 @@ class Form extends React.Component {
     return (
       <div className='InputNeeds'>
         <h1>Where would you like to go?</h1>
-        <Form onSubmit={this.onClick} >
-          <Form.Field>
-            <label>Go from</label>
-            <input placeholder='start' name="start"/>
-          </Form.Field>
-          <Form.Field>
-            <label>to</label>
-            <input placeholder='end' name="end"/>
-          </Form.Field>
-          <Form.Field>
-            <label>Number of days available</label>
-            <input placeholder='numberDays' name="numberDays"/>
-          </Form.Field>
-          {/* <Search changeHandler={this.getCategory} />
-          <Button type='submit'>Submit</Button> */}
-        </Form>
+        <form>
+          <label>Go from</label>
+          <input placeholder='start' name="start"/>
+          <label>to</label>
+          <input placeholder='end' name="end"/>
+          <label>Number of days available</label>
+          <input placeholder='numberDays' name="numberDays"/>
+          {/* { <Search changeHandler={this.getCategory} />} */}
+          <button>Submit</button>
+        </form>
       </div>
     )
   }
 }
 
-const mapDispatchToProps = {
-  Form
-}
+// const mapDispatchToProps = {
+//   Form
+// }
 
-const mapStateToProps = state => {
-  return {
-    pending: state.pending
-  }
-}
+// const mapStateToProps = state => {
+//   return {
+//     pending: state.pending
+//   }
+// }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Form)
+export default connect()(RoadieForm)
+
+// export default connect(mapStateToProps, mapDispatchToProps)(Form)
