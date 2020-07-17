@@ -7,7 +7,7 @@ import Error from './Error'
 const App = () => (
   <div className='app-container'>
     <>
-      <Hello />
+      {/* <Hello /> */}
       <Error />
       {/* <MainMap /> */}
     </>
