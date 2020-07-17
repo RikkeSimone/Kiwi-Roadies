@@ -1,28 +1,56 @@
 import React from 'react'
-import { Icon, Marker, Popup } from 'leaflet'
-import { Map, TileLayer } from 'react-leaflet'
+import { Icon } from 'leaflet'
+import { Map, TileLayer, Marker, Popup } from 'react-leaflet'
 import { connect } from 'react-redux'
+import Routing from 'react-native-leaflet-routing'
 
 // coordinates to center map
 const position = [-40.852931, 172.762057]
 
-const car = new Icon({
+const carIcon = new Icon({
   iconUrl: './graphics/kiwiroadieslogo.png',
-  iconSize: [25, 25]
+  iconSize: [50, 50]
 })
 
+const startPosition = [-36, 175]
+const endPosition = [-37.13, 175.5413]
+
+// To figure out how to pass map props if using this one?
+// https://github.com/arjunghimire/react-leaflet-routing-machine-example
+
 const MainMap = ({ dataSet }) => (
+
   <div className='map-container'>
     <Map center={position} zoom={5} >
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
       />
-      {/* <Marker position={position}>
-        <Popup>
-            CAR
-        </Popup> */}
-      {/* </Marker> */}
+
+      {/* <Routing
+        // optional: map layer
+        // mapLayer={
+        //   name: 'OpenStreetMap',
+        //   type: 'TileLayer',
+        //   url: `https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png`,
+        //   attribution: '&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors'
+        // }
+
+        // optional : initial region displayed
+        initialRegion={startPosition}
+
+        // optional: coordinates of the starting point
+        from={startPosition}
+
+        // optional: coordinates of the arriving point
+        to={endPosition}
+      /> */}
+
+      <Marker
+        position={startPosition}
+        icon={carIcon}
+      />
+
     </Map>
   </div>
 )

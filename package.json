@@ -40,6 +40,7 @@
     "express": "^4.17.1",
     "immutable": "^4.0.0-rc.12",
     "leaflet": "^1.6.0",
+    "leaflet-routing-machine": "^3.2.12",
     "prop-types": "^15.7.2",
     "react-immutable-proptypes": "^2.2.0",
     "react-leaflet": "^2.7.0",
