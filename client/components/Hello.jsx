@@ -5,6 +5,7 @@ function Hello () {
     <div className="hello-container">
       <div>
         <h1>Welcome to Kiwi Roadies</h1>
+        <h2>Tell us who you are and lets get started</h2>
         <div className="name-form-cont">
           <form className="name-form">
             <input type="name" className="form_-field" placeholder="What's your name?" />

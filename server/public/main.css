@@ -19,7 +19,15 @@
   margin-top: 1%;
 }
 
+.hello-container {
+  margin-top: 10%;
+}
+
 h1 {
+  color: white;
+}
+
+h2 {
   color: white;
 }
 
