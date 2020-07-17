@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hello renders the expected items 1`] = `
+<DocumentFragment>
+  <div
+    class="hello-container"
+  >
+    <div>
+      <h1>
+        Welcome to Kiwi Roadies
+      </h1>
+      <h2>
+        Tell us who you are and lets get started
+      </h2>
+      <div
+        class="name-form-cont"
+      >
+        <form
+          class="name-form"
+        >
+          <input
+            class="form-field"
+            placeholder="What's your name?"
+            type="text"
+          />
+          <button
+            class="name-button"
+            type="button"
+          >
+            Lets get going
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
