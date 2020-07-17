@@ -1,7 +1,12 @@
-name: Deploy to Netlify on commits to master
+name: pullWorkflow
+
 on:
+  pull_request:
+    branches: [master, dev]
   push:
-    branches: [master]
+    branches:
+      - dev
+
 jobs:
   tests:
     runs-on: ubuntu-latest
@@ -31,20 +36,3 @@ jobs:
         env:
           # pass the Dashboard record key as an environment variable
           CYPRESS_RECORD_KEY: ${{secrets.CYPRESS_RECORD_KEY}}
-     
-  build:
-    needs: [tests, cypress-run]
-    runs-on: ubuntu-latest
-    steps:
-      # Checkout repo
-      - uses: actions/checkout@v2
-      - name: Install Dependencies
-        run: npm install
-      - name: Build site
-        run: npm run build
-      # Deploy the site with netlify-cli
-      - name: Deploy Site
-        env:
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-        run: npx netlify-cli deploy --dir=server/public --prod
