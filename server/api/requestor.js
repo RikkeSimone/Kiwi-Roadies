@@ -1,16 +1,15 @@
-import request from 'superagent'
+const request = require('superagent')
 
-const baseUrl = '/api/v1'
-
-export default function consume (endpoint, method = 'get', data = {}) {
+module.exports = function consume (endpoint, headers = {}, method = 'get', data = {}) {
   const payLoadMethod = method.toLowerCase() === 'get' ? 'query' : 'send'
-  const headers = {
-    Accept: 'application/json'
+  const reqHeaders = {
+    Accept: 'application/json',
+    ...headers
   }
 
-  return request[method](baseUrl + endpoint)
-    .set(headers)[payLoadMethod](data)
-    .then(res => res)
+  return request[method](endpoint)
+    .set(reqHeaders)[payLoadMethod](data)
+    .then(res => res.body)
     .catch(err => {
       throw err
     })
