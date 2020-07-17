@@ -1,6 +1,6 @@
 import { ADD_NAME } from '../actions'
 
-function addingName (state = [], action) {
+export default function addingName (state = [], action) {
   switch (action.type) {
     case ADD_NAME:
       return action.name
@@ -9,5 +9,3 @@ function addingName (state = [], action) {
       return state
   }
 }
-
-export default addingName
