@@ -1,6 +1,5 @@
 const express = require('express')
 const request = require('superagent')
-require('dotenv').config()
 const router = express.Router()
 
 // /api/v1/coolstuff
