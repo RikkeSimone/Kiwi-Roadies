@@ -5,7 +5,9 @@ class Loading extends React.Component {
   render () {
     return (
       <>
+        { this.props.waiting &&
       <h2>Loading...</h2>
+        }
       </>
     )
   }
@@ -13,8 +15,7 @@ class Loading extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    name: state.name,
-    waiting:
+    waiting: state.waiting
   }
 }
 
