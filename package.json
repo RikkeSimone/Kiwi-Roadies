@@ -28,6 +28,12 @@
       "@babel/plugin-proposal-object-rest-spread"
     ]
   },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/tests/cypress/"
+    ]
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.1",
     "@testing-library/react": "^10.4.7",
@@ -41,17 +47,26 @@
     "redux-immutablejs": "0.0.8",
     "redux-thunk": "^2.3.0",
     "reselect": "^4.0.0",
+    "superagent": "^5.3.1",
     "webpack-merge": "^5.0.9"
-
   },
   "devDependencies": {
     "@babel/core": "^7.10.3",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.1.0",
     "@babel/plugin-proposal-class-properties": "^7.10.1",
     "@babel/plugin-proposal-object-rest-spread": "^7.10.3",
     "@babel/preset-env": "^7.10.3",
     "@babel/preset-react": "^7.10.1",
     "babel-loader": "^8.1.0",
     "cypress": "^4.10.0",
+    "eslint": "^7.4.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-standard": "^4.0.1",
     "jest": "^26.1.0",
     "nodemon": "^2.0.4",
     "npm-install-webpack-plugin": "^4.0.5",

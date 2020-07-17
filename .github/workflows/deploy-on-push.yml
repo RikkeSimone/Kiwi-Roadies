@@ -1,0 +1,50 @@
+name: Deploy to Netlify on commits to master
+on:
+  push:
+    branches: [master]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install modules
+        run: npm i
+      - name: Run lint
+        run: npm run lint
+      - name: testWithJest
+        run: npm run test
+
+  cypress-run:
+    name: intergration-test
+    needs: [tests]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      # https://github.com/cypress-io/github-action
+      - name: Cypress run
+        uses: cypress-io/github-action@v1
+        with:
+          record: false
+          start: npm run dev
+          working-directory: ./
+        env:
+          # pass the Dashboard record key as an environment variable
+          CYPRESS_RECORD_KEY: ${{secrets.CYPRESS_RECORD_KEY}}
+     
+  build:
+    needs: [tests, cypress-run]
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout repo
+      - uses: actions/checkout@v2
+      - name: Install Dependencies
+        run: npm install
+      - name: Build site
+        run: npm run build
+      # Deploy the site with netlify-cli
+      - name: Deploy Site
+        env:
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        run: npx netlify-cli deploy --dir=server/public --prod
