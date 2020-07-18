@@ -5,9 +5,9 @@ class Loading extends React.Component {
   render () {
     return (
       <>
-        { this.props.waiting &&
-      <h2>Loading...</h2>
-        }
+
+        <img src="./graphics/kiwiroadieslogo.png"/>
+
       </>
     )
   }

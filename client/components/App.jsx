@@ -6,6 +6,7 @@ import Hello from './Hello'
 import Error from './Error'
 import Greeting from './Greeting'
 import Form from './Form'
+import Loading from './Loading'
 // import MainMap from './MainMap'
 
 const App = () => (
@@ -16,6 +17,7 @@ const App = () => (
       <Hello />
       <Greeting />
       <Form />
+      <Loading />
     </div>
     <Footer />
   </div>
