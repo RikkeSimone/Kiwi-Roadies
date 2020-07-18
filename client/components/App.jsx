@@ -5,6 +5,7 @@ import Footer from './Footer'
 import Hello from './Hello'
 import Error from './Error'
 import Greeting from './Greeting'
+import Form from './Form'
 // import MainMap from './MainMap'
 
 const App = () => (
@@ -14,6 +15,7 @@ const App = () => (
       <Header />
       <Hello />
       <Greeting />
+      <Form />
     </div>
     <Footer />
   </div>

@@ -31,6 +31,8 @@ class RoadieForm extends React.Component {
     //   return <Loading />
     // }
     return (
+      <>
+        {this.props.name &&
       <div className='form-container'>
         <div className='dropdowncontainer'>
           <div className ='dropdownstart'>
@@ -88,7 +90,15 @@ class RoadieForm extends React.Component {
           <button>Submit</button>
         </div>
       </div>
+        }
+      </>
     )
+  }
+}
+
+const mapStateToProps = state => {
+  return {
+    name: state.name
   }
 }
 
@@ -100,6 +110,6 @@ class RoadieForm extends React.Component {
 //   }
 // }
 
-export default connect()(RoadieForm)
+export default connect(mapStateToProps)(RoadieForm)
 
 // export default connect(mapStateToProps, mapDispatchToProps)(RoadieForm)
