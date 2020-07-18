@@ -1,8 +1,15 @@
 import React, { useState } from 'react'
+import { connect } from 'react-redux'
+
+// our actions
+import { addTripRequest } from '../actions'
+
+// our buttons
 import DropdownButton from 'react-bootstrap/DropdownButton'
 import Dropdown from 'react-bootstrap/Dropdown'
+import Button from 'react-bootstrap/Button'
 
-function App () {
+function RoadieForm (props) {
   const [startcity, setStart] = useState('')
   const handleStart = (e) => {
     console.log(e)
@@ -26,7 +33,6 @@ function App () {
 
       <div className='roadiestart'>
         <DropdownButton
-        // alignRight
           title="Choose Roadie Start"
           id="dropdown-menu-align-center"
           onSelect={handleStart}
@@ -35,14 +41,12 @@ function App () {
           <Dropdown.Item eventKey="Wellington">Wellington</Dropdown.Item>
           <Dropdown.Item eventKey="Christchurch">Christchurch</Dropdown.Item>
           <Dropdown.Divider />
-          {/* <Dropdown.Item eventKey="some link">some link</Dropdown.Item> */}
         </DropdownButton>
         <h4>Your roadie will start in {startcity}</h4>
       </div>
 
       <div className='roadieend'>
         <DropdownButton
-        // alignRight
           title="Choose Roadie End"
           id="dropdown-menu-align-center"
           onSelect={handleEnd}
@@ -51,14 +55,12 @@ function App () {
           <Dropdown.Item eventKey="Raglan">Raglan</Dropdown.Item>
           <Dropdown.Item eventKey="Whangarei">Whangarei</Dropdown.Item>
           <Dropdown.Divider />
-          {/* <Dropdown.Item eventKey="some link">some link</Dropdown.Item> */}
         </DropdownButton>
         <h4>Your roadie will end in {endcity}</h4>
       </div>
 
       <div className='daysaway'>
         <DropdownButton
-        // alignRight
           title="How many days away?"
           id="dropdown-menu-align-center"
           onSelect={handleDays}
@@ -69,16 +71,29 @@ function App () {
           <Dropdown.Item eventKey="4-days">4 Days</Dropdown.Item>
           <Dropdown.Item eventKey="5-days">5 Days</Dropdown.Item>
           <Dropdown.Divider />
-          {/* <Dropdown.Item eventKey="some link">some link</Dropdown.Item> */}
         </DropdownButton>
         <h4>Your roadie will start in {daysaway}</h4>
       </div>
       <div className='submitbutton'>
         <h2>aaaand pop it through!</h2>
-        <button>Submit</button>
+        <Button variant="primary" onClick={() => props.dispatch(addTripRequest([startcity, endcity, daysaway]))}>Submit</Button>
       </div>
     </div>
   )
 }
 
-export default App
+// this.props.dispatch(addTripRequest(setStart, setEnd, setDays))}
+
+const mapStateToProps = state => {
+  return {
+    roadie: state.roadie
+  }
+}
+
+// const mapDispatchToProps = state => {
+//   return {
+//     addTripRequest
+//   }
+// }
+
+export default connect(mapStateToProps)(RoadieForm)
