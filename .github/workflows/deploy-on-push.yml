@@ -41,5 +41,5 @@ build:
       - uses: akhileshns/heroku-deploy@v3.2.6 # This is the action
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: 'kiwiroadiesm' #Must be unique in Heroku
+          heroku_app_name: 'kiwiroadies' #Must be unique in Heroku
           heroku_email: 'kimfitter@yahoo.com'
