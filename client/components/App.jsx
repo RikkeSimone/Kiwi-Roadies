@@ -6,6 +6,7 @@ import Hello from './Hello'
 import Error from './Error'
 import Greeting from './Greeting'
 // import MainMap from './MainMap'
+import CoolStuff from './CoolStuff'
 
 const App = () => (
   <div className='app-container'>
@@ -14,6 +15,7 @@ const App = () => (
       <Header />
       <Hello />
       <Greeting />
+      <CoolStuff />
     </div>
     <Footer />
   </div>
