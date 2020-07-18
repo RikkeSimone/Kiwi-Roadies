@@ -1,16 +1,11 @@
-// const initialCampState = {
-//   campsites: []
-// }
+import { ADD_CAMP } from '../actions/campsites'
 
-const campsites = (state = [], action) => {
+export default function addCampsites (state = [], action) {
   switch (action.type) {
-    case 'ADD_CAMP':
-      return {
-        campsites: action.campsites
-      }
+    case ADD_CAMP:
+      return action.campsites
+
     default:
       return state
   }
 }
-
-export default campsites
