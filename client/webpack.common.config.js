@@ -13,6 +13,10 @@ module.exports = {
         loader: 'file-loader?name=/public/icons/[name].[ext]'
       },
       {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader'
+      },
+      {
         test: /\.jsx?$/,
         loader: 'babel-loader',
         exclude: /node_modules/
