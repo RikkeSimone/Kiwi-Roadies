@@ -3,24 +3,31 @@ import DropdownButton from 'react-bootstrap/DropdownButton'
 import Dropdown from 'react-bootstrap/Dropdown'
 
 function App () {
-  const [value, setValue] = useState('')
+  const [startcity, setStart] = useState('')
   const handleStart = (e) => {
     console.log(e)
-    setValue(e)
+    setStart(e)
   }
 
+  const [endcity, setEnd] = useState('')
   const handleEnd = (e) => {
     console.log(e)
-    setValue(e)
+    setEnd(e)
+  }
+
+  const [daysaway, setDays] = useState('')
+  const handleDays = (e) => {
+    console.log(e)
+    setDays(e)
   }
 
   return (
     <div className="App container">
 
-      <div>
+      <div className='roadiestart'>
         <DropdownButton
         // alignRight
-          title="Roadie Start"
+          title="Choose Roadie Start"
           id="dropdown-menu-align-center"
           onSelect={handleStart}
         >
@@ -30,13 +37,13 @@ function App () {
           <Dropdown.Divider />
           {/* <Dropdown.Item eventKey="some link">some link</Dropdown.Item> */}
         </DropdownButton>
-        <h4>Your roadie will start in {value}</h4>
+        <h4>Your roadie will start in {startcity}</h4>
       </div>
 
-      <div>
+      <div className='roadieend'>
         <DropdownButton
         // alignRight
-          title="Roadie End"
+          title="Choose Roadie End"
           id="dropdown-menu-align-center"
           onSelect={handleEnd}
         >
@@ -46,7 +53,29 @@ function App () {
           <Dropdown.Divider />
           {/* <Dropdown.Item eventKey="some link">some link</Dropdown.Item> */}
         </DropdownButton>
-        <h4>Your roadie will end in {value}</h4>
+        <h4>Your roadie will end in {endcity}</h4>
+      </div>
+
+      <div className='daysaway'>
+        <DropdownButton
+        // alignRight
+          title="How many days away?"
+          id="dropdown-menu-align-center"
+          onSelect={handleDays}
+        >
+          <Dropdown.Item eventKey="1-day">1 Day</Dropdown.Item>
+          <Dropdown.Item eventKey="2-days">2 Days</Dropdown.Item>
+          <Dropdown.Item eventKey="3-days">3 Days</Dropdown.Item>
+          <Dropdown.Item eventKey="4-days">4 Days</Dropdown.Item>
+          <Dropdown.Item eventKey="5-days">5 Days</Dropdown.Item>
+          <Dropdown.Divider />
+          {/* <Dropdown.Item eventKey="some link">some link</Dropdown.Item> */}
+        </DropdownButton>
+        <h4>Your roadie will start in {daysaway}</h4>
+      </div>
+      <div className='submitbutton'>
+        <h2>aaaand pop it through!</h2>
+        <button>Submit</button>
       </div>
     </div>
   )
