@@ -11,6 +11,7 @@ class Greeting extends React.Component {
              <p>Tell us where you would like to go!</p>
            </div>
         }
+
       </>
     )
   }

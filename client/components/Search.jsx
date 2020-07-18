@@ -11,11 +11,9 @@ export const Search = () => {
 }
 
 const mapStateToProps = (state) => ({
-  
 })
 
 const mapDispatchToProps = {
-  
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Search)
