@@ -32,19 +32,14 @@ jobs:
           # pass the Dashboard record key as an environment variable
           CYPRESS_RECORD_KEY: ${{secrets.CYPRESS_RECORD_KEY}}
      
-  build:
+build:
+    name: deploy
     needs: [tests, cypress-run]
     runs-on: ubuntu-latest
     steps:
-      # Checkout repo
       - uses: actions/checkout@v2
-      - name: Install Dependencies
-        run: npm install
-      - name: Build site
-        run: npm run build
-      # Deploy the site with netlify-cli
-      - name: Deploy Site
-        env:
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-        run: npx netlify-cli deploy --dir=server/public --prod
+      - uses: akhileshns/heroku-deploy@v3.2.6 # This is the action
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: 'kiwiroadiesm' #Must be unique in Heroku
+          heroku_email: 'kimfitter@yahoo.com'
