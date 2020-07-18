@@ -8,21 +8,16 @@ class InfoReq extends React.Component {
   state = { isLoading: true }
 
   componentDidMount () {
-    setTimeout(() => {
-      this.setState({
-        isLoading: false
-      })
-    }, 1000)
+    this.setState({
+      isLoading: false
+    })
   }
 
   render () {
     return (
       <div>
-        {this.state.isLoading ? <Loading />
-          : <div>
-            <Greeting />
-            <Form />
-          </div>}
+        <Greeting />
+        <Form />
       </div>
     )
   }
