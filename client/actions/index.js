@@ -1,9 +1,8 @@
-let nextWordId = 0
+export const ADD_NAME = 'ADD_NAME'
 
-export const addWord = (word) => {
+export const addName = (name) => {
   return {
-    type: 'ADD_WORD',
-    id: nextWordId++,
-    word
+    type: 'ADD_NAME',
+    name: name
   }
 }
