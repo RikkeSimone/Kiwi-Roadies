@@ -1,14 +1,12 @@
 const express = require('express')
-const request = require('superagent')
+const getCampsites = require('../api/getCampsites')
 const router = express.Router()
 
 // /api/v1/coolstuff
 router.get('/campsites', (req, res) => {
-  request.get('https://api.doc.govt.nz/v2/campsites')
-    .set('X-API-Key', 'eOPSTyEUYA1cnX8as3KLY5Dtmx8wbxqg8dQLNweL')
-    .set('accept', 'application/json')
-    .then(response => {
-      res.status(200).json(response.body)
+  getCampsites()
+    .then(campsites => {
+      res.status(200).json(campsites)
     })
     .catch(err => {
       res.status(500).send('API error: ' + err.message)
