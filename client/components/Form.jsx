@@ -1,5 +1,4 @@
 import React from 'react'
-// import { Button, Form } from 'semantic-ui-react'
 import { connect } from 'react-redux'
 import Dropdown from 'react-bootstrap/Dropdown'
 
@@ -7,24 +6,10 @@ import Dropdown from 'react-bootstrap/Dropdown'
 // import Search from './Search'
 
 class RoadieForm extends React.Component {
-  // state = {
-  // }
-
-  // changeHandler = (ev) => {
-  //   const { value, start, end, numberDays } = ev.target
-  //   this.setState({
-  //   })
-  // }
-
-  // componentDidMount () {
-  // }
-
-  // onClick = () => {
-  //   // addFood(this.state)
-  //   //   .then(() => this.props.history.push('/'))
-  // }
+  // const startData = props.trips.start
 
   render () {
+    console.log(this.props.cities)
     // const { pending } = this.props
 
     // if (pending) {
@@ -41,7 +26,7 @@ class RoadieForm extends React.Component {
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
-                <p><Dropdown.Item href="#/action-1">Auckland</Dropdown.Item></p>
+                <p><Dropdown.Item href="#/action-1">{this.props.cities.start}</Dropdown.Item></p>
               </Dropdown.Menu>
             </Dropdown>
           </div>
@@ -54,9 +39,9 @@ class RoadieForm extends React.Component {
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
-                <p><Dropdown.Item href="#/action-1">Thames</Dropdown.Item></p>
-                <p><Dropdown.Item href="#/action-1">Raglan</Dropdown.Item></p>
-                <p><Dropdown.Item href="#/action-1">Whangarei</Dropdown.Item></p>
+                <p><Dropdown.Item href="#/action-1" >Thames</Dropdown.Item></p>
+                <p><Dropdown.Item href="#/action-2">Raglan</Dropdown.Item></p>
+                <p><Dropdown.Item href="#/action-3">Whangarei</Dropdown.Item></p>
               </Dropdown.Menu>
             </Dropdown>
           </div>
@@ -92,14 +77,32 @@ class RoadieForm extends React.Component {
   }
 }
 
+const mapStateToProps = state => {
+  return {
+    cities: state.dataSet.trips
+  }
+}
+
+export default connect(mapStateToProps)(RoadieForm)
+
 // const mapDispatchToProps = {
 // }
 
-// const mapStateToProps = state => {
-//   return {
-//   }
+// export default connect(mapStateToProps, mapDispatchToProps)(RoadieForm)
+
+// state = {
 // }
 
-export default connect()(RoadieForm)
+// changeHandler = (ev) => {
+//   const { value, start, end, numberDays } = ev.target
+//   this.setState({
+//   })
+// }
 
-// export default connect(mapStateToProps, mapDispatchToProps)(RoadieForm)
+// componentDidMount () {
+// }
+
+// onClick = () => {
+//   // addFood(this.state)
+//   //   .then(() => this.props.history.push('/'))
+// }
