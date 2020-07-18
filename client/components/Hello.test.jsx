@@ -3,9 +3,9 @@ import { renderWithRedux } from '../testing/utils'
 import '@testing-library/jest-dom'
 import 'regenerator-runtime/runtime'
 
-import Footer from './Footer'
+import Hello from './Hello'
 
-test('Footer contains names of website creators', async () => {
-  const { asFragment } = renderWithRedux(<Footer />)
+test('Hello renders the expected items', async () => {
+  const { asFragment } = renderWithRedux(<Hello />)
   expect(asFragment()).toMatchSnapshot()
 })
