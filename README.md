@@ -24,7 +24,7 @@ View locally on `http://localhost:3000/`
 Alternatively view the deployed website on:
 
 ```sh
-https://kiwiroadies.netlify.app/
+https://kiwiroadies.herokuapp.com/
 ```
 ## Goals
 
