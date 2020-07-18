@@ -9,4 +9,3 @@ test('RoadieForm contains a dropdown', async () => {
   const { asFragment } = renderWithRedux(<RoadieForm />)
   expect(asFragment()).toMatchSnapshot()
 })
-
