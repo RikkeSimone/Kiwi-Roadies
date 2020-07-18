@@ -1,4 +1,4 @@
-name: Deploy to Netlify on commits to master
+name: Deploy to Heroku on commits to master
 on:
   push:
     branches: [master]
