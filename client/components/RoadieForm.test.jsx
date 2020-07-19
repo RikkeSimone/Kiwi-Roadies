@@ -3,9 +3,9 @@ import { renderWithRedux } from '../testing/utils'
 import '@testing-library/jest-dom'
 import 'regenerator-runtime/runtime'
 
-import Footer from './Footer'
+import RoadieForm from './RoadieForm'
 
-test('Footer contains names of website creators', async () => {
-  const { asFragment } = renderWithRedux(<Footer />)
+test('RoadieForm contains a dropdown', async () => {
+  const { asFragment } = renderWithRedux(<RoadieForm />)
   expect(asFragment()).toMatchSnapshot()
 })
