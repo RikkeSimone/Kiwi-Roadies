@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { connect } from 'react-redux'
 
 // our actions
-import { addTripRequest } from '../actions'
+import { acquireTripDetails } from '../actions'
 
 // our buttons
 import DropdownButton from 'react-bootstrap/DropdownButton'
@@ -78,7 +78,7 @@ function RoadieForm (props) {
       </div>
       <div className='submitbutton'>
         <h2>aaaand pop it through!</h2>
-        <Button variant="primary" onClick={() => props.dispatch(addTripRequest([startcity, endcity, daysaway]))}>Submit</Button>
+        <Button variant="primary" onClick={() => props.dispatch(acquireTripDetails([startcity, endcity, daysaway]))}>Submit</Button>
       </div>
     </div>
       }

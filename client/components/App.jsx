@@ -7,6 +7,7 @@ import Hello from './Hello'
 import Error from './Error'
 import InfoReq from './InfoReq'
 import Loading from './Loading'
+import Trip from './Trip'
 
 // import MainMap from './MainMap'
 // import CoolStuff from './CoolStuff'
@@ -30,6 +31,8 @@ class App extends React.Component {
 
     if (this.props.waiting) {
       renderedComponent = <Loading />
+    } else if (this.props.tripstatus) {
+      renderedComponent = <Trip />
     } else {
       renderedComponent = <><Hello /><InfoReq /></>
     }
@@ -53,7 +56,8 @@ function demoAsyncCall () {
 
 const mapStateToProps = state => {
   return {
-    waiting: state.waiting
+    waiting: state.waiting,
+    tripstatus: state.tripstatus
   }
 }
 
