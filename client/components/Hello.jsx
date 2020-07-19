@@ -12,22 +12,17 @@ class Hello extends React.Component {
           ? null
           : <div className="hello-container">
             <div>
-              <h1>Welcome to Kiwi Roadies</h1>
-              <h2>Tell us who you are and lets get started</h2>
-              <div className="name-form-cont">
-                <form className="name-form">
-                  <input type="text"
-                    className="form-field"
-                    placeholder="What's your name?"
+              <div className="intro">
+                <img className="intro-message" src="./up-for-a-roadie.png"/>
+              </div>
+              <h3>WHAT&apos;S YOUR NAME?</h3>
+              <div className="form-container">
+                <div className="form__group">
+                  <input type="text" className="form__input" id="name" placeholder="Your name" required=""
                     onChange={(event) => (name = event.target.value)}
                   />
-                  <button type="button"
-                    className="name-button"
-                    onClick={() => this.props.dispatch(acquireName(name))}
-                  >
-            Lets get going
-                  </button>
-                </form>
+                </div>
+                <span className="fas fa-arrow-circle-right" onClick={() => this.props.dispatch(acquireName(name))}></span>
               </div>
             </div>
           </div>
