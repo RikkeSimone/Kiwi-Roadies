@@ -8,6 +8,8 @@ import Error from './Error'
 import InfoReq from './InfoReq'
 import Loading from './Loading'
 import Trip from './Trip'
+import CoolStuff from './CoolStuff'
+import MainMap from './MainMap'
 
 // import MainMap from './MainMap'
 // import CoolStuff from './CoolStuff'
@@ -43,6 +45,8 @@ class App extends React.Component {
           <Error />
           <Header />
           {renderedComponent}
+          <CoolStuff />
+          <MainMap />
         </div>
       </div>
     )
