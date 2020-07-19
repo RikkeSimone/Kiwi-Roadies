@@ -44,14 +44,13 @@ class App extends React.Component {
           <Header />
           {renderedComponent}
         </div>
-        <Footer />
       </div>
     )
   }
 }
 
 function demoAsyncCall () {
-  return new Promise((resolve) => setTimeout(() => resolve(), 2500))
+  return new Promise((resolve) => setTimeout(() => resolve(), 1))
 }
 
 const mapStateToProps = state => {

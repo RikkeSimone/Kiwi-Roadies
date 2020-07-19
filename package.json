@@ -10,7 +10,7 @@
     "build": "webpack --config client/webpack.prod.config.js",
     "dev:build": "webpack --config client/webpack.dev.config.js",
     "start": "node server",
-    "coverage":"jest --coverage",
+    "coverage": "jest --coverage",
     "test": "jest --verbose --noStackTrace",
     "e2e": "cypress run",
     "test:watch": "npm test -- --watchAll",
