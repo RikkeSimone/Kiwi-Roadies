@@ -5,7 +5,7 @@ class Loading extends React.Component {
   render () {
     return (
       <>
-        <img src="./graphics/kiwiroadieslogo.png"/>
+        <div className="loader"></div>
       </>
     )
   }

@@ -21,7 +21,10 @@ export const turnOffWait = () => {
 export const addTripRequest = (roadie) => {
   return {
     type: 'ADD_TRIP',
-    roadie: roadie
+    roadie: roadie,
+    waiting: true,
+    name: null,
+    tripstatus: true
   }
 }
 
@@ -31,5 +34,14 @@ export function acquireName (name) {
     setTimeout(() => {
       dispatch(turnOffWait())
     }, 3000)
+  }
+}
+
+export function acquireTripDetails (startcity, endcity, daysaway) {
+  return (dispatch) => {
+    dispatch(addTripRequest([startcity, endcity, daysaway]))
+    setTimeout(() => {
+      dispatch(turnOffWait())
+    }, 1000)
   }
 }
