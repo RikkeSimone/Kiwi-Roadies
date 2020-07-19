@@ -1,34 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { connect } from 'react-redux'
 import 'regenerator-runtime/runtime'
 
-import { Icon } from 'leaflet'
-import { Map, TileLayer, Marker } from 'react-leaflet'
-const stamenTonerTiles = 'http://stamen-tiles-{s}.a.ssl.fastly.net/toner-background/{z}/{x}/{y}.png'
-const stamenTonerAttr = 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-
-// import mapLayers from './mapLayers'
+import MapGL from 'react-map-gl'
+import 'mapbox-gl/dist/mapbox-gl.css'
 
 // coordinates to center map
-const position = [-40.852931, 172.762057]
+const position = [172.762057, -40.852931]
 
-const carIcon = new Icon({
-  iconUrl: './graphics/just-kiwi.png',
-  iconSize: [30, 30]
-})
+const from = [175, -36]
+const to = [175.5413, -38.13]
 
-const endIcon = new Icon({
-  // className: 'custom-div-icon',
-  iconUrl: './graphics/just-kiwi.png',
-  html: "<div style='background-color:#c30b82;' class='marker-pin'></div><i class='material-icons'>weekend</i>",
-  iconSize: [30, 30]
-})
+console.log('mapbox token', process.env.ACCESS_TOKEN)
 
-const from = [-36, 175]
-const to = [-38.13, 175.5413]
-
-console.log('mapbox token', process.env)
-
+const MAPBOX_TOKEN = 'pk.eyJ1Ijoia2ltbmV3emVhbGFuZCIsImEiOiJja2NzY3Q3anMxaXY4MnltazVsdHMxNGMyIn0.Vpc0ObF_wq6PfnZTfWTxJQ'
 // Leaflet controls examples, leaflet maps maintain their own state. todo add ref to Map
 // https://www.azavea.com/blog/2016/12/05/getting-started-with-react-and-leaflet/
 
@@ -36,32 +21,25 @@ const MainMap = (props) => {
   const { dataSet } = props
   console.log('the dataSet is for the trip planning is ', dataSet)
 
+  const viewport = {
+    latitude: -40.852931,
+    longitude: 172.76205,
+    zoom: 4,
+    bearing: 0,
+    pitch: 0
+  }
+
   return (
-    <div className='map-container'>
-      <Map
-      // Add ref to
-      // ref={m => { this.leafletMap = m }}
-        center={position}
-        zoom={5} >
-        {/* <TileLayer
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-        /> */}
-        <TileLayer
-          attribution={stamenTonerAttr}
-          url={stamenTonerTiles}
-        />
-        <Marker
-          position={from}
-          icon={carIcon}
-        />
-
-        <Marker
-          position={to}
-          icon={endIcon}
-        />
-
-      </Map>
+    <div>
+      <p>map</p>
+      <MapGL
+        {...viewport}
+        width="60vw"
+        height="80vh"
+        mapStyle="mapbox://styles/mapbox/light-v10"
+        onViewportChange={viewport => viewport}
+        mapboxApiAccessToken={MAPBOX_TOKEN}
+      />
     </div>
   )
 }
