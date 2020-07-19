@@ -45,8 +45,6 @@ class App extends React.Component {
           <Error />
           <Header />
           {renderedComponent}
-          <CoolStuff />
-          <MainMap />
         </div>
       </div>
     )
