@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { addName } from '../actions'
+import { acquireName } from '../actions'
 
 let name = ''
 
@@ -23,7 +23,7 @@ class Hello extends React.Component {
                   />
                   <button type="button"
                     className="name-button"
-                    onClick={() => this.props.dispatch(addName(name))}
+                    onClick={() => this.props.dispatch(acquireName(name))}
                   >
             Lets get going
                   </button>
