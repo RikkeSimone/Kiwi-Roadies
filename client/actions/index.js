@@ -26,10 +26,10 @@ export const addTripRequest = (roadie) => {
 }
 
 export function acquireName (name) {
-  return (dispatch, name) => {
+  return (dispatch) => {
     dispatch(addName(name))
-      .then(setTimeout(() => {
-        dispatch(turnOffWait())
-      }, 3000))
+    setTimeout(() => {
+      dispatch(turnOffWait())
+    }, 3000)
   }
 }
