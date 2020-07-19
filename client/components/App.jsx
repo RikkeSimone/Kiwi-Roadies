@@ -9,6 +9,7 @@ import InfoReq from './InfoReq'
 import Loading from './Loading'
 
 // import MainMap from './MainMap'
+// import CoolStuff from './CoolStuff'
 
 let renderedComponent = ''
 
