@@ -7,7 +7,6 @@ import Error from './Error'
 import Greeting from './Greeting'
 import MainMap from './MainMap'
 
-
 const App = () => (
   <div className='app-container'>
     <div className="body">
