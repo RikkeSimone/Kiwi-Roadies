@@ -1,7 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import Greeting from './Greeting'
-import Loading from './Loading'
 import Form from './Form'
 
 class InfoReq extends React.Component {

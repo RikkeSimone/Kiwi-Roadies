@@ -4,12 +4,12 @@ jest.mock('./requestor', () => {
   return (endpoint, headers = {}, method = 'get', payload) => {
     return Promise.resolve(
       [{
-        'assetId': 100000811,
-        'name': 'LITTLE HELLFIRE CAMPSITE',
-        'status': 'OPEN',
-        'region': null,
-        'y': 4797019,
-        'x': 1200491
+        assetId: 100000811,
+        name: 'LITTLE HELLFIRE CAMPSITE',
+        status: 'OPEN',
+        region: null,
+        y: 4797019,
+        x: 1200491
       }]
     )
   }
