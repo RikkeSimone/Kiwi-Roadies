@@ -29,6 +29,8 @@ function RoadieForm (props) {
   }
 
   return (
+    <>
+      { props.name &&
     <div className="App container">
 
       <div className='roadiestart'>
@@ -79,6 +81,8 @@ function RoadieForm (props) {
         <Button variant="primary" onClick={() => props.dispatch(addTripRequest([startcity, endcity, daysaway]))}>Submit</Button>
       </div>
     </div>
+      }
+    </>
   )
 }
 
@@ -86,7 +90,8 @@ function RoadieForm (props) {
 
 const mapStateToProps = state => {
   return {
-    roadie: state.roadie
+    roadie: state.roadie,
+    name: state.name
   }
 }
 
