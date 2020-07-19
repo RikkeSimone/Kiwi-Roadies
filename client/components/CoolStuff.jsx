@@ -14,10 +14,8 @@ class CoolStuff extends Component {
     request.get(campURL)
       .then(res => {
         const campsites = res.body
-        console.log('the campsites are ', campsites)
         const action = addCampsites(campsites)
         this.props.dispatch(action)
-        console.log('action is', action)
       })
   }
 
