@@ -5,18 +5,19 @@ import Footer from './Footer'
 import Hello from './Hello'
 import Error from './Error'
 import Greeting from './Greeting'
-import MainMap from './MainMap'
+// import MainMap from './MainMap'
+import CoolStuff from './CoolStuff'
 
 const App = () => (
   <div className='app-container'>
-     <div className="body">  
-       <Error /> 
-       <Header />  
-       <Hello />
-       <Greeting /> 
-      <MainMap />
-     </div>  
-     <Footer />
+    <div className="body">
+      <Error />
+      <Header />
+      <Hello />
+      <Greeting />
+      <CoolStuff />
+    </div>
+    <Footer />
   </div>
 )
 
