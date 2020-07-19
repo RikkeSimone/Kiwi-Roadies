@@ -1,8 +1,7 @@
 import React from 'react'
 import { Icon } from 'leaflet'
-import { Map, TileLayer, Marker, Popup } from 'react-leaflet'
+import { Map, TileLayer, Marker } from 'react-leaflet'
 import { connect } from 'react-redux'
-import Routing from 'react-native-leaflet-routing'
 
 // coordinates to center map
 const position = [-40.852931, 172.762057]
@@ -13,7 +12,6 @@ const carIcon = new Icon({
 })
 
 const startPosition = [-36, 175]
-const endPosition = [-37.13, 175.5413]
 
 // To figure out how to pass map props if using this one?
 // https://github.com/arjunghimire/react-leaflet-routing-machine-example

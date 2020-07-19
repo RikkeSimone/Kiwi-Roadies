@@ -9,7 +9,7 @@ import InfoReq from './InfoReq'
 import Loading from './Loading'
 
 // import MainMap from './MainMap'
-import CoolStuff from './CoolStuff'
+// import CoolStuff from './CoolStuff'
 
 let renderedComponent = ''
 
@@ -58,4 +58,3 @@ const mapStateToProps = state => {
 }
 
 export default connect(mapStateToProps)(App)
->>>>>>> dev

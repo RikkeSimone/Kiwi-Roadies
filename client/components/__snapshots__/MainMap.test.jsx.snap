@@ -3,105 +3,117 @@
 exports[`MainMap contains a map 1`] = `
 <DocumentFragment>
   <div
-    class="leaflet-container leaflet-grab leaflet-touch-drag"
-    style="position: relative;"
-    tabindex="0"
+    class="map-container"
   >
     <div
-      class="leaflet-pane leaflet-map-pane"
-      style="left: 0px; top: 0px;"
+      class="leaflet-container leaflet-grab leaflet-touch-drag"
+      style="position: relative;"
+      tabindex="0"
     >
       <div
-        class="leaflet-pane leaflet-tile-pane"
+        class="leaflet-pane leaflet-map-pane"
+        style="left: 0px; top: 0px;"
       >
         <div
-          class="leaflet-layer "
-          style="z-index: 1;"
+          class="leaflet-pane leaflet-tile-pane"
         >
           <div
-            class="leaflet-tile-container leaflet-zoom-animated"
-            style="z-index: 18; left: 0px; top: 0px;"
+            class="leaflet-layer "
+            style="z-index: 1;"
           >
-            <img
-              alt=""
-              class="leaflet-tile"
-              role="presentation"
-              src="https://a.tile.openstreetmap.org/8/252/156.png"
-              style="width: 256px; height: 256px; left: -59px; top: -46px;"
-            />
+            <div
+              class="leaflet-tile-container leaflet-zoom-animated"
+              style="z-index: 18; left: 0px; top: 0px;"
+            >
+              <img
+                alt=""
+                class="leaflet-tile"
+                role="presentation"
+                src="https://c.tile.openstreetmap.org/5/31/19.png"
+                style="width: 256px; height: 256px; left: -91px; top: -252px;"
+              />
+            </div>
           </div>
         </div>
-      </div>
-      <div
-        class="leaflet-pane leaflet-shadow-pane"
-      />
-      <div
-        class="leaflet-pane leaflet-overlay-pane"
-      />
-      <div
-        class="leaflet-pane leaflet-marker-pane"
-      />
-      <div
-        class="leaflet-pane leaflet-tooltip-pane"
-      />
-      <div
-        class="leaflet-pane leaflet-popup-pane"
-      />
-    </div>
-    <div
-      class="leaflet-control-container"
-    >
-      <div
-        class="leaflet-top leaflet-left"
-      >
         <div
-          class="leaflet-control-zoom leaflet-bar leaflet-control"
+          class="leaflet-pane leaflet-shadow-pane"
+        />
+        <div
+          class="leaflet-pane leaflet-overlay-pane"
+        />
+        <div
+          class="leaflet-pane leaflet-marker-pane"
         >
-          <a
-            aria-label="Zoom in"
-            class="leaflet-control-zoom-in"
-            href="#"
-            role="button"
-            title="Zoom in"
-          >
-            +
-          </a>
-          <a
-            aria-label="Zoom out"
-            class="leaflet-control-zoom-out"
-            href="#"
-            role="button"
-            title="Zoom out"
-          >
-            −
-          </a>
+          <img
+            alt=""
+            class="leaflet-marker-icon leaflet-zoom-hide leaflet-interactive"
+            src="./graphics/kiwiroadieslogo.png"
+            style="margin-left: -25px; margin-top: -25px; width: 50px; height: 50px; left: 51px; top: -141px; z-index: -141;"
+            tabindex="0"
+          />
         </div>
+        <div
+          class="leaflet-pane leaflet-tooltip-pane"
+        />
+        <div
+          class="leaflet-pane leaflet-popup-pane"
+        />
       </div>
       <div
-        class="leaflet-top leaflet-right"
-      />
-      <div
-        class="leaflet-bottom leaflet-left"
-      />
-      <div
-        class="leaflet-bottom leaflet-right"
+        class="leaflet-control-container"
       >
         <div
-          class="leaflet-control-attribution leaflet-control"
+          class="leaflet-top leaflet-left"
         >
-          <a
-            href="https://leafletjs.com"
-            title="A JS library for interactive maps"
+          <div
+            class="leaflet-control-zoom leaflet-bar leaflet-control"
           >
-            Leaflet
-          </a>
-           | © 
-          <a
-            href="http://osm.org/copyright"
+            <a
+              aria-label="Zoom in"
+              class="leaflet-control-zoom-in"
+              href="#"
+              role="button"
+              title="Zoom in"
+            >
+              +
+            </a>
+            <a
+              aria-label="Zoom out"
+              class="leaflet-control-zoom-out"
+              href="#"
+              role="button"
+              title="Zoom out"
+            >
+              −
+            </a>
+          </div>
+        </div>
+        <div
+          class="leaflet-top leaflet-right"
+        />
+        <div
+          class="leaflet-bottom leaflet-left"
+        />
+        <div
+          class="leaflet-bottom leaflet-right"
+        >
+          <div
+            class="leaflet-control-attribution leaflet-control"
           >
-            OpenStreetMap
-          </a>
-           contributors
+            <a
+              href="https://leafletjs.com"
+              title="A JS library for interactive maps"
+            >
+              Leaflet
+            </a>
+             | © 
+            <a
+              href="http://osm.org/copyright"
+            >
+              OpenStreetMap
+            </a>
+             contributors
+          </div>
         </div>
       </div>
     </div>

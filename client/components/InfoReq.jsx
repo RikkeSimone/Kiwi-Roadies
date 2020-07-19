@@ -1,7 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import Greeting from './Greeting'
-import Loading from './Loading'
 import RoadieForm from './RoadieForm'
 
 class InfoReq extends React.Component {
