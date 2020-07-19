@@ -2,10 +2,13 @@ export default {
   trips: [
     {
       id: 1,
-      start: 'Auckland',
-      end: 'Thames',
-      activity: 'Walk',
-      drivetime: 2
+      name: 'Twin coast cycle trail',
+      city: 'Kaikohe',
+      address: 
+      startlat: , 
+      startlong: ,
+      km: ,
+      days: ,
     },
     {
       id: 2,
