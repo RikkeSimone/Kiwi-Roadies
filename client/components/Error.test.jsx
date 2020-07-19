@@ -2,7 +2,7 @@ import React from 'react'
 import { renderWithRedux } from '../testing/utils'
 import '@testing-library/jest-dom'
 // To resolve the ReferenceError: regeneratorRuntime is not defined error, we need to import this runtime module
-import regeneratorRuntime from 'regenerator-runtime'
+// import regeneratorRuntime from 'regenerator-runtime'
 
 import Error from './Error'
 

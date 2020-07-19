@@ -24,7 +24,7 @@ class CoolStuff extends Component {
     return (
       <>
         <h2>Campsites</h2>
-        <h3>name: "Akapoua Bay Campsite", status: "OPEN", region: "Auckland"</h3>
+        <h3>name: Akapoua Bay Campsite, status: OPEN, region: Auckland</h3>
       </>
     )
   }
