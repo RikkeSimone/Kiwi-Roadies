@@ -71,7 +71,10 @@ exports[`RoadieForm contains a dropdown 1`] = `
       <h2>
         aaaand pop it through!
       </h2>
-      <button>
+      <button
+        class="btn btn-primary"
+        type="button"
+      >
         Submit
       </button>
     </div>

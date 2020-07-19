@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import Greeting from './Greeting'
 import Loading from './Loading'
-import Form from './Form'
+import RoadieForm from './RoadieForm'
 
 class InfoReq extends React.Component {
   state = { isLoading: true }
@@ -17,7 +17,7 @@ class InfoReq extends React.Component {
     return (
       <div>
         <Greeting />
-        <Form />
+        <RoadieForm />
       </div>
     )
   }
