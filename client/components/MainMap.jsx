@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import { connect } from 'react-redux'
 import 'regenerator-runtime/runtime'
 
-import ReactMapGL, { Marker, Popup, Icon, ControlPanel, NavigationControl } from 'react-map-gl'
+import ReactMapGL, { Marker } from 'react-map-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
-// import DeckGL, { ArcLayer } from 'deck.gl'
+import DeckGL, { ArcLayer } from 'deck.gl'
 
 // coordinates to center map
 // const position = [172.762057, -40.852931]
@@ -27,8 +27,9 @@ const iconSVG = `M20.2,15.7L20.2,15.7c1.1-1.6,1.8-3.6,1.8-5.7c0-5.6-4.5-10-10-10
   C20.1,15.8,20.2,15.8,20.2,15.7z`
 const SIZE = 20
 const MainMap = (props) => {
-  const { dataSet } = props
+  const { roadieform, dataSet,campsites } = props
   console.log('the dataSet is for the trip planning is ', dataSet)
+  console.log('the roadieform is ', roadieform)
 
   const viewport = {
     latitude: -40.852931,
@@ -39,25 +40,48 @@ const MainMap = (props) => {
   }
 
   const source = {
-    latitude: -36.86667,
-    longitude: 174.76667
+    latitude: -36.8485,
+    longitude: 174.7633
   }
 
   const target = {
-    latitude: -38.13,
-    longitude: 175.5413
+    latitude: -37.133333,
+    longitude: 175.533333
   }
+
+  const arcs = [
+    {
+      flyFrom: 'AUCKLAND',
+      flyTo: 'THAMES',
+      source: [174.7633, -36.8485],
+      target: [175.533333, -37.133333]
+    }]
 
   return (
     <div className="root" >
       <ReactMapGL
         {...viewport}
-        width="30vw"
-        height="30vh"
+        width="60vw"
+        height="60vh"
+        perspectiveEnabled
         mapStyle="mapbox://styles/mapbox/light-v10"
         onViewportChange={viewport => viewport}
         mapboxApiAccessToken={MAPBOX_TOKEN}
       >
+        <DeckGL
+          viewState={viewport}
+          layers={[
+            new ArcLayer({
+              id: 'flight-arcs',
+              data: arcs,
+              getSourcePosition: d => d.source,
+              getTargetPosition: d => d.target,
+              getSourceColor: () =>[0, 191, 255, 120] ,
+              getTargetColor: () => [0, 0, 128, 120],
+              getWidth: () => 6
+            })
+          ]}
+        />
         <div className="nav" style={navStyle}>
           {/* <NavigationControl onViewportChange={(viewport) => this.setState({ viewport })}/> */}
         </div>
@@ -70,8 +94,29 @@ const MainMap = (props) => {
             viewBox="0 0 24 24"
             style={{
               cursor: 'pointer',
-              fill: '#0d89c5',
+              fill: '00BFFF',
               stroke: 'none',
+              opacity: '0.6',
+              transform: `translate(${-SIZE / 2}px,${-SIZE}px)`
+            }}
+
+          >
+            <path d={iconSVG} />
+          </svg>
+        </Marker>
+
+        <Marker
+          longitude={target.longitude}
+          latitude={target.latitude}
+        >
+          <svg
+            height={SIZE}
+            viewBox="0 0 24 24"
+            style={{
+              cursor: 'pointer',
+              fill: '00BFFF',
+              stroke: 'none',
+              opacity: '0.6',
               transform: `translate(${-SIZE / 2}px,${-SIZE}px)`
             }}
 
@@ -87,7 +132,9 @@ const MainMap = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    dataSet: state.dataSet
+    roadieform: state.roadieform,
+    dataSet: state.dataSet,
+    campsites: state.campsites
   }
 }
 

@@ -2,7 +2,11 @@ import React from 'react'
 import { renderWithRedux } from '../testing/utils'
 import '@testing-library/jest-dom'
 // To resolve the ReferenceError: regeneratorRuntime is not defined error, we need to import this runtime module
+/* eslint-disable no-unused-vars */
+
 import regeneratorRuntime from 'regenerator-runtime'
+
+/* eslint-enable no-unused-vars */
 
 import Error from './Error'
 

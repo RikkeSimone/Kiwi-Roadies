@@ -5,18 +5,10 @@ class Loading extends React.Component {
   render () {
     return (
       <>
-        { this.props.waiting &&
-      <h2>Loading...</h2>
-        }
+        <img src="./graphics/kiwiroadieslogo.png"/>
       </>
     )
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    waiting: state.waiting
-  }
-}
-
-export default connect(mapStateToProps)(Loading)
+export default connect()(Loading)
