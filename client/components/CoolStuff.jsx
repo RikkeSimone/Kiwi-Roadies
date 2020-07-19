@@ -15,8 +15,9 @@ class CoolStuff extends Component {
       .then(res => {
         const campsites = res.body
         console.log('the campsites are ', campsites)
-        // not currently dispatching to store?
-        addCampsites(campsites)
+        const action = addCampsites(campsites)
+        this.props.dispatch(action)
+        console.log('action is', action)
       })
   }
 
@@ -24,15 +25,9 @@ class CoolStuff extends Component {
     return (
       <>
         <h2>Campsites</h2>
-        <h3>name: Akapoua Bay Campsite, status: OPEN, region: Auckland</h3>
+        <h2>{this.props.campsites[0] && this.props.campsites[0].name}</h2>
       </>
     )
-  }
-}
-
-function mapDispatchToProps (dispatch) {
-  return {
-    addCampsites
   }
 }
 
@@ -43,6 +38,5 @@ const mapStateToProps = state => {
 }
 
 export default connect(
-  mapStateToProps,
-  mapDispatchToProps
+  mapStateToProps
 )(CoolStuff)
