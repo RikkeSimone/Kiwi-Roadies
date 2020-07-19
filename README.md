@@ -30,7 +30,7 @@ https://kiwiroadies.herokuapp.com/
 
 ### MVP
 
-* Pre-draw 3 kiwi roadies
+* Pre-draw 3 kiwi roadies on a map
 * Build the form component that generates your road trip based on your start location, end location, number of days and activies preferences
 * Have preference options available - may require an API
 * API's for the base map, New Zealand, travel routes, activities, DOC
