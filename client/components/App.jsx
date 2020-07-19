@@ -9,14 +9,14 @@ import MainMap from './MainMap'
 
 const App = () => (
   <div className='app-container'>
-    {/* <div className="body"> */}
-      {/* <Error />
-      <Header /> */}
-      {/* <Hello />
-      <Greeting /> */}
+     <div className="body">  
+       <Error /> 
+       <Header />  
+       <Hello />
+       <Greeting /> 
       <MainMap />
-    {/* </div> */}
-    {/* <Footer /> */}
+     </div>  
+     <Footer />
   </div>
 )
 

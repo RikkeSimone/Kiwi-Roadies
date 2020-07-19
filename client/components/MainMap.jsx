@@ -50,11 +50,10 @@ const MainMap = (props) => {
 
   return (
     <div className="root" >
-      <p>map</p>
       <ReactMapGL
         {...viewport}
-        width="60vw"
-        height="80vh"
+        width="30vw"
+        height="30vh"
         mapStyle="mapbox://styles/mapbox/light-v10"
         onViewportChange={viewport => viewport}
         mapboxApiAccessToken={MAPBOX_TOKEN}
