@@ -385,3 +385,14 @@ cursor: pointer;
   width:100vw;
   height:100vh;
 }
+
+#geocoder {
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+  top: 20px;
+  }
+
+.mapboxgl-ctrl-geocoder {
+  min-width: 100%;
+  }
