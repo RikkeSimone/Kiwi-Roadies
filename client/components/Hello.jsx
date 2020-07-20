@@ -13,9 +13,11 @@ class Hello extends React.Component {
           : <div className="hello-container">
             <div>
               <div className="intro">
-                <img className="intro-message" src="./up-for-a-roadie.png"/>
+                <p className="intro-message">UP FOR A <br/>ROADIE?</p>
               </div>
-              <h3>WHAT&apos;S YOUR NAME?</h3>
+              <div className="name-q">
+                <h3>WHAT&apos;S YOUR NAME?</h3>
+              </div>
               <div className="form-container">
                 <div className="form__group">
                   <input type="text" className="form__input" id="name" placeholder="Your name" required=""
