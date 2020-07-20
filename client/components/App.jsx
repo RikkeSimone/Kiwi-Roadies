@@ -12,6 +12,7 @@ import Trip from './Trip'
 // import CoolStuff from './CoolStuff'
 
 let renderedComponent = ''
+let status = ''
 
 class App extends React.Component {
   state = {
@@ -30,15 +31,18 @@ class App extends React.Component {
 
     if (this.props.waiting) {
       renderedComponent = <Loading />
+      status = 'loading-screen'
     } else if (this.props.tripstatus) {
       renderedComponent = <Trip />
+      status = 'body'
     } else {
       renderedComponent = <><Hello /><InfoReq /></>
+      status = 'body'
     }
 
     return (
       <div className='app-container'>
-        <div className="body">
+        <div className={status}>
           <Error />
           <Header />
           {renderedComponent}
