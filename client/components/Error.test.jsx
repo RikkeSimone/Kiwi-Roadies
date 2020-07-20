@@ -10,9 +10,9 @@ import regeneratorRuntime from 'regenerator-runtime'
 
 import Error from './Error'
 
-const initialState = {
-  error: null
-}
+// const initialState = {
+//   error: null
+// }
 
 const newState = {
   error: 'error'
