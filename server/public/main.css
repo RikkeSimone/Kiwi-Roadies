@@ -1,4 +1,307 @@
-.leaflet-container {
+.body {
   width: 100%;
+  position: absolute;
+  text-align: center;
+  background-image: url("./road.jpg");
   height: 100vh;
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  outline: 9px solid #819678;
+  outline-offset: -30px;
 }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.github-gato {
+  margin: 2%;
+  width: 50px;
+  height: 50px;
+}
+
+.intro {
+align-items: center;
+display: flex;
+justify-content: center;
+}
+
+.intro-message {
+  text-align: center;
+  color: white;
+  font-family: 'Knewave', cursive;
+  font-size: 150px;
+  margin: 7%;
+  transform: rotate(-10deg);
+  line-height: 1;
+}
+
+.logo {
+  height: 90px;
+  width: 150px;
+  margin-top: 2.5%;
+  margin-left: 5%;
+}
+
+.hello-container {
+  display: flexbox;
+}
+
+.name-q {
+  display: flexbox;
+  align-items: center;
+}
+
+h1 {
+  color: white;
+}
+
+h3 {
+  color: white;
+  margin-top: -6%;
+  margin-left: -3%;
+  margin-bottom: 10px;
+  font-family: 'Bangers', cursive;
+  font-size: x-large;
+}
+
+.name-form-cont {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.name-form {	
+		width: 360px;
+		color: #a3a3a3;
+		font: inherit;
+		box-shadow: 0 6px 10px 0 rgba(0, 0, 0 , .1);
+		border: 0;
+		outline: 0;
+		padding: 22px 18px;
+}
+
+.greeting-text {
+  display:inline-block;
+  overflow:hidden;
+  white-space:nowrap;
+}
+
+.greeting-text:first-of-type {
+  animation: showup 7s infinite;
+}
+
+.greeting-text:last-of-type {
+  width:0px;
+  animation: reveal 7s infinite;
+}
+
+.greeting-text:last-of-type p {
+  margin-left:-355px;
+  animation: slidein 7s infinite;
+}
+
+@keyframes showup {
+  0% {opacity:0;}
+  20% {opacity:1;}
+  80% {opacity:1;}
+  100% {opacity:0;}
+}
+
+@keyframes slidein {
+  0% { margin-left:-800px; }
+  20% { margin-left:-800px; }
+  35% { margin-left:0px; }
+  100% { margin-left:0px; }
+}
+
+@keyframes reveal {
+  0% {opacity:0;width:0px;}
+  20% {opacity:1;width:0px;}
+  30% {width:355px;}
+  80% {opacity:1;}
+  100% {opacity:0;width:355px;}
+}
+
+
+p {
+font-size:12px;
+color:#999;
+margin-top:200px;
+}
+
+.map-container {
+  display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.leaflet-container {
+  width: 60%;
+/* css rule that must be set for Leaflet element when positioned static/relative is an absolute height*/
+  height: 60vh;
+}
+
+.loader:empty {
+  position: absolute;
+  top: calc(50% - 4em);
+  left: calc(50% - 4em);
+  width: 6em;
+  height: 6em;
+  border: 1.1em solid rgba(0, 0, 0, 0.2);
+  border-left: 1.1em solid #000000;
+  border-radius: 50%;
+  animation: load8 1.1s infinite linear;
+}
+
+@keyframes load8 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* nav bar */
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #232323;
+  transition: color 0.3s ease;
+}
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0; 
+  z-index: 2; 
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #cdcdcd;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu
+{
+  position: absolute;
+  width: 100px;
+  margin: -50px 0 0 -50px;
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu p
+{
+  font-size: 10px;
+  margin-right: 15px;
+}
+
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+/* nav bar */
+
+/* input box */
+
+.form-container {
+align-items: center;
+display: flex;
+justify-content: center;
+margin-top: 1%;
+}
+
+.form__input {
+  font-family: 'Bangers', cursive;
+  color: grey;
+  font-size: 1.8rem;
+	margin: 0 auto;
+  padding: 1rem 2rem;
+  border-radius: 0.2rem;
+  background-color: whitesmoke;
+  width: 100%;
+  display: block;
+  border: none;
+}
+
+.fa-arrow-circle-right {
+  color: #FECB00;
+  margin-left: 30px;
+  font-size: 50px;
+}
+
+.fa-arrow-circle-right:hover {
+cursor: pointer;
+}
+
+/* input box */
+
