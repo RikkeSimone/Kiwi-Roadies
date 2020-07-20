@@ -7,7 +7,7 @@ class Greeting extends React.Component {
       <>
         { this.props.name &&
            <div className="greeting-text">
-             <h2>hey, {this.props.name}!</h2>
+             <h2>Hey, {this.props.name}!</h2>
              <p>Tell us where you would like to go!</p>
            </div>
         }
