@@ -7,7 +7,6 @@ import { acquireTripDetails } from '../actions'
 // our buttons
 import DropdownButton from 'react-bootstrap/DropdownButton'
 import Dropdown from 'react-bootstrap/Dropdown'
-import Button from 'react-bootstrap/Button'
 
 function RoadieForm (props) {
   const [startcity, setStart] = useState('')
