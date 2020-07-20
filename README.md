@@ -10,6 +10,9 @@ Kiwi Roadies is a road trip planner like no other.
 
 * It sources open data APIs to recommend activities, including beaches, walking tracks and Department of Conservation (DOC) campsites.
 
+ **Kiwi Roadies was created using the following tech stack:
+ JavaScript, Node.js, Bootstrap, React, Redux, Redux Thunk, Cypress (E2E testing), Heroku, Express, Superagent, Jest, React Map GL, D3, Webpack**
+
 
 ## How to use
 
@@ -30,22 +33,23 @@ https://kiwiroadies.herokuapp.com/
 
 ### MVP
 
-* Pre-draw 3 kiwi roadies on a map
-* Build the form component that generates your road trip based on your start location, end location, number of days and activies preferences
-* Have preference options available - may require an API
-* API's for the base map, New Zealand, travel routes, activities, DOC
+* Pre-draw 3 kiwi destinations on a map
+* Build a form that generates your road trip based on your start location, end location, number of days  
+* API's for the New Zealand base map - flying cameras, DOC 
+* App animates a name and travel journey across the client side
 
 ### Stretch Goals 
 
-* Home by a certain date/time (this factors into your roadie as a whole)
+* Map icons of bike trails, camp sites, possibly trails and huts. This will show based on zoom focus
 * Send/share your trip with others - screen shot, PDF, email, Export it
-* Bring in an API that writes out your name and travel journey across the client side
+* Directions on the map
+* Scrolling on the map triggers location change, with that has associated information such as links
+* Have more activity preferences available such as beaches - may require additonal API
 * Tag pictures of your trip to sites
-* Trains
-* Database
+* Home by a certain date/time (this factors into your roadie as a whole)
 * Sign-in & Authorisation
-* Map icons
-* Jingle
+* Radio Jingle
+* Trains
 
 ## Made with ❤️ by
 
