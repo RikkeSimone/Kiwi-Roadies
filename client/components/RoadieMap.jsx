@@ -2,9 +2,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import 'regenerator-runtime/runtime'
 
-import ReactMapGL, { NavigationControl, FlyToInterpolator } from 'react-map-gl'
+import ReactMapGL, { NavigationControl } from 'react-map-gl'
 import { _goToWellington, _goToAuckland, _goToRaglan, _goToThames, _goToWhangarei } from './goTo.js'
-import * as d3 from 'd3'
 
 require('dotenv').config()
 
@@ -47,7 +46,7 @@ class MainMap extends Component {
         <button onClick={() => _goToRaglan(viewport, this.updateView)}>Go to Raglan</button>
         <button onClick={() => _goToThames(viewport, this.updateView)}>Go to Thames</button>
         <button onClick={() => _goToWhangarei(viewport, this.updateView)}>Go to Whangarei</button>
-   
+
         <ReactMapGL
           {...this.state.viewport}
           width="60vw"
