@@ -6,7 +6,6 @@
   "main": "server/index.js",
   "author": "EDA Students - Ariana, Kim, Rikke, Jonty",
   "scripts": {
-    "format": "npx eslint --fix --ext .js,.jsx",
     "lint": "npx eslint . --ext .js,.jsx --ignore-path .eslintignore",
     "format": "npx eslint . --fix --ext .js,.jsx",
     "build": "webpack --config client/webpack.prod.config.js",
