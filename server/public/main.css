@@ -11,6 +11,34 @@
   outline-offset: -30px;
 }
 
+.loading-screen {
+  background: rgb(244,244,244);
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  text-align: center;
+  display: flexbox;
+}
+
+.loading-screen-image {
+  margin-top: 10%;
+  margin-bottom: 10%;
+  margin-right: 8%;
+  justify-content: center;
+  animation: wobble 2s ease-in-out infinite;
+  transform-origin: center bottom;
+  transition: padding .3s, bottom .3s;
+}
+
+@keyframes wobble {
+  33% {
+    transform: rotate(5deg);
+  }
+  66% {
+    transform: rotate(-5deg);
+  }
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -89,6 +117,8 @@ h3 {
   display:inline-block;
   overflow:hidden;
   white-space:nowrap;
+  color: white;
+  padding: 5%;
 }
 
 .greeting-text:first-of-type {
@@ -304,4 +334,50 @@ cursor: pointer;
 }
 
 /* input box */
+
+/* RoadieForm buttons & text */
+
+.btn-primary {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px!important;
+  font-style: bold!important;
+  color: white!important; 
+  background-color: #657e5b!important;
+  width: 250px;
+  height: 50px;
+  align-content: center;
+  border-color: white;
+  margin: 2%;
+  padding: 20px;
+  border-radius: 10%;
+  border: white!important;
+  outline: white!important;
+  outline-style: none;
+  box-shadow: none; 
+  }
+
+.dropdown-menu {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px!important;;
+  background-color: white!important;
+  width: 250px;
+  height: auto;
+  align-content: center;
+}
+
+.roadiestart {
+  margin: 2%;
+}
+
+.roadieend {
+  margin: 2%;
+}
+
+.daysaway {
+  margin: 2%;
+}
+
+.submitbutton {
+  margin: 10%;
+}
 

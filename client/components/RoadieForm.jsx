@@ -7,7 +7,6 @@ import { acquireTripDetails } from '../actions'
 // our buttons
 import DropdownButton from 'react-bootstrap/DropdownButton'
 import Dropdown from 'react-bootstrap/Dropdown'
-import Button from 'react-bootstrap/Button'
 
 function RoadieForm (props) {
   const [startcity, setStart] = useState('')
@@ -31,7 +30,7 @@ function RoadieForm (props) {
   return (
     <>
       { props.name &&
-    <div className="App container">
+    <div className="roadieformcontainer">
 
       <div className='roadiestart'>
         <DropdownButton
@@ -44,7 +43,7 @@ function RoadieForm (props) {
           <Dropdown.Item eventKey="Christchurch">Christchurch</Dropdown.Item>
           <Dropdown.Divider />
         </DropdownButton>
-        <h4>Your roadie will start in {startcity}</h4>
+        <h3>Your roadie will start in {startcity}</h3>
       </div>
 
       <div className='roadieend'>
@@ -58,7 +57,7 @@ function RoadieForm (props) {
           <Dropdown.Item eventKey="Whangarei">Whangarei</Dropdown.Item>
           <Dropdown.Divider />
         </DropdownButton>
-        <h4>Your roadie will end in {endcity}</h4>
+        <h3>Your roadie will end in {endcity}</h3>
       </div>
 
       <div className='daysaway'>
@@ -74,11 +73,11 @@ function RoadieForm (props) {
           <Dropdown.Item eventKey="5-days">5 Days</Dropdown.Item>
           <Dropdown.Divider />
         </DropdownButton>
-        <h4>Your roadie will start in {daysaway}</h4>
+        <h3>Your roadie will be {daysaway}</h3>
       </div>
       <div className='submitbutton'>
-        <h2>aaaand pop it through!</h2>
-        <Button variant="primary" onClick={() => props.dispatch(acquireTripDetails([startcity, endcity, daysaway]))}>Submit</Button>
+        <h3>...aaaand pop it through!</h3>
+        <span className="fas fa-arrow-circle-right" onClick={() => props.dispatch(acquireTripDetails([startcity, endcity, daysaway]))}></span>
       </div>
     </div>
       }
