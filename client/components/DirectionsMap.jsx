@@ -4,9 +4,8 @@ import 'regenerator-runtime/runtime'
 
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
-import MapBoxDirections from 'mapbox-gl-directions'
-import 'mapbox-gl/dist/mapbox-gl-directions.css'
-import MapboxGeocoder from 'mapbox-gl-geocoder'
+import MapBoxDirections from '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions'
+import '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions.css'
 
 require('dotenv').config()
 
@@ -33,14 +32,7 @@ class DirectionsMap extends Component {
       profile: 'mapbox/driving'
     })
 
-    map.addControl(directions, 'bottom-left')
-
-    const geocoder = new MapboxGeocoder({
-      accessToken: mapboxgl.accessToken,
-      types: 'country,region,place,postcode,locality,neighborhood'
-    })
-
-    geocoder.addTo('#geocoder')
+    map.addControl(directions, 'top-right')
   }
 
   render () {
