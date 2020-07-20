@@ -19,7 +19,7 @@ class App extends React.Component {
   }
 
   componentDidMount () {
-    demoAsyncCall().then(() => this.setState({ loading: false }))
+    simulateLoading().then(() => this.setState({ loading: false }))
   }
 
   render () {
@@ -48,7 +48,7 @@ class App extends React.Component {
   }
 }
 
-function demoAsyncCall () {
+function simulateLoading () {
   return new Promise((resolve) => setTimeout(() => resolve(), 1))
 }
 
