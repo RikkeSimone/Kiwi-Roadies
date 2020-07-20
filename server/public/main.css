@@ -23,7 +23,7 @@
 .loading-screen-image {
   margin-top: 10%;
   margin-bottom: 10%;
-  margin-right: 10%;
+  margin-right: 8%;
   justify-content: center;
   animation: wobble 2s ease-in-out infinite;
   transform-origin: center bottom;
