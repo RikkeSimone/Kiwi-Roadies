@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import 'regenerator-runtime/runtime'
 
-import ReactMapGL from 'react-map-gl'
-import 'mapbox-gl/dist/mapbox-gl.css'
+import ReactMapGL, { NavigationControl, FlyToInterpolator } from 'react-map-gl'
+import { _goToWellington, _goToAuckland, _goToRaglan, _goToThames, _goToWhangarei } from './goTo.js'
+import * as d3 from 'd3'
 
 require('dotenv').config()
 
@@ -20,44 +21,49 @@ const navStyle = {
   padding: '10px'
 }
 
-const MainMap = (props) => {
-  const { roadieform, dataSet, campsites } = props
-  console.log('the dataSet is for the trip planning is ', dataSet)
-  console.log('the roadieform is ', roadieform)
-  console.log('the campsites are ', campsites)
-
-  const viewport = {
-    latitude: -40.852931,
-    longitude: 172.76205,
-    zoom: 4,
-    bearing: 0,
-    pitch: 0
+class MainMap extends Component {
+  state= {
+    viewport: {
+      latitude: -40.852931,
+      longitude: 172.76205,
+      zoom: 4,
+      bearing: 0,
+      pitch: 0,
+      width: 500,
+      height: 500
+    }
   }
 
-  return (
-    <div className="root" >
-      <ReactMapGL
-        {...viewport}
-        width="60vw"
-        height="60vh"
-        mapStyle="mapbox://styles/mapbox/light-v10"
-        onViewportChange={viewport => viewport}
-        mapboxApiAccessToken={MAPBOX_TOKEN}
-      >
-        <div className="nav" style={navStyle}>
-          {/* <NavigationControl onViewportChange={(viewport) => this.setState({ viewport })}/> */}
-        </div>
-      </ReactMapGL>
-    </div>
-  )
-}
+  updateView =(viewport) => {
+    this.setState({ viewport })
+  }
 
-const mapStateToProps = (state) => {
-  return {
-    roadieform: state.roadieform,
-    dataSet: state.dataSet,
-    campsites: state.campsites
+  render () {
+    const { viewport } = this.state
+    return (
+      <div >
+        <button onClick={() => _goToAuckland(viewport, this.updateView)}>Go to Auckland</button>
+        <button onClick={() => _goToWellington(viewport, this.updateView)}>Go to Wellington</button>
+        <button onClick={() => _goToRaglan(viewport, this.updateView)}>Go to Raglan</button>
+        <button onClick={() => _goToThames(viewport, this.updateView)}>Go to Thames</button>
+        <button onClick={() => _goToWhangarei(viewport, this.updateView)}>Go to Whangarei</button>
+   
+        <ReactMapGL
+          {...this.state.viewport}
+          width="60vw"
+          height="60vh"
+          mapStyle="mapbox://styles/mapbox/light-v10"
+          onViewportChange={viewport => this.setState({ viewport })}
+          mapboxApiAccessToken={MAPBOX_TOKEN}
+        >
+          <div className="nav" style={navStyle}>
+            <NavigationControl showCompass ={false} />
+          </div>
+        </ReactMapGL>
+
+      </div>
+    )
   }
 }
 
-export default connect(mapStateToProps)(MainMap)
+export default connect()(MainMap)
