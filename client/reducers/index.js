@@ -14,7 +14,7 @@ export default combineReducers({
   error,
   name,
   roadieform,
-  nationalParks
+  nationalParks,
   campsites,
   waiting,
   tripstatus
