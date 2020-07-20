@@ -1,5 +1,5 @@
 export default {
-  trips: [
+  biketracks: [
     {
       id: 1,
       name: 'Twin coast cycle trail',
