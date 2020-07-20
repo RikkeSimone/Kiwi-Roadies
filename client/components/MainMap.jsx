@@ -1,19 +1,17 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
 import 'regenerator-runtime/runtime'
 
 import ReactMapGL, { Marker } from 'react-map-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import DeckGL, { ArcLayer } from 'deck.gl'
-
-// coordinates to center map
-// const position = [172.762057, -40.852931]
+require('dotenv').config()
 
 // some inspiration https://greatescape.co/
 
 console.log('mapbox token', process.env.ACCESS_TOKEN)
 
-const MAPBOX_TOKEN = 'pk.eyJ1Ijoia2ltbmV3emVhbGFuZCIsImEiOiJja2NzY3Q3anMxaXY4MnltazVsdHMxNGMyIn0.Vpc0ObF_wq6PfnZTfWTxJQ'
+const MAPBOX_TOKEN = process.env.ACCESS_TOKEN
 
 const navStyle = {
   position: 'absolute',

@@ -5,10 +5,10 @@
   background-image: url("./road.jpg");
   height: 100vh;
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;
-  outline: 7px solid #819678;
-  outline-offset: -20px;
+  outline: 9px solid #819678;
+  outline-offset: -30px;
 }
 
 .header {
@@ -19,23 +19,40 @@
 
 .github-gato {
   margin: 2%;
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
+}
+
+.intro {
+align-items: center;
+display: flex;
+justify-content: center;
 }
 
 .intro-message {
-  width: 32%;
+  text-align: center;
+  color: white;
+  font-family: 'Knewave', cursive;
+  font-size: 150px;
+  margin: 7%;
+  transform: rotate(-10deg);
+  line-height: 1;
 }
 
 .logo {
-  height: 70px;
-  width: 120px;
-  margin-top: 3%;
-  margin-left: 7%;
+  height: 90px;
+  width: 150px;
+  margin-top: 2.5%;
+  margin-left: 5%;
 }
 
 .hello-container {
   display: flexbox;
+}
+
+.name-q {
+  display: flexbox;
+  align-items: center;
 }
 
 h1 {
@@ -44,10 +61,11 @@ h1 {
 
 h3 {
   color: white;
-  margin-top: -2%;
+  margin-top: -6%;
   margin-left: -3%;
-  margin-bottom: 2%;
-  font-family: 'Oswald', sans-serif;
+  margin-bottom: 10px;
+  font-family: 'Bangers', cursive;
+  font-size: x-large;
 }
 
 .name-form-cont {
@@ -114,17 +132,6 @@ p {
 font-size:12px;
 color:#999;
 margin-top:200px;
-}
-
-.footer {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-  text-align: center;
 }
 
 .map-container {
@@ -243,7 +250,7 @@ margin-top:200px;
 {
   position: absolute;
   width: 100px;
-  margin: -100px 0 0 -50px;
+  margin: -50px 0 0 -50px;
   background: #ededed;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
@@ -254,7 +261,7 @@ margin-top:200px;
 
 #menu p
 {
-  font-size: 15px;
+  font-size: 10px;
   margin-right: 15px;
 }
 
@@ -270,14 +277,15 @@ margin-top:200px;
 align-items: center;
 display: flex;
 justify-content: center;
+margin-top: 1%;
 }
 
 .form__input {
-  font-family: 'Oswald', sans-serif;
-  color: white;
+  font-family: 'Bangers', cursive;
+  color: grey;
   font-size: 1.8rem;
 	margin: 0 auto;
-  padding: 1rem 1.5rem;
+  padding: 1rem 2rem;
   border-radius: 0.2rem;
   background-color: whitesmoke;
   width: 100%;
@@ -286,8 +294,8 @@ justify-content: center;
 }
 
 .fa-arrow-circle-right {
-  color: #819678;
-  margin-left: 10px;
+  color: #FECB00;
+  margin-left: 30px;
   font-size: 50px;
 }
 
