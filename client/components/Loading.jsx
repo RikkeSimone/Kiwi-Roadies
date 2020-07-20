@@ -4,19 +4,11 @@ import { connect } from 'react-redux'
 class Loading extends React.Component {
   render () {
     return (
-      <>
-        { this.props.waiting &&
-      <h2>Loading...</h2>
-        }
-      </>
+      <div className="loading-screen-image">
+        <img src="./graphics/loadingscreen-revisioned.png" className="kiwi-car"/>
+      </div>
     )
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    waiting: state.waiting
-  }
-}
-
-export default connect(mapStateToProps)(Loading)
+export default connect()(Loading)

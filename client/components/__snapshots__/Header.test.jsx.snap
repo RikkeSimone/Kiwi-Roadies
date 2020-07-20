@@ -5,9 +5,34 @@ exports[`Header contains a logo 1`] = `
   <div
     class="header"
   >
+    <nav
+      role="navigation"
+    >
+      <div
+        id="menuToggle"
+      >
+        <input
+          type="checkbox"
+        />
+        <span />
+        <span />
+        <span />
+        <ul
+          id="menu"
+        >
+          <p>
+            Made with love by Ariana, Rikke, Kim and Jonty
+          </p>
+        </ul>
+      </div>
+    </nav>
     <img
       class="logo"
-      src="./graphics/kiwiroadieslogo.png"
+      src="./graphics/kiwiroadieslogo-no-road.png"
+    />
+    <img
+      class="github-gato"
+      src="./github-gato.png"
     />
   </div>
 </DocumentFragment>

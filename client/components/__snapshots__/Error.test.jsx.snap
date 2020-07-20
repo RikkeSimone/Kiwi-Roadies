@@ -1,5 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Error component for falsey for initial store value and when there is no error 1`] = `<DocumentFragment />`;
-
 exports[`Error component for truthy when store changes 1`] = `<DocumentFragment />`;

@@ -6,30 +6,40 @@ exports[`Hello renders the expected items 1`] = `
     class="hello-container"
   >
     <div>
-      <h1>
-        Welcome to Kiwi Roadies
-      </h1>
-      <h2>
-        Tell us who you are and lets get started
-      </h2>
       <div
-        class="name-form-cont"
+        class="intro"
       >
-        <form
-          class="name-form"
+        <p
+          class="intro-message"
+        >
+          UP FOR A 
+          <br />
+          ROADIE?
+        </p>
+      </div>
+      <div
+        class="name-q"
+      >
+        <h3>
+          WHAT'S YOUR NAME?
+        </h3>
+      </div>
+      <div
+        class="form-container"
+      >
+        <div
+          class="form__group"
         >
           <input
-            class="form-field"
-            placeholder="What's your name?"
+            class="form__input"
+            id="name"
+            placeholder="Your name"
             type="text"
           />
-          <button
-            class="name-button"
-            type="button"
-          >
-            Lets get going
-          </button>
-        </form>
+        </div>
+        <span
+          class="fas fa-arrow-circle-right"
+        />
       </div>
     </div>
   </div>
