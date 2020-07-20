@@ -9,21 +9,14 @@ exports[`Hello renders the expected items 1`] = `
       <div
         class="intro"
       >
-        <p
+        <img
           class="intro-message"
-        >
-          UP FOR A 
-          <br />
-          ROADIE?
-        </p>
+          src="./up-for-a-roadie.png"
+        />
       </div>
-      <div
-        class="name-q"
-      >
-        <h3>
-          WHAT'S YOUR NAME?
-        </h3>
-      </div>
+      <h3>
+        WHAT'S YOUR NAME?
+      </h3>
       <div
         class="form-container"
       >
