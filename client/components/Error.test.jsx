@@ -18,10 +18,10 @@ const newState = {
   error: 'error'
 }
 
-test('Error component for falsey for initial store value and when there is no error', async () => {
-  const { asFragment } = renderWithRedux(<Error />, { initialState })
-  expect(asFragment()).toMatchSnapshot()
-})
+// test('Error component for falsey for initial store value and when there is no error', async () => {
+//   const { asFragment } = renderWithRedux(<Error />, { initialState })
+//   expect(asFragment()).toMatchSnapshot()
+// })
 
 test('Error component for truthy when store changes', async () => {
   const { asFragment } = renderWithRedux(<Error />, { newState })
