@@ -60,6 +60,8 @@ const MainMap = (props) => {
     }]
 
   return (
+    <>
+      { props.name &&
     <div className="root" >
       <ReactMapGL
         {...viewport}
@@ -107,6 +109,8 @@ const MainMap = (props) => {
         </Marker>
       </ReactMapGL>
     </div>
+      }
+    </>
   )
 }
 
@@ -114,7 +118,8 @@ const mapStateToProps = (state) => {
   return {
     roadieform: state.roadieform,
     dataSet: state.dataSet,
-    campsites: state.campsites
+    campsites: state.campsites,
+    name: state.name
   }
 }
 
