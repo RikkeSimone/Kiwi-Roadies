@@ -1,4 +1,3 @@
-import getTracks from './getTracks'
 import getHuts from './getHuts'
 
 jest.mock('./requestor', () => {
