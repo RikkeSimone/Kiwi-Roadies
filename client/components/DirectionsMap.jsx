@@ -37,9 +37,12 @@ class DirectionsMap extends Component {
     const marker = new mapboxgl.Marker()
       .setLngLat([172.76205, -40.852931])
       .addTo(map)
+
+    console.log('start', this.props.roadieform[0][0])
   }
 
   render () {
+    console.log(this.props.roadieform)
     return (
       <>
         <p>Directions Map</p>
@@ -50,4 +53,8 @@ class DirectionsMap extends Component {
   }
 }
 
-export default connect()(DirectionsMap)
+const mapStateToProps = state => ({
+  roadieform: state.roadieform
+})
+
+export default connect(mapStateToProps)(DirectionsMap)
