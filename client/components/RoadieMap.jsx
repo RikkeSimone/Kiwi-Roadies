@@ -47,6 +47,8 @@ class MainMap extends Component {
   render () {
     const { viewport } = this.state
     return (
+      <>
+        { this.props.name &&
       <div >
         <button onClick={() => _goToAuckland(viewport, this.updateView)}>Go to Auckland</button>
         <button onClick={() => _goToWellington(viewport, this.updateView)}>Go to Wellington</button>
@@ -81,13 +83,16 @@ class MainMap extends Component {
         </ReactMapGL>
 
       </div>
+        }
+      </>
     )
   }
 }
 
 const mapStateToProps = state => {
   return {
-    trips: state.dataSet.trips
+    trips: state.dataSet.trips,
+    name: state.name
   }
 }
 

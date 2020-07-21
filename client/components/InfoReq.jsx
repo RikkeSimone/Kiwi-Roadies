@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import Greeting from './Greeting'
 import RoadieForm from './RoadieForm'
-import MainMap from './MainMap'
+import RoadieMap from './RoadieMap'
 // import DirectionsMap from './DirectionsMap'
 import ScrollMap from './ScrollMap'
 
@@ -20,8 +20,7 @@ class InfoReq extends React.Component {
       <div>
         <Greeting />
         <RoadieForm />
-        <MainMap />
-        <ScrollMap/>
+        <RoadieMap />
       </div>
     )
   }

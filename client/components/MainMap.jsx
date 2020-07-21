@@ -25,7 +25,7 @@ const iconSVG = `M20.2,15.7L20.2,15.7c1.1-1.6,1.8-3.6,1.8-5.7c0-5.6-4.5-10-10-10
 const SIZE = 20
 
 const MainMap = (props) => {
-  const { roadieform, dataSet, campsites } = props
+  // const { roadieform, dataSet, campsites } = props
 
   const viewport = {
     latitude: -40.852931,
