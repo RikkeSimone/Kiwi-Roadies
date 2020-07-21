@@ -41,8 +41,23 @@ class DirectionsMap extends Component {
       map.addControl(directions, 'top-left')
 
       parks.map(park => {
-        const marker = new mapboxgl.Marker()
+        var popup = new mapboxgl.Popup({ offset: 25 }).setText(
+          'National Park'
+        )
+        const marker = new mapboxgl.Marker(
+          <div
+            style={{
+              width: '5rem',
+              height: '5rem',
+              borderRadius: '50%',
+              cursor: 'pointer',
+              fill: '00BFFF',
+              stroke: 'none',
+              opacity: '0.6'
+            }} />
+        )
           .setLngLat([park.long, park.lat])
+          .setPopup(popup)
           .addTo(map)
       }
       )
