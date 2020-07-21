@@ -396,3 +396,10 @@ cursor: pointer;
 .mapboxgl-ctrl-geocoder {
   min-width: 100%;
   }
+
+  .nationalpark {
+    width: 5rem;
+    height: 5rem;
+    fill: #228B22
+
+  }

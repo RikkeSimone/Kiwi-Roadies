@@ -12,9 +12,6 @@ require('dotenv').config()
 mapboxgl.accessToken = process.env.ACCESS_TOKEN
 
 class DirectionsMap extends Component {
-  updateView =(viewport) => {
-    this.setState({ viewport })
-  }
 
   componentDidMount () {
     const map = new mapboxgl.Map({
@@ -29,7 +26,9 @@ class DirectionsMap extends Component {
 
     const parks = this.props.nationalParks.nationalParks
 
-    console.log('national parks', parks)
+    const campsites = this.props.campsites
+
+    console.log('campsites', campsites)
 
     map.on('load', function () {
       const directions = new MapBoxDirections({
@@ -44,19 +43,21 @@ class DirectionsMap extends Component {
         var popup = new mapboxgl.Popup({ offset: 25 }).setText(
           'National Park'
         )
-        const marker = new mapboxgl.Marker(
-          <div
-            style={{
-              width: '5rem',
-              height: '5rem',
-              borderRadius: '50%',
-              cursor: 'pointer',
-              fill: '00BFFF',
-              stroke: 'none',
-              opacity: '0.6'
-            }} />
-        )
+
+        const marker = new mapboxgl.Marker()
           .setLngLat([park.long, park.lat])
+          .setPopup(popup)
+          .addTo(map)
+      }
+      )
+
+      campsites.map(campsite => {
+        var popup = new mapboxgl.Popup({ offset: 25 }).setText(
+          'Campsites'
+        )
+
+        const marker = new mapboxgl.Marker()
+          .setLngLat([campsite.longlat[0], campsite.longlat[1]])
           .setPopup(popup)
           .addTo(map)
       }
@@ -82,7 +83,6 @@ const mapStateToProps = state => ({
   roadieform: state.roadieform,
   nationalParks: state.nationalParks,
   campsites: state.campsites
-
 })
 
 export default connect(mapStateToProps)(DirectionsMap)
