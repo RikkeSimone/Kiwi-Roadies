@@ -2,9 +2,10 @@ import React from 'react'
 import { connect } from 'react-redux'
 import 'regenerator-runtime/runtime'
 
-import ReactMapGL, { Marker } from 'react-map-gl'
+import ReactMapGL from 'react-map-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import DeckGL, { ArcLayer } from 'deck.gl'
+
 require('dotenv').config()
 
 // some inspiration https://greatescape.co/
@@ -83,25 +84,22 @@ const MainMap = (props) => {
         <div className="nav" style={navStyle}>
           {/* <NavigationControl onViewportChange={(viewport) => this.setState({ viewport })}/> */}
         </div>
-        <Marker
           longitude={arcs[0].source[0]}
           latitude={arcs[0].source[1]}
-        >
-          <svg
-            height={SIZE}
-            viewBox="0 0 24 24"
-            style={{
-              cursor: 'pointer',
-              fill: '00BFFF',
-              stroke: 'none',
-              opacity: '0.6',
-              transform: `translate(${-SIZE / 2}px,${-SIZE}px)`
-            }}
+        <svg
+          height={SIZE}
+          viewBox="0 0 24 24"
+          style={{
+            cursor: 'pointer',
+            fill: '00BFFF',
+            stroke: 'none',
+            opacity: '0.6',
+            transform: `translate(${-SIZE / 2}px,${-SIZE}px)`
+          }}
 
-          >
-            <path d={iconSVG} />
-          </svg>
-        </Marker>
+        >
+          <path d={iconSVG} />
+        </svg>
       </ReactMapGL>
     </div>
       }
