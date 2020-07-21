@@ -41,9 +41,15 @@ class MainMap extends Component {
   }
 
   componentDidMount () {
-    this.setState({
-      isLoading: false
-    })
+    setTimeout(() => {
+      document.getElementById('akl-btn').click()
+    }, 2000)
+    setTimeout(() => {
+      document.getElementById('rgl-btn').click()
+    }, 25000)
+    setTimeout(() => {
+      document.getElementById('wlgtn-btn').click()
+    }, 15000)
   }
 
   updateView =(viewport) => {
@@ -56,11 +62,11 @@ class MainMap extends Component {
       <>
         { this.props.name &&
       <div >
-        <button onClick={() => _goToAuckland(viewport, this.updateView)}>Go to Auckland</button>
-        <button onClick={() => _goToWellington(viewport, this.updateView)}>Go to Wellington</button>
-        <button onClick={() => _goToRaglan(viewport, this.updateView)}>Go to Raglan</button>
-        <button onClick={() => _goToThames(viewport, this.updateView)}>Go to Thames</button>
-        <button onClick={() => _goToWhangarei(viewport, this.updateView)}>Go to Whangarei</button>
+        <button id="akl-btn" onClick={() => _goToAuckland(viewport, this.updateView)}>Go to Auckland</button>
+        <button id="wlgtn-btn" onClick={() => _goToWellington(viewport, this.updateView)}>Go to Wellington</button>
+        <button id="rgl-btn" onClick={() => _goToRaglan(viewport, this.updateView)}>Go to Raglan</button>
+        <button id="th-btn" onClick={() => _goToThames(viewport, this.updateView)}>Go to Thames</button>
+        <button id="wh-btn" onClick={() => _goToWhangarei(viewport, this.updateView)}>Go to Whangarei</button>
 
         <ReactMapGL
           {...this.state.viewport}
