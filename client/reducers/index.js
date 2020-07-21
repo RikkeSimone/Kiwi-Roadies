@@ -11,7 +11,6 @@ import tripstatus from './tripstatus'
 import huts from './huts'
 import tracks from './tracks'
 
-
 export default combineReducers({
   dataSet,
   error,
