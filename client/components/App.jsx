@@ -10,7 +10,7 @@ import Trip from './Trip'
 // import ScrollMap from './ScrollMap'
 
 // import MainMap from './MainMap'
-import CoolStuff from './CoolStuff'
+// import CoolStuff from './CoolStuff'
 
 let renderedComponent = ''
 let status = ''
