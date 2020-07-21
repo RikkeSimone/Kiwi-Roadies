@@ -64,6 +64,26 @@ export function grabStartCity (city, ogViewport) {
         transitionEasing: d3.easeCubic
       }
     }
+  } else if (city === 'Thames') {
+    cityViewPort = {
+      ...ogViewport,
+      latitude: -41.2867,
+      longitude: 174.7730,
+      zoom: 14,
+      transitionDuration: 5000,
+      transitionInterpolator: new FlyToInterpolator(),
+      transitionEasing: d3.easeCubic
+    }
+  } else if (city === 'Whangarei') {
+    cityViewPort = {
+      ...ogViewport,
+      latitude: -35.7251,
+      longitude: 174.3237,
+      zoom: 14,
+      transitionDuration: 5000,
+      transitionInterpolator: new FlyToInterpolator(),
+      transitionEasing: d3.easeCubic
+    }
   }
   return (dispatch) => {
     dispatch(addCityViewPort(cityViewPort))

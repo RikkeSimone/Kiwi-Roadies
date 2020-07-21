@@ -19,12 +19,14 @@ function RoadieForm (props) {
   const [endcity, setEnd] = useState('')
   const handleEnd = (e) => {
     console.log(e)
+    props.dispatch(grabStartCity(e, props.viewport))
     setEnd(e)
   }
 
   const [daysaway, setDays] = useState('')
   const handleDays = (e) => {
     console.log(e)
+    props.dispatch(grabStartCity(e, props.viewport))
     setDays(e)
   }
 
