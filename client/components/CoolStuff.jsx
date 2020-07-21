@@ -5,6 +5,7 @@ import { addCampsites } from '../actions/campsites'
 import { addHuts } from '../actions/huts'
 // import { addTracks } from '../actions/tracks'
 import proj4 from 'proj4'
+import { addTracks } from '../actions/tracks'
 
 const campURL = 'http://localhost:3000/api/v1/coolstuff/campsites'
 const trackURL = 'http://localhost:3000/api/v1/coolstuff/tracks'
@@ -46,22 +47,20 @@ class CoolStuff extends Component {
         huts.forEach(hut => {
           hut.longLat = proj4(tmerc, wgs84, hut.longLat)
         })
-        console.log('CoolStuff Huts', huts)
         const action = addHuts(huts)
         this.props.dispatch(action)
       })
-    request.get(hutURL)
+    request.get(trackURL)
       .then(res => {
-        const huts = res.body
+        const tracks = res.body
         // console.log('Long Lat:', proj4(tmerc, wgs84, [firstUTM.x, firstUTM.y]))
-        huts.forEach(hut => {
-          hut.longLat = [hut.x, hut.y]
+        tracks.forEach(track => {
+          track.longLat = [track.x, track.y]
         })
-        huts.forEach(hut => {
-          hut.longLat = proj4(tmerc, wgs84, hut.longLat)
+        tracks.forEach(track => {
+          track.longLat = proj4(tmerc, wgs84, track.longLat)
         })
-        console.log('CoolStuff Huts', huts)
-        const action = addHuts(huts)
+        const action = addTracks(tracks)
         this.props.dispatch(action)
       })
   }
@@ -79,7 +78,8 @@ class CoolStuff extends Component {
 const mapStateToProps = state => {
   return {
     campsites: state.campsites,
-    huts: state.huts
+    huts: state.huts,
+    tracks: state.tracks
   }
 }
 
