@@ -7,6 +7,11 @@ import { addTracks } from '../actions/tracks'
 import { getCampsites } from './getCampsites'
 import { getHuts } from './getHuts'
 import { getTracks } from './getTracks'
+// import { endcity, daysaway } from './RoadieForm'
+
+// import beach from '../../data/beachData'
+// import bikeTrack from '../../data/bikeData'
+// import nationalPark from '../../data/nationalparks'
 
 class CoolStuff extends Component {
   state= {
@@ -38,14 +43,19 @@ class CoolStuff extends Component {
   render () {
     return (
       <>
-        <h2>Campsites</h2>
-        <h2>{this.props.campsites[0] && this.props.campsites[0].name}</h2>
+        <div className="coolcontainer">
+          <h2>Campsites</h2>
 
-        <h2>Huts</h2>
-        <h2>{this.props.huts[0] && this.props.huts[0].name}</h2>
+          <h3>
+            Name: {this.props.campsites[0] && this.props.campsites[0].name}
+          </h3>
 
-        <h2>Tracks</h2>
-        <h2>{this.props.tracks[0] && this.props.tracks[0].name}</h2>
+          <h2>Huts</h2>
+          <h2>{this.props.huts[0] && this.props.huts[0].name}</h2>
+
+          <h2>Tracks</h2>
+          <h2>{this.props.tracks[0] && this.props.tracks[0].name}</h2>
+        </div>
       </>
     )
   }
