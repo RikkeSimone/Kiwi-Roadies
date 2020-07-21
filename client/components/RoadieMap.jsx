@@ -2,11 +2,12 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import 'regenerator-runtime/runtime'
 
-import ReactMapGL, { NavigationControl } from 'react-map-gl'
+import ReactMapGL, { NavigationControl, Marker } from 'react-map-gl'
 import { _goToWellington, _goToAuckland, _goToRaglan, _goToThames, _goToWhangarei } from './goTo.js'
+// import { point } from 'leaflet'
 
 require('dotenv').config()
-
+// some inspiration https://greatescape.co/
 console.log('mapbox token', process.env.ACCESS_TOKEN)
 
 const MAPBOX_TOKEN = process.env.ACCESS_TOKEN
@@ -16,6 +17,15 @@ const navStyle = {
   top: 0,
   left: 0,
   padding: '10px'
+}
+
+// maker styling
+const style = {
+  padding: '10px',
+  color: '#fff',
+  cursor: 'pointer',
+  background: '#1978c8',
+  borderRadius: '6px'
 }
 
 class MainMap extends Component {
@@ -56,6 +66,19 @@ class MainMap extends Component {
           <div className="nav" style={navStyle}>
             <NavigationControl showCompass ={false} />
           </div>
+          {this.props.trips.map(trip => {
+            return (
+              <Marker
+                key={trip.id}
+                longitude={trip.longitude}
+                latitude={trip.latitude}
+              >
+                <div style={style}>👋</div>
+              </Marker>
+            )
+          })
+          }
+
         </ReactMapGL>
 
       </div>
@@ -63,4 +86,10 @@ class MainMap extends Component {
   }
 }
 
-export default connect()(MainMap)
+const mapStateToProps = state => {
+  return {
+    trips: state.dataSet.trips
+  }
+}
+
+export default connect(mapStateToProps)(MainMap)
