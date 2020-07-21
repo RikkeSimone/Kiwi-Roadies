@@ -26,11 +26,17 @@ class DirectionsMap extends Component {
       zoom: 4
     })
 
+    const start = this.props.roadieform[0][0].concat(', New Zealand')
+    const end = this.props.roadieform[0][1].concat(', New Zealand')
+
+    console.log('start', start)
+    console.log('end', end)
+
     map.on('load', function () {
       const directions = new MapBoxDirections({
         accessToken: mapboxgl.accessToken,
         unit: 'metric',
-        profile: 'mapbox/driving',
+        profile: 'mapbox/driving'
       })
 
       map.addControl(directions, 'top-left')
@@ -39,9 +45,8 @@ class DirectionsMap extends Component {
         .setLngLat([172.76205, -40.852931])
         .addTo(map)
 
-      directions.setOrigin('Auckland').setDestination('Wellington')
+      directions.setOrigin(start).setDestination(end)
     })
-    console.log('start', this.props.roadieform[0][0])
   }
 
   render () {
