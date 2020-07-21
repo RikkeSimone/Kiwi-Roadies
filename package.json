@@ -34,7 +34,10 @@
     "testPathIgnorePatterns": [
       "/node_modules/",
       "/tests/cypress/"
-    ]
+    ],
+    "transform": {
+      "^.+\\.jsx?$": "babel7-jest"
+    }
   },
   "dependencies": {
     "@math.gl/web-mercator": "^3.2.2",
