@@ -8,7 +8,6 @@ import InfoReq from './InfoReq'
 import Loading from './Loading'
 import Trip from './Trip'
 
-
 // import MainMap from './MainMap'
 // import CoolStuff from './CoolStuff'
 

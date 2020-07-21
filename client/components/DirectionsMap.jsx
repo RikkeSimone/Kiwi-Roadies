@@ -12,7 +12,6 @@ require('dotenv').config()
 mapboxgl.accessToken = process.env.ACCESS_TOKEN
 
 class DirectionsMap extends Component {
-
   componentDidMount () {
     const map = new mapboxgl.Map({
       container: this.mapWrapper,
@@ -44,7 +43,7 @@ class DirectionsMap extends Component {
           'National Park'
         )
 
-        const marker = new mapboxgl.Marker()
+        new mapboxgl.Marker()
           .setLngLat([park.long, park.lat])
           .setPopup(popup)
           .addTo(map)
@@ -56,7 +55,7 @@ class DirectionsMap extends Component {
           'Campsites'
         )
 
-        const marker = new mapboxgl.Marker()
+        new mapboxgl.Marker()
           .setLngLat([campsite.longlat[0], campsite.longlat[1]])
           .setPopup(popup)
           .addTo(map)
