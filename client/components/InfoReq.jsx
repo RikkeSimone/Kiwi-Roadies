@@ -3,7 +3,8 @@ import { connect } from 'react-redux'
 import Greeting from './Greeting'
 import RoadieForm from './RoadieForm'
 import MainMap from './MainMap'
-import DirectionsMap from './DirectionsMap'
+// import DirectionsMap from './DirectionsMap'
+import ScrollMap from './ScrollMap'
 
 class InfoReq extends React.Component {
   state = { isLoading: true }
@@ -20,7 +21,7 @@ class InfoReq extends React.Component {
         <Greeting />
         <RoadieForm />
         <MainMap />
-        <DirectionsMap/>
+        <ScrollMap/>
       </div>
     )
   }
