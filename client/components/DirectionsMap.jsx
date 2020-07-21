@@ -9,8 +9,6 @@ import '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions.css'
 
 require('dotenv').config()
 
-// console.log('mapbox token for Directions map', process.env.ACCESS_TOKEN)
-
 mapboxgl.accessToken = process.env.ACCESS_TOKEN
 
 class DirectionsMap extends Component {
@@ -29,8 +27,9 @@ class DirectionsMap extends Component {
     const start = this.props.roadieform[0][0].concat(', New Zealand')
     const end = this.props.roadieform[0][1].concat(', New Zealand')
 
-    console.log('start', start)
-    console.log('end', end)
+    const parks = this.props.nationalParks.nationalParks
+
+    console.log('national parks', parks)
 
     map.on('load', function () {
       const directions = new MapBoxDirections({
@@ -41,9 +40,12 @@ class DirectionsMap extends Component {
 
       map.addControl(directions, 'top-left')
 
-      const marker = new mapboxgl.Marker()
-        .setLngLat([172.76205, -40.852931])
-        .addTo(map)
+      parks.map(park => {
+        const marker = new mapboxgl.Marker()
+          .setLngLat([park.long, park.lat])
+          .addTo(map)
+      }
+      )
 
       directions.setOrigin(start).setDestination(end)
     })
@@ -62,7 +64,10 @@ class DirectionsMap extends Component {
 }
 
 const mapStateToProps = state => ({
-  roadieform: state.roadieform
+  roadieform: state.roadieform,
+  nationalParks: state.nationalParks,
+  campsites: state.campsites
+
 })
 
 export default connect(mapStateToProps)(DirectionsMap)
