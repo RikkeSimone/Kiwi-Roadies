@@ -1,0 +1,222 @@
+[33mcommit 4f4f8f062af161ab23936c3aec2d9b2f790f4e8c[m[33m ([m[1;36mHEAD -> [m[1;32m125-zoom-map-needs-to-automate-based-on-users-choice[m[33m)[m
+Author: Jonty Buchan <63333241+jonty-terrence@users.noreply.github.com>
+Date:   Tue Jul 21 19:38:25 2020 +1200
+
+    Only Auckland starting point is working
+
+[33mcommit ed23c80475411ea40ae093728d51b2a2b185a661[m
+Author: Jonty Buchan <63333241+jonty-terrence@users.noreply.github.com>
+Date:   Tue Jul 21 18:50:29 2020 +1200
+
+    Can jump between locations at city selection
+
+[33mcommit c76f984f89cc4ac60935a195739b3fb225ae8bc0[m[33m ([m[1;31morigin/dev[m[33m, [m[1;32mdev[m[33m)[m
+Author: Jonty Buchan <63333241+jonty-terrence@users.noreply.github.com>
+Date:   Tue Jul 21 16:15:12 2020 +1200
+
+    Correct components rendering
+
+[33mcommit d704bf081ad3b49024bf11f58bc7693a0f75d75a[m
+Author: Jonty Buchan <63333241+jonty-terrence@users.noreply.github.com>
+Date:   Tue Jul 21 15:15:14 2020 +1200
+
+    Update test
+
+[33mcommit bbaf8994f3f479eab84c37d3249d137022efaf67[m
+Merge: 5189513 03c7530
+Author: Jonty Buchan <63333241+jonty-terrence@users.noreply.github.com>
+Date:   Tue Jul 21 15:10:38 2020 +1200
+
+    Merge pull request #124 from matai-2020/adding-long/lat-to-campsites
+    
+    Adds longitude and latitude keys and values to campsite data
+
+[33mcommit 03c7530a928d4f7f04b435671dce5199d990513c[m[33m ([m[1;31morigin/adding-long/lat-to-campsites[m[33m)[m
+Merge: caf6e67 5189513
+Author: Jonty Buchan <63333241+jonty-terrence@users.noreply.github.com>
+Date:   Tue Jul 21 15:10:18 2020 +1200
+
+    Merge branch 'dev' into adding-long/lat-to-campsites
+
+[33mcommit 5189513cd41b7ca559af82f41770317b1e77849b[m
+Merge: f096d70 d7248f9
+Author: Jonty Buchan <63333241+jonty-terrence@users.noreply.github.com>
+Date:   Tue Jul 21 15:07:42 2020 +1200
+
+    Merge pull request #123 from matai-2020/104-roadie-scroll
+    
+    Create ScrollMap component
+
+[33mcommit f096d700c312c148a3f423a79bee1d75ec1bd0c7[m
+Merge: 13b8188 8db05c4
+Author: Jonty Buchan <63333241+jonty-terrence@users.noreply.github.com>
+Date:   Tue Jul 21 15:06:49 2020 +1200
+
+    Merge pull request #122 from matai-2020/78-ariana-branch
+    
+    78 ariana branch
+
+[33mcommit 8db05c4f51e26085e8cffb23ac2c2153f0f093f1[m[33m ([m[1;31morigin/78-ariana-branch[m[33m)[m
+Merge: 96157b3 13b8188
+Author: Jonty Buchan <63333241+jonty-terrence@users.noreply.github.com>
+Date:   Tue Jul 21 15:06:22 2020 +1200
+
+    Merge branch 'dev' into 78-ariana-branch
+
+[33mcommit 96157b3229a7a4660550a918a15a21ecd7f2f5f3[m
+Author: ariana-mirus <arianamirus@gmail.com>
+Date:   Tue Jul 21 15:02:22 2020 +1200
+
+    can now get small icons populating across the map
+
+[33mcommit caf6e675132c8122aab4eede4d519299a6ad140d[m[33m ([m[1;32madding-long/lat-to-campsites[m[33m)[m
+Author: Jonty Buchan <63333241+jonty-terrence@users.noreply.github.com>
+Date:   Tue Jul 21 14:49:35 2020 +1200
+
+    Adds longitude and latitude keys and values to campsite data
+
+[33mcommit d7248f9fa63e17cb65d51ae2998f1eeace8b558a[m[33m ([m[1;31morigin/104-roadie-scroll[m[33m)[m
+Author: Kim Fitter <26913197+kimnewzealand@users.noreply.github.com>
+Date:   Tue Jul 21 14:39:31 2020 +1200
+
+    Create ScrollMap component
+
+[33mcommit 13b818859e83e0f4f4cce6c460197b0b497418bc[m
+Merge: ffc230a ad8edad
+Author: Jonty Buchan <63333241+jonty-terrence@users.noreply.github.com>
+Date:   Tue Jul 21 14:14:25 2020 +1200
+
+    Merge pull request #121 from matai-2020/lat-long-conversion
+    
+    Adds conversion to long/lat capabilities
+
+[33mcommit ad8edadcce1a6f0986f7a81f76e38de2563e4926[m[33m ([m[1;31morigin/lat-long-conversion[m[33m)[m
+Merge: a72f564 ffc230a
+Author: Jonty Buchan <63333241+jonty-terrence@users.noreply.github.com>
+Date:   Tue Jul 21 14:10:42 2020 +1200
+
+    Merge branch 'dev' into lat-long-conversion
+
+[33mcommit a72f5648f401d3435a8ac7ba01d87d8334868136[m[33m ([m[1;32mlat-long-conversion[m[33m)[m
+Author: Jonty Buchan <63333241+jonty-terrence@users.noreply.github.com>
+Date:   Tue Jul 21 14:09:26 2020 +1200
+
+    Adds conversion to long/lat capabilities
+
+[33mcommit ffc230a80b485558ec4a5beb9e00d0e3c37531c1[m
+Merge: da5f34c 145eaf8
+Author: Jonty Buchan <63333241+jonty-terrence@users.noreply.github.com>
+Date:   Tue Jul 21 14:08:43 2020 +1200
+
+    Merge pull request #120 from matai-2020/8.1-draw-route
+    
+    8.1 draw route
+
+[33mcommit da5f34ca5596beddabba75a55a05bdf50708c3a8[m
+Merge: ddd9c4a 29630ca
+Author: Jonty Buchan <63333241+jonty-terrence@users.noreply.github.com>
+Date:   Tue Jul 21 14:08:09 2020 +1200
+
+    Merge pull request #119 from matai-2020/118-images-bike-tracks
+    
+    118 images bike tracks
+
+[33mcommit 45d49ae9419a3e5a97d6ab88b28ca70f10e70e1b[m
+Author: ariana-mirus <arianamirus@gmail.com>
+Date:   Tue Jul 21 12:22:32 2020 +1200
+
+    marker component made and added, currently commented out until fixed
+
+[33mcommit 2859ecb49d722dce4256f0cf35dad8d9764a2408[m
+Author: ariana-mirus <arianamirus@gmail.com>
+Date:   Tue Jul 21 12:21:24 2020 +1200
+
+    updated trip data to individual locations with lat and long
+
+[33mcommit 29630ca7ca2798a6fc689e1c80d59e44e03b8313[m[33m ([m[1;31morigin/118-images-bike-tracks[m[33m)[m
+Author: Rikke Simone <33711718+RikkeSimone@users.noreply.github.com>
+Date:   Tue Jul 21 12:16:24 2020 +1200
+
+    images has been uploaded for our biketrails
+
+[33mcommit 1fa24fc27f5ddbe9810692b48719ec5ddfb08c70[m[33m ([m[1;31morigin/beach-data-file[m[33m)[m
+Author: Rikke Simone <33711718+RikkeSimone@users.noreply.github.com>
+Date:   Tue Jul 21 11:44:11 2020 +1200
+
+    beach data complete
+
+[33mcommit 145eaf8c47e2380716b282c73f8520ac92462e8c[m[33m ([m[1;31morigin/8.1-draw-route[m[33m)[m
+Author: Kim Fitter <kimfitter@yahoo.com>
+Date:   Tue Jul 21 10:36:51 2020 +1200
+
+    Gets the driving directions component working
+
+[33mcommit 42d8d8ad34f9c5cd204544eb7ddad454d315fa87[m
+Author: Kim Fitter <kimfitter@yahoo.com>
+Date:   Mon Jul 20 21:43:21 2020 +1200
+
+    Add directions and geocoder to DirectionsMap test component
+
+[33mcommit bd7e3c18f87a61dfff970d7c9acfbecfb6107eb5[m
+Author: Kim Fitter <kimfitter@yahoo.com>
+Date:   Mon Jul 20 20:34:55 2020 +1200
+
+    Add DirectionsMap test component
+
+[33mcommit ddd9c4a16c300225f468b662866540b8823c063e[m
+Author: Jonty Buchan <63333241+jonty-terrence@users.noreply.github.com>
+Date:   Mon Jul 20 17:40:44 2020 +1200
+
+    Fix linting errors
+
+[33mcommit d8d1e38408b735ed3445228edb4c830aa456f773[m
+Author: Jonty Buchan <63333241+jonty-terrence@users.noreply.github.com>
+Date:   Mon Jul 20 17:23:21 2020 +1200
+
+    Fix reducer
+
+[33mcommit aafea8db54d2d07da7ac450948a7328d62adf3a9[m
+Author: Jonty Buchan <63333241+jonty-terrence@users.noreply.github.com>
+Date:   Mon Jul 20 17:12:28 2020 +1200
+
+    Delete Cypress video
+
+[33mcommit ca0ac65c2329834fecb8ad6eeac3cde5ab505c33[m
+Merge: fd0fd0a f4edf65
+Author: Jonty Buchan <63333241+jonty-terrence@users.noreply.github.com>
+Date:   Mon Jul 20 16:56:15 2020 +1200
+
+    Merge pull request #112 from matai-2020/nationa-parks-data-file
+    
+    Nationa parks data file
+
+[33mcommit f4edf654b8a6332cc6358eb2ce8ac7116dba8f9f[m[33m ([m[1;31morigin/nationa-parks-data-file[m[33m)[m
+Merge: 7c86a91 fd0fd0a
+Author: Jonty Buchan <63333241+jonty-terrence@users.noreply.github.com>
+Date:   Mon Jul 20 16:56:07 2020 +1200
+
+    Merge branch 'dev' into nationa-parks-data-file
+
+[33mcommit fd0fd0aabd34c69b284b6f91e368c86a878b317e[m
+Author: Jonty Buchan <63333241+jonty-terrence@users.noreply.github.com>
+Date:   Mon Jul 20 16:01:43 2020 +1200
+
+    Conditionally renders static map on inforeq component
+
+[33mcommit eb549a9d8ae5cdc8b76b27323b32e347c21168c6[m
+Author: Jonty Buchan <63333241+jonty-terrence@users.noreply.github.com>
+Date:   Mon Jul 20 15:55:40 2020 +1200
+
+    Removes unnamed variables
+
+[33mcommit b11d4ade44d40e4f5e1406a390cb1f4f2aba3e1c[m
+Merge: c1c6fad 286c193
+Author: Jonty Buchan <63333241+jonty-terrence@users.noreply.github.com>
+Date:   Mon Jul 20 15:53:49 2020 +1200
+
+    Merge pull request #110 from matai-2020/666-css-repairs
+    
+    666 css repairs
+
+[33mcommit 286c193e41a5207663481ff3a203b7bd280adb09[m[33m ([m[1;31morigin/666-css-repairs[m[33m)[m
+Merge: 67365dd 

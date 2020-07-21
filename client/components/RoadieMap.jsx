@@ -40,6 +40,12 @@ class MainMap extends Component {
     }
   }
 
+  componentDidMount () {
+    this.setState({
+      isLoading: false
+    })
+  }
+
   updateView =(viewport) => {
     this.setState({ viewport })
   }
