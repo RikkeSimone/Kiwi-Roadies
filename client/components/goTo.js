@@ -1,6 +1,25 @@
 import * as d3 from 'd3'
 import { FlyToInterpolator } from 'react-map-gl'
 
+export const _goToCity = (viewport, updateView, city) => {
+  let lat
+  let long
+  if (city === 'Auckland') {
+    lat = -36.8485
+    long = 174.7633
+  }
+  const view = {
+    ...viewport,
+    latitude: -36.8485,
+    longitude: 174.7633,
+    zoom: 14,
+    transitionDuration: 5000,
+    transitionInterpolator: new FlyToInterpolator(),
+    transitionEasing: d3.easeCubic
+  }
+  updateView(view)
+}
+
 export const _goToWellington = (viewport, updateView) => {
   const view = {
     ...viewport,

@@ -1,7 +1,13 @@
+import { _goToCity } from '../components/goTo'
+import * as d3 from 'd3'
+import { FlyToInterpolator } from 'react-map-gl'
+
 export const ADD_NAME = 'ADD_NAME'
 export const RECEIVED_INFO = 'RECEIVED_INFO'
 export const ADD_TRIP = 'ADD_TRIP'
 export const TURN_OFF_WAIT = 'TURN_OFF_WAIT'
+export const ADD_START_CITY = 'ADD_START_CITY'
+export const ADD_CITY_VIEWPORT = 'ADD_CITY_VIEWPORT'
 
 export const addName = (name) => {
   return {
@@ -34,6 +40,33 @@ export function acquireName (name) {
     setTimeout(() => {
       dispatch(turnOffWait())
     }, 3000)
+  }
+}
+
+export function addCityViewPort (viewport) {
+  return {
+    type: 'ADD_CITY_VIEWPORT',
+    viewport: viewport
+  }
+}
+
+export function grabStartCity (city, ogViewport) {
+  let cityViewPort
+  if (city === 'Auckland') {
+    cityViewPort = {
+      viewport: {
+        ...ogViewport,
+        latitude: -36.8485,
+        longitude: 174.7633,
+        zoom: 14,
+        transitionDuration: 5000,
+        transitionInterpolator: new FlyToInterpolator(),
+        transitionEasing: d3.easeCubic
+      }
+    }
+  }
+  return (dispatch) => {
+    dispatch(addCityViewPort(cityViewPort))
   }
 }
 

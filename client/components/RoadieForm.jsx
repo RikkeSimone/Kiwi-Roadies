@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { connect } from 'react-redux'
 
 // our actions
-import { acquireTripDetails } from '../actions'
+import { acquireTripDetails, grabStartCity } from '../actions'
 
 // our buttons
 import DropdownButton from 'react-bootstrap/DropdownButton'
@@ -11,6 +11,7 @@ import Dropdown from 'react-bootstrap/Dropdown'
 function RoadieForm (props) {
   const [startcity, setStart] = useState('')
   const handleStart = (e) => {
+    props.dispatch(grabStartCity(e, props.viewport))
     console.log(e)
     setStart(e)
   }
@@ -90,7 +91,8 @@ function RoadieForm (props) {
 const mapStateToProps = state => {
   return {
     roadie: state.roadie,
-    name: state.name
+    name: state.name,
+    viewport: state.city.viewport
   }
 }
 

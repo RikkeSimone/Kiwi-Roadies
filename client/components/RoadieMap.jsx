@@ -28,7 +28,7 @@ const style = {
 }
 
 class MainMap extends Component {
-  state= {
+  state = {
     viewport: {
       latitude: -40.852931,
       longitude: 172.76205,
@@ -41,27 +41,26 @@ class MainMap extends Component {
   }
 
   updateView =(viewport) => {
-    this.setState({ viewport })
+    this.setState(this.props.viewport)
   }
 
   render () {
-    const { viewport } = this.state
+    const { viewport } = this.props.viewport
     return (
       <>
         { this.props.name &&
-      <div >
+      <div>
         <button onClick={() => _goToAuckland(viewport, this.updateView)}>Go to Auckland</button>
         <button onClick={() => _goToWellington(viewport, this.updateView)}>Go to Wellington</button>
         <button onClick={() => _goToRaglan(viewport, this.updateView)}>Go to Raglan</button>
         <button onClick={() => _goToThames(viewport, this.updateView)}>Go to Thames</button>
         <button onClick={() => _goToWhangarei(viewport, this.updateView)}>Go to Whangarei</button>
-
         <ReactMapGL
-          {...this.state.viewport}
+          {...this.props.viewport}
           width="60vw"
           height="60vh"
           mapStyle="mapbox://styles/mapbox/light-v10"
-          onViewportChange={viewport => this.setState({ viewport })}
+          onViewportChange={viewport => this.props.viewport}
           mapboxApiAccessToken={MAPBOX_TOKEN}
         >
           <div className="nav" style={navStyle}>
@@ -92,7 +91,9 @@ class MainMap extends Component {
 const mapStateToProps = state => {
   return {
     trips: state.dataSet.trips,
-    name: state.name
+    name: state.name,
+    city: state.city,
+    viewport: state.city.viewport
   }
 }
 
