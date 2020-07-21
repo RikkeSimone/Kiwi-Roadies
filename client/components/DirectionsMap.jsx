@@ -26,18 +26,21 @@ class DirectionsMap extends Component {
       zoom: 4
     })
 
-    const directions = new MapBoxDirections({
-      accessToken: mapboxgl.accessToken,
-      unit: 'metric',
-      profile: 'mapbox/driving'
+    map.on('load', function () {
+      const directions = new MapBoxDirections({
+        accessToken: mapboxgl.accessToken,
+        unit: 'metric',
+        profile: 'mapbox/driving',
+      })
+
+      map.addControl(directions, 'top-left')
+
+      const marker = new mapboxgl.Marker()
+        .setLngLat([172.76205, -40.852931])
+        .addTo(map)
+
+      directions.setOrigin('Auckland').setDestination('Wellington')
     })
-
-    map.addControl(directions, 'top-right')
-
-    const marker = new mapboxgl.Marker()
-      .setLngLat([172.76205, -40.852931])
-      .addTo(map)
-
     console.log('start', this.props.roadieform[0][0])
   }
 
