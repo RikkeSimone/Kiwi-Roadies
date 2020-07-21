@@ -33,6 +33,10 @@ class DirectionsMap extends Component {
     })
 
     map.addControl(directions, 'top-right')
+
+    const marker = new mapboxgl.Marker()
+      .setLngLat([172.76205, -40.852931])
+      .addTo(map)
   }
 
   render () {
