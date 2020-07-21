@@ -1,5 +1,5 @@
 export default {
-  trips: [
+  bikeTracks: [
     {
       id: 1,
       name: 'Twin coast cycle trail',
@@ -11,7 +11,8 @@ export default {
       startlong: 173.816210,
       km: 87,
       days: [1, 2],
-      url: 'https://www.twincoastcycletrail.kiwi.nz/'
+      url: 'https://www.twincoastcycletrail.kiwi.nz/',
+      image: '../images/biketwincoast.jpg'
     },
     {
       id: 2,
@@ -24,7 +25,8 @@ export default {
       startlong: 175.374620,
       km: 160,
       days: [1, 2, 3, 4],
-      url: 'https://haurakirailtrail.co.nz/'
+      url: 'https://haurakirailtrail.co.nz/',
+      image: '../images/bikehaurakirail.jpg'
     },
     {
       id: 3,
@@ -37,7 +39,8 @@ export default {
       startlong: 175.661480,
       km: 104,
       days: [1, 2, 3, 4],
-      url: 'https://www.waikatorivertrails.co.nz/'
+      url: 'https://www.waikatorivertrails.co.nz/',
+      image: '../images/bikewaikatoriver.jpg'
     },
     {
       id: 4,
@@ -50,7 +53,8 @@ export default {
       startlong: 177.287130,
       km: 121,
       days: [1, 2, 3],
-      url: 'https://motutrails.co.nz/'
+      url: 'https://motutrails.co.nz/',
+      image: '../images/bikemotutrail.jpg'
     },
     {
       id: 5,
@@ -63,7 +67,8 @@ export default {
       startlong: 176.251430,
       km: 48,
       days: [1, 2],
-      url: 'https://www.newzealand.com/int/feature/te-ara-ahi-trail/'
+      url: 'https://www.newzealand.com/int/feature/te-ara-ahi-trail/',
+      image: '../images/biketearaahi.jpg'
     },
     {
       id: 6,
@@ -76,7 +81,8 @@ export default {
       startlong: 176.897229,
       km: 200,
       days: [1, 2, 3, 4],
-      url: 'https://www.hbtrails.nz/'
+      url: 'https://www.hbtrails.nz/',
+      image: '../images/bikehawkesbaytrails.jpg'
     },
     {
       id: 7,
@@ -89,7 +95,8 @@ export default {
       startlong: 175.6841243,
       km: 88,
       days: [1, 2, 3],
-      url: 'https://www.lovetaupo.com/en/discover/highlights/great-lake-trails/'
+      url: 'https://www.lovetaupo.com/en/discover/highlights/great-lake-trails/',
+      image: '../images/bikegreatlake.jpg'
     },
     {
       id: 8,
@@ -102,7 +109,8 @@ export default {
       startlong: 175.4777239,
       km: 85,
       days: [2],
-      url: 'https://www.timbertrail.nz/'
+      url: 'https://www.timbertrail.nz/',
+      image: '../images/biketimbertrail.jpg'
     },
     {
       id: 9,
@@ -115,7 +123,8 @@ export default {
       startlong: 175.4148224,
       km: 231,
       days: [1, 2, 3, 4, 5, 6],
-      url: 'https://www.mountainstosea.nz/'
+      url: 'https://www.mountainstosea.nz/',
+      image: '../images/bikemountainstosea.jpg'
     },
     {
       id: 10,
@@ -128,7 +137,8 @@ export default {
       startlong: 174.8865234,
       km: 114,
       days: [2, 3],
-      url: 'https://wairarapanz.com/see-and-do/remutaka-cycle-trail'
+      url: 'https://wairarapanz.com/see-and-do/remutaka-cycle-trail',
+      image: '../images/bikeremutaka.jpg'
     }
   ]
 }
