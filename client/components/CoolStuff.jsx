@@ -20,8 +20,14 @@ class CoolStuff extends Component {
     request.get(campURL)
       .then(res => {
         const campsites = res.body
-        const firstUTM = res.body[0]
-        console.log('Long Lat:', proj4(tmerc, wgs84, [firstUTM.x, firstUTM.y]))
+        // console.log('Long Lat:', proj4(tmerc, wgs84, [firstUTM.x, firstUTM.y]))
+        campsites.forEach(campsite => {
+          campsite.longLat = [campsite.x, campsite.y]
+        })
+        campsites.forEach(campsite => {
+          campsite.longLat = proj4(tmerc, wgs84, campsite.longLat)
+        })
+        console.log(campsites)
         const action = addCampsites(campsites)
         this.props.dispatch(action)
       })

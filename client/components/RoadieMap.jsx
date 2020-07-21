@@ -7,7 +7,7 @@ import { _goToWellington, _goToAuckland, _goToRaglan, _goToThames, _goToWhangare
 
 require('dotenv').config()
 
-console.log('mapbox token', process.env.ACCESS_TOKEN)
+// console.log('mapbox token', process.env.ACCESS_TOKEN)
 
 const MAPBOX_TOKEN = process.env.ACCESS_TOKEN
 
