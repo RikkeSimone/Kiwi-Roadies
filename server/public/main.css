@@ -381,3 +381,18 @@ cursor: pointer;
   margin: 10%;
 }
 
+.mapWrapper {
+  width:100vw;
+  height:100vh;
+}
+
+#geocoder {
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+  top: 20px;
+  }
+
+.mapboxgl-ctrl-geocoder {
+  min-width: 100%;
+  }
