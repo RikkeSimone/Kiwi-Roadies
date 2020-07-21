@@ -26,9 +26,6 @@ const SIZE = 20
 
 const MainMap = (props) => {
   const { roadieform, dataSet, campsites } = props
-  console.log('the dataSet is for the trip planning is ', dataSet)
-  console.log('the roadieform is ', roadieform)
-  console.log('the campsites are ', campsites)
 
   const viewport = {
     latitude: -40.852931,

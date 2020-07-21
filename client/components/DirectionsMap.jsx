@@ -9,7 +9,7 @@ import '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions.css'
 
 require('dotenv').config()
 
-console.log('mapbox token for Directions map', process.env.ACCESS_TOKEN)
+// console.log('mapbox token for Directions map', process.env.ACCESS_TOKEN)
 
 mapboxgl.accessToken = process.env.ACCESS_TOKEN
 
