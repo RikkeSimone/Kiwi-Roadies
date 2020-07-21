@@ -8,6 +8,7 @@ import waiting from './waiting'
 import roadieform from './roadieform'
 import nationalParks from './nationalParks'
 import tripstatus from './tripstatus'
+import tracks from './tracks'
 
 export default combineReducers({
   dataSet,
@@ -17,5 +18,6 @@ export default combineReducers({
   nationalParks,
   campsites,
   waiting,
-  tripstatus
+  tripstatus,
+  tracks
 })
