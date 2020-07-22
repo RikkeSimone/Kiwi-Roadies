@@ -90,7 +90,10 @@ function RoadieForm (props) {
 const mapStateToProps = state => {
   return {
     roadie: state.roadie,
-    name: state.name
+    name: state.name,
+    startcity: state.startcity,
+    endcity: state.endcity,
+    daysaway: state.daysaway
   }
 }
 
