@@ -45,7 +45,9 @@ class DirectionsMap extends Component {
     const { nationalParks } = this.props
 
     nationalParks.nationalParks.map((park) => {
-      var popup = new mapboxgl.Popup({ offset: 25 }).setText(
+      var elMarker = document.createElement('div')
+      elMarker.id = 'park'
+      var popup = new mapboxgl.Popup({ closeOnClick: false }).setText(
         name
       )
 
@@ -60,7 +62,9 @@ class DirectionsMap extends Component {
     const { campsites } = this.props
 
     campsites.map((campsite) => {
-      var popup = new mapboxgl.Popup({ offset: 25 }).setText(
+      var elMarker = document.createElement('div')
+      elMarker.id = 'campsite'
+      var popup = new mapboxgl.Popup({ closeOnClick: false }).setText(
         campsite.name
       )
 
@@ -75,7 +79,9 @@ class DirectionsMap extends Component {
     const { huts } = this.props
 
     huts.map((hut) => {
-      var popup = new mapboxgl.Popup({ offset: 25 }).setText(
+      var elMarker = document.createElement('div')
+      elMarker.id = 'hut'
+      var popup = new mapboxgl.Popup({ closeOnClick: false }).setText(
         hut.name
       )
 
@@ -88,7 +94,9 @@ class DirectionsMap extends Component {
 
   addBeaches = () => {
     beaches.map((beach) => {
-      var popup = new mapboxgl.Popup({ offset: 25 }).setText(
+      var elMarker = document.createElement('div')
+      elMarker.id = 'beach'
+      var popup = new mapboxgl.Popup({ closeOnClick: false }).setText(
         beach.name
       )
 
@@ -101,7 +109,6 @@ class DirectionsMap extends Component {
 
   addTracks = () => {
     bikeTracks.map((track) => {
-      // create DOM element for the marker
       var elMarker = document.createElement('div')
       elMarker.id = 'bike'
       var popup = new mapboxgl.Popup({ closeOnClick: false }).setText(
