@@ -41,16 +41,15 @@ https://kiwiroadies.herokuapp.com/
 
 ### Stretch Goals 
 
-* Map icons of bike trails, camp sites, possibly trails and huts. This will show based on zoom focus
-* Send/share your trip with others - screen shot, PDF, email, Export it
-* Directions on the map
-* Scrolling on the map triggers location change, with that has associated information such as links
-* Have more activity preferences available such as beaches - may require additonal API
-* Tag pictures of your trip to sites
-* Home by a certain date/time (this factors into your roadie as a whole)
-* Sign-in & Authorisation
-* Radio Jingle
-* Trains
+-[x] Map icons of bike trails, camp sites,national parks, beaches, and huts. This will show based on zoom focus
+-[] Send/share your trip with others - screen shot, PDF, email, Export it
+-[x] Directions on the map
+-[] Scrolling on the map triggers location change, with that has associated information such as links
+-[] Tag pictures of your trip to sites
+-[] Home by a certain date/time (this factors into your roadie as a whole)
+-[] Sign-in & Authorisation
+-[] Radio Jingle
+-[] Trains
 
 ## Made with ❤️ by
 
