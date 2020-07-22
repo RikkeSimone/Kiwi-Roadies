@@ -42,7 +42,7 @@ class DirectionsMap extends Component {
 
     nationalParks.nationalParks.map((park) => {
       var popup = new mapboxgl.Popup({ offset: 25 }).setText(
-        'National Park'
+        name
       )
 
       new mapboxgl.Marker()
@@ -57,7 +57,7 @@ class DirectionsMap extends Component {
 
     campsites.map((campsite) => {
       var popup = new mapboxgl.Popup({ offset: 25 }).setText(
-        'Campsites'
+        campsite.name
       )
 
       new mapboxgl.Marker()
@@ -67,11 +67,26 @@ class DirectionsMap extends Component {
     })
   }
 
+  addHuts = () => {
+    const { huts } = this.props
+
+    huts.map((hut) => {
+      var popup = new mapboxgl.Popup({ offset: 25 }).setText(
+        hut.name
+      )
+
+      new mapboxgl.Marker()
+        .setLngLat([hut.longLat[0], hut.longLat[1]])
+        .setPopup(popup)
+        .addTo(this.map)
+    })
+  }
+
   render () {
     if (this.map) {
       this.addNationalParks()
       this.addCampsites()
-      // this.addHuts()
+      this.addHuts()
     }
 
     return (
