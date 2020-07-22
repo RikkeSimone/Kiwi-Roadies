@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading renders driving kiwi 1`] = `
+<DocumentFragment>
+  <div
+    class="loading-screen-image"
+  >
+    <img
+      class="kiwi-car"
+      src="./graphics/loadingscreen-revisioned.png"
+    />
+  </div>
+</DocumentFragment>
+`;

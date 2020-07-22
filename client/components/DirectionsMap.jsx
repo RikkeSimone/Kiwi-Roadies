@@ -134,12 +134,9 @@ class DirectionsMap extends Component {
     return (
       <>
         <div className="coolmap">
-          <p>Directions Map</p>
           <div ref={el => (this.mapWrapper = el)}
             className ="mapWrapper"/>
         </div>
-        <div ref={el => (this.mapWrapper = el)}
-          className ="mapWrapper"/>
       </>
     )
   }
