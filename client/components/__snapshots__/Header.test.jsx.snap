@@ -26,10 +26,14 @@ exports[`Header contains a logo 1`] = `
         </ul>
       </div>
     </nav>
-    <img
-      class="logo"
-      src="./graphics/kiwiroadieslogo-no-road.png"
-    />
+    <a
+      href="/"
+    >
+      <img
+        class="logo"
+        src="./graphics/kiwiroadieslogo-no-road.png"
+      />
+    </a>
     <img
       class="github-gato"
       src="./github-gato.png"

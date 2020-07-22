@@ -16,7 +16,9 @@ function Header () {
           </ul>
         </div>
       </nav>
-      <img className="logo" src="./graphics/kiwiroadieslogo-no-road.png"/>
+      <a href="/">
+        <img className="logo" src="./graphics/kiwiroadieslogo-no-road.png"/>
+      </a>
       <img className="github-gato" src="./github-gato.png"/>
     </div>
   )

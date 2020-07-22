@@ -7,6 +7,10 @@ import 'mapbox-gl/dist/mapbox-gl.css'
 import MapBoxDirections from '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions'
 import '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions.css'
 
+// our data
+import beaches from '../../data/beachData'
+import bikeTracks from '../../data/bikeData'
+
 require('dotenv').config()
 
 mapboxgl.accessToken = process.env.ACCESS_TOKEN
@@ -41,11 +45,13 @@ class DirectionsMap extends Component {
     const { nationalParks } = this.props
 
     nationalParks.nationalParks.map((park) => {
-      var popup = new mapboxgl.Popup({ offset: 25 }).setText(
-        name
+      var elMarkerPark = document.createElement('div')
+      elMarkerPark.id = 'park'
+      var popup = new mapboxgl.Popup({ closeOnClick: false }).setText(
+        park.name
       )
 
-      new mapboxgl.Marker()
+      new mapboxgl.Marker(elMarkerPark)
         .setLngLat([park.long, park.lat])
         .setPopup(popup)
         .addTo(this.map)
@@ -56,11 +62,13 @@ class DirectionsMap extends Component {
     const { campsites } = this.props
 
     campsites.map((campsite) => {
-      var popup = new mapboxgl.Popup({ offset: 25 }).setText(
+      var elMarkerCamp = document.createElement('div')
+      elMarkerCamp.id = 'campsite'
+      var popup = new mapboxgl.Popup({ closeOnClick: false }).setText(
         campsite.name
       )
 
-      new mapboxgl.Marker()
+      new mapboxgl.Marker(elMarkerCamp)
         .setLngLat([campsite.longLat[0], campsite.longLat[1]])
         .setPopup(popup)
         .addTo(this.map)
@@ -71,12 +79,44 @@ class DirectionsMap extends Component {
     const { huts } = this.props
 
     huts.map((hut) => {
-      var popup = new mapboxgl.Popup({ offset: 25 }).setText(
+      var elMarkerHut = document.createElement('div')
+      elMarkerHut.id = 'hut'
+      var popup = new mapboxgl.Popup({ closeOnClick: false }).setText(
         hut.name
       )
 
-      new mapboxgl.Marker()
+      new mapboxgl.Marker(elMarkerHut)
         .setLngLat([hut.longLat[0], hut.longLat[1]])
+        .setPopup(popup)
+        .addTo(this.map)
+    })
+  }
+
+  addBeaches = () => {
+    beaches.map((beach) => {
+      var elMarkerBeach = document.createElement('div')
+      elMarkerBeach.id = 'beach'
+      var popup = new mapboxgl.Popup({ closeOnClick: false }).setText(
+        beach.name
+      )
+
+      new mapboxgl.Marker(elMarkerBeach)
+        .setLngLat([beach.startlong, beach.startlat])
+        .setPopup(popup)
+        .addTo(this.map)
+    })
+  }
+
+  addTracks = () => {
+    bikeTracks.map((track) => {
+      var elMarkerBike = document.createElement('div')
+      elMarkerBike.id = 'bike'
+      var popup = new mapboxgl.Popup({ closeOnClick: false }).setText(
+        track.name
+      )
+
+      new mapboxgl.Marker(elMarkerBike)
+        .setLngLat([track.startlong, track.startlat])
         .setPopup(popup)
         .addTo(this.map)
     })
@@ -87,6 +127,8 @@ class DirectionsMap extends Component {
       this.addNationalParks()
       this.addCampsites()
       this.addHuts()
+      this.addBeaches()
+      this.addTracks()
     }
 
     return (

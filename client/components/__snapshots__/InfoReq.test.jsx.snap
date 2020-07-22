@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InfoReq renders the expected items 1`] = `<DocumentFragment />`;
