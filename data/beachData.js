@@ -25,7 +25,7 @@ export default [
   },
   {
     id: 3,
-    name: 'New Chum&quot;s Beach',
+    name: 'New Chums Beach',
     region: 'Waikato',
     cities: ['Whitianga', 'Thames', 'Hahei', 'Tairua', 'Whenuakite', 'Whangamata', 'Onemana', 'Whangapoua', 'Coromandel'],
     start: '170 Te Punga Road, Whangapoua 3582',

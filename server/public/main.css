@@ -382,7 +382,6 @@ cursor: pointer;
 }
 
 .mapWrapper {
-  display: flexbox;
   width:50vw;
   height:50vh;
 }
@@ -397,3 +396,29 @@ cursor: pointer;
 .mapboxgl-ctrl-geocoder {
   min-width: 100%;
   }
+
+  .beachimage {
+    width: 250px;
+    height: 250px;
+  }
+
+  .bikeimage {
+    width: 250px;
+    height: 250px;
+  }
+
+  .coolcontainer {
+    font-size: 14px;
+    display: flexbox;
+    max-width: 350px;
+    max-height: 350px;
+    overflow: scroll;
+    padding: 2%;
+  }
+
+  .coolmap {
+    display: flexbox;
+    max-width: 150px;
+    max-height: 150px;
+  }
+

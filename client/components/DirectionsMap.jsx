@@ -38,9 +38,11 @@ class DirectionsMap extends Component {
   render () {
     return (
       <>
-        <p>Directions Map</p>
-        <div ref={el => (this.mapWrapper = el)}
-          className ="mapWrapper"/>
+        <div className="coolmap">
+          <p>Directions Map</p>
+          <div ref={el => (this.mapWrapper = el)}
+            className ="mapWrapper"/>
+        </div>
       </>
     )
   }
