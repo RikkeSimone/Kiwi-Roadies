@@ -80,10 +80,11 @@ class CoolStuff extends Component {
             }
           })}
 
-          <p>On the map we have flagged some of the best Kiwi campsites, tracks and huts for you!
+          <div className="flagboxtext">
+            <p>On the map we have flagged some of the best Kiwi campsites, tracks and huts for you!
             please visit <a rel="noreferrer noopener" target="_blank" href="https://www.doc.govt.nz/">Department of Conservation</a> for booking or more information.
-          </p>
-
+            </p>
+          </div>
         </div>
       </>
     )

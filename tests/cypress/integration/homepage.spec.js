@@ -23,6 +23,9 @@ describe('The Home Page', () => {
     cy.get('#name')
       .type(name)
     cy.wait(5000) // wait 5 seconds
+  })
+
+  it('Includes an arrow button', () => {
     cy.get('.fa-arrow-circle-right')
       .click()
   })
@@ -46,20 +49,14 @@ describe('The Trip Planner Page', () => {
   it('Includes a roadie start drop down', () => {
     cy.get('.roadiestart')
       .contains('Choose Roadie Start')
-    // Add test to select start
-    // cy.get('h3')
-    //   .contains('YOUR ROADIE WILL START IN ' + start.toUpperCase)
   })
 
   it('Includes a roadie end drop down', () => {
     cy.get('.roadieend')
       .contains('Choose Roadie End')
-    // Add test to select end
-    // cy.get('h3')
-    //   .contains('YOUR ROADIE WILL END IN ' + end.toUpperCase)
   })
 
-  it('Includes an arrow button to button', () => {
+  it('Includes an arrow button', () => {
     cy.get('.submitbutton')
     cy.wait(5000) // wait 5 seconds
     cy.get('.fa-arrow-circle-right')
@@ -76,23 +73,17 @@ describe('The Second Loading Screen', () => {
   })
 })
 
-describe('The Final Trip screen loads with a map with activities and autompopulated driving directions', () => {
+describe('The Final Trip screen loads with header logo and background image and text', () => {
   it('Successfully loads the logo and loading screen image', () => {
     cy.get('img')
       .should('have.class', 'logo')
     cy.get('img')
       .should('have.class', 'kiwi-car')
+    cy.get('h3')
+      .contains('Awesome choice!')
+  })
+  it('Successfully loads the map with driving directions', () => {
+    cy.get('canvas')
+      .should('have.class', 'mapboxgl-canvas')
   })
 })
-
-// describe('Request', () => {
-//   it('displays random users from API', () => {
-//     cy.request('https://jsonplaceholder.typicode.com/users')
-//       .should((response) => {
-//         expect(response.status).to.eq(200)
-//         expect(response.body).to.have.length(10)
-//         expect(response).to.have.property('headers')
-//         expect(response).to.have.property('duration')
-//       })
-//   })
-// })
