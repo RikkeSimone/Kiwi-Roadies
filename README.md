@@ -34,22 +34,22 @@ https://kiwiroadies.herokuapp.com/
 
 ### MVP
 
-* Pre-draw 3 kiwi destinations on a map
-* Build a form that generates your road trip based on your start location, end location, number of days  
-* API's for the New Zealand base map - flying cameras, DOC 
-* App animates a name and travel journey across the client side
+- [x] Pre-draw 3 kiwi destinations on a map
+- [x] Build a form that generates your road trip based on your start location, end location, number of days  
+- [x] API's for the New Zealand base map - flying cameras, DOC 
+- [x] App animates a name and travel journey across the client side
 
 ### Stretch Goals 
 
--[x] Map icons of bike trails, camp sites,national parks, beaches, and huts. This will show based on zoom focus
--[] Send/share your trip with others - screen shot, PDF, email, Export it
--[x] Directions on the map
--[] Scrolling on the map triggers location change, with that has associated information such as links
--[] Tag pictures of your trip to sites
--[] Home by a certain date/time (this factors into your roadie as a whole)
--[] Sign-in & Authorisation
--[] Radio Jingle
--[] Trains
+- [x] Map icons of bike trails, camp sites,national parks, beaches, and huts. This will show based on zoom focus
+- [ ] Send/share your trip with others - screen shot, PDF, email, Export it
+- [x] Directions on the map
+- [ ] Scrolling on the map triggers location change, with that has associated information such as links
+- [ ] Tag pictures of your trip to sites
+- [ ] Home by a certain date/time (this factors into your roadie as a whole)
+- [ ] Sign-in & Authorisation
+- [ ] Radio Jingle
+- [ ] Trains
 
 ## Made with ❤️ by
 
