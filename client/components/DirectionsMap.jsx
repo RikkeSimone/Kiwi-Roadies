@@ -55,7 +55,7 @@ class DirectionsMap extends Component {
           'Campsites'
         )
 
-        const marker = new mapboxgl.Marker()
+        new mapboxgl.Marker()
           .setLngLat([campsite.longlat[0], campsite.longlat[1]])
           .setPopup(popup)
           .addTo(map)
