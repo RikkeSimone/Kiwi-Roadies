@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 
 // our actions
 import { addCampsites } from '../actions/campsites'
+// import proj4 from 'proj4'
 import { addHuts } from '../actions/huts'
 import { addTracks } from '../actions/tracks'
 

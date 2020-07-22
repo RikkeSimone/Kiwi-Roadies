@@ -76,7 +76,6 @@ function RoadieForm (props) {
         <h3>Your roadie will be {daysaway}</h3>
       </div>
       <div className='submitbutton'>
-        <h3>...aaaand pop it through!</h3>
         <span className="fas fa-arrow-circle-right" onClick={() => props.dispatch(acquireTripDetails([startcity, endcity, daysaway]))}></span>
       </div>
     </div>
