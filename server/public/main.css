@@ -79,11 +79,10 @@ justify-content: center;
 .inforeq-container {
   display: inline-flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   height: 80%;
   width: 98%;
   border-radius: 1%;
-  margin-top: 2%;
 }
 
 .name-q {
@@ -100,10 +99,11 @@ justify-content: center;
 
 .greet-content {
   background-color: #94ad89;
-  width: 145%;
+  width: 147%;
   border-radius: 1%;
   box-shadow: 0px 1px 12px 5px rgba(0,0, 0,0.27);
-  height: 75%;
+  height: 77%;
+  margin-top: -10%;
 }
 
 h1 {
@@ -142,7 +142,19 @@ h3 {
   white-space:nowrap;
   color: white;
   padding: 5%;
-  margin-top: 25%
+  margin-top: 10%;
+  margin-left: 10%;
+  font-family: 'Bangers', cursive;
+}
+
+.greeting-text h2 {
+  font-size: 50px;
+}
+
+.greeting-text p {
+  color: white;
+  align-content: center;
+  font-size: 15px;
 }
 
 .greeting-text:first-of-type {
@@ -350,6 +362,7 @@ margin-top: 1%;
 .fa-arrow-circle-right {
   color: #FECB00;
   margin-left: 30px;
+  margin-top: 1%;
   font-size: 50px;
 }
 
@@ -361,14 +374,28 @@ cursor: pointer;
 
 /* RoadieForm buttons & text */
 
+.roadieformcontainer {
+  margin-top: 0;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 10%;
+}
+
+.roadieformcontainer h3 {
+  margin-top: 0;
+  margin-left: 15%;
+  margin-right: 10%;
+  margin-bottom: 10%;
+}
+
 .btn-primary {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px!important;
+  font-family: 'Bangers', cursive;
+  font-size: 14px!important;
   font-style: bold!important;
   color: white!important; 
   background-color: #657e5b!important;
-  width: 250px;
-  height: 50px;
+  width: 220px;
+  height: 40px;
   align-content: center;
   border-color: white;
   margin: 2%;
@@ -382,7 +409,7 @@ cursor: pointer;
 
 .dropdown-menu {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px!important;;
+  font-size: 10px!important;;
   background-color: white!important;
   width: 250px;
   height: auto;
@@ -402,7 +429,33 @@ cursor: pointer;
 }
 
 .submitbutton {
-  margin: 10%;
+  display: inline-flex;
+  margin-left: 25%;
+}
+
+.submitbutton h3 {
+  margin: auto;
+  display: inline-flex;
+  background-color: #657e5b;
+  border-radius: 10%;
+}
+
+.roadiemap-container {
+  background-color: #94ad89;
+  padding: 10px;
+  border-radius: 1%;
+  text-align: right;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0 , .1);
+}
+
+.map-btn {
+  display: inline-flex;
+  background-color: #657e5b;
+  color: white;
+  border-style: solid;
+  border-color: grey;
+  border-width: 0.3px;
+
 }
 
 .mapWrapper {

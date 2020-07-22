@@ -64,11 +64,11 @@ class MainMap extends Component {
       <>
         { this.props.name &&
       <div className="roadiemap-container">
-        <button id="akl-btn" onClick={() => _goToAuckland(viewport, this.updateView)}>Go to Auckland</button>
-        <button id="wlgtn-btn" onClick={() => _goToWellington(viewport, this.updateView)}>Go to Wellington</button>
-        <button id="rgl-btn" onClick={() => _goToRaglan(viewport, this.updateView)}>Go to Raglan</button>
-        <button id="th-btn" onClick={() => _goToThames(viewport, this.updateView)}>Go to Thames</button>
-        <button id="wh-btn" onClick={() => _goToWhangarei(viewport, this.updateView)}>Go to Whangarei</button>
+        <button className="map-btn" id="akl-btn" onClick={() => _goToAuckland(viewport, this.updateView)}>Go to Auckland</button>
+        <button className="map-btn" id="wlgtn-btn" onClick={() => _goToWellington(viewport, this.updateView)}>Go to Wellington</button>
+        <button className="map-btn" id="rgl-btn" onClick={() => _goToRaglan(viewport, this.updateView)}>Go to Raglan</button>
+        <button className="map-btn" id="th-btn" onClick={() => _goToThames(viewport, this.updateView)}>Go to Thames</button>
+        <button className="map-btn" id="wh-btn" onClick={() => _goToWhangarei(viewport, this.updateView)}>Go to Whangarei</button>
 
         <ReactMapGL
           {...this.state.viewport}
