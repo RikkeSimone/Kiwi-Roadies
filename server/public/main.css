@@ -459,7 +459,6 @@ cursor: pointer;
 }
 
 .mapWrapper {
-  display: flexbox;
   width:50vw;
   height:50vh;
 }
@@ -473,6 +472,47 @@ cursor: pointer;
 
 .mapboxgl-ctrl-geocoder {
   min-width: 100%;
+  }
+
+  .beachimage {
+    width: 250px;
+    height: 250px;
+  }
+
+  .bikeimage {
+    width: 250px;
+    height: 250px;
+  }
+
+  .coolcontainer {
+    background-color: #94ad89;
+    font-size: 14px;
+    max-width: 350px;
+    max-height: 350px;
+    overflow: scroll;
+    padding: 2%;
+    margin-top: 1;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+    /* align-items: center; */
+    display: flex;
+    /* justify-content: center; */
+  }
+
+  .coolcontainer h3 {
+    margin-top: 0;
+    margin-left: 15%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+  }
+
+  .coolmap {
+    background-color: #94ad89;
+    padding: 10px;
+    border-radius: 1%;
+    text-align: right;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0 , .1);
   }
 
   .nationalpark {

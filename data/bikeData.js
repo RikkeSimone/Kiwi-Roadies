@@ -4,7 +4,7 @@ export default [
     name: 'Twin coast cycle trail',
     grade: 'Easy to Intermediate',
     region: 'Northland',
-    cities: ['Opua', 'Kawakawa', 'Kaikohe', 'Okaihau', 'Horeke'],
+    cities: ['Opua', 'Kawakawa', 'Kaikohe', 'Okaihau', 'Horeke', 'Whangarei'],
     start: '1-3 Mangakahia Road, Kaikohe 0405',
     startlat: -35.432230,
     startlong: 173.816210,
@@ -71,7 +71,7 @@ export default [
   },
   {
     id: 6,
-    name: 'Hawke&quot;s Bay Trails',
+    name: 'Hawkes Bay Trails',
     grade: 'Easy to Intermediate',
     region: 'Hawke&quot;s Bay',
     cities: ['Napier', 'Hastings'],
