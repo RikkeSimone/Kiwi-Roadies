@@ -60,7 +60,7 @@ function RoadieForm (props) {
         <h3>Your roadie will end in {endcity}</h3>
       </div>
 
-      <div className='daysaway'>
+      {/* <div className='daysaway'>
         <DropdownButton
           title="How many days away?"
           id="dropdown-menu-align-center"
@@ -74,7 +74,7 @@ function RoadieForm (props) {
           <Dropdown.Divider />
         </DropdownButton>
         <h3>Your roadie will be {daysaway}</h3>
-      </div>
+      </div> */}
       <div className='submitbutton'>
         <span className="fas fa-arrow-circle-right" onClick={() => props.dispatch(acquireTripDetails([startcity, endcity, daysaway]))}></span>
       </div>
