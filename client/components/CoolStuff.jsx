@@ -48,7 +48,7 @@ class CoolStuff extends Component {
       <>
         <div className="coolcontainer">
           <h3>Awesome choice!</h3>
-          <p>Your roadie will start in {this.props.startcity} heading to {this.props.endcity} for an incredible {this.props.daysaway}!</p>
+          <p>Your roadie will start in {this.props.startcity} heading to {this.props.endcity}!</p>
           <h3>While you&apos;re there, grab your togs and head off to one of these amazing beaches!</h3>
           {beaches.map(beach => {
             if (beach.cities.includes(this.props.endcity)) {
@@ -97,8 +97,7 @@ const mapStateToProps = state => {
     huts: state.huts,
     tracks: state.tracks,
     startcity: state.roadieform[0][0],
-    endcity: state.roadieform[0][1],
-    daysaway: state.roadieform[0][2]
+    endcity: state.roadieform[0][1]
   }
 }
 
