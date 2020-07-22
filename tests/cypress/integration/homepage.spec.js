@@ -61,7 +61,6 @@ describe('The Trip Planner Page', () => {
 
   it('Includes an arrow button to button', () => {
     cy.get('.submitbutton')
-      .contains('...aaaand pop it through!')
     cy.wait(5000) // wait 5 seconds
     cy.get('.fa-arrow-circle-right')
       .click()
