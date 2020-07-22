@@ -1,10 +1,4 @@
 import * as actions from './index'
-import configureStore from 'redux-mock-store'
-import thunk from 'redux-thunk'
-import addName from './index'
-
-const middlewares = [thunk]
-const mockStore = configureStore(middlewares)
 
 describe('Action Testing', () => {
   it('addName should create an action that triggers waiting', () => {

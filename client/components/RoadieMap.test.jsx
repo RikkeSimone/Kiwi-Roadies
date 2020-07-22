@@ -3,9 +3,10 @@ import { renderWithRedux } from '../testing/utils'
 import '@testing-library/jest-dom'
 import 'regenerator-runtime/runtime'
 
-import Greeting from './Greeting'
+import RoadingMap from './RoadieMap'
+import RoadieMap from './RoadieMap'
 
-test('Greeting displays welcoming message', async () => {
-  const { asFragment } = renderWithRedux(<Greeting />)
+test('RoadieMap renders correctly', async () => {
+  const { asFragment } = renderWithRedux(<RoadieMap />)
   expect(asFragment()).toMatchSnapshot()
 })
