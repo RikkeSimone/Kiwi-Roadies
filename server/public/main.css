@@ -195,8 +195,8 @@ h3 {
 
 
 p {
-font-size:12px;
-color:#999;
+font-size:14px;
+color:rgb(241, 232, 232);
 margin-top:200px;
 }
 
@@ -459,8 +459,8 @@ cursor: pointer;
 }
 
 .mapWrapper {
-  width:50vw;
-  height:50vh;
+  width: 60vw;
+  height: 60vh;
 }
 
 #geocoder {
@@ -485,39 +485,64 @@ cursor: pointer;
   }
 
   .coolcontainer {
+    color: white;
     background-color: #94ad89;
     font-size: 14px;
-    max-width: 350px;
-    max-height: 350px;
     overflow: scroll;
     padding: 2%;
-    margin-top: 1;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-top: 1%;
+    margin-left: 5%;
     margin-bottom: 10%;
-    /* align-items: center; */
-    display: flex;
-    /* justify-content: center; */
-  }
-
-  .coolcontainer h3 {
-    margin-top: 0;
-    margin-left: 15%;
-    margin-right: 10%;
-    margin-bottom: 10%;
-  }
+    height: 80%;
+    width: 98%;
+    border-radius: 1%;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0 , .1);
+}
 
   .coolmap {
     background-color: #94ad89;
+    display: inline-flex;
     padding: 10px;
     border-radius: 1%;
-    text-align: right;
+    text-align: center;
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0 , .1);
-  }
+    margin-top: 1%; 
+    margin-left: 2%;
+    margin-right: 5%;
+    margin-bottom: 10%;
+}
 
   .nationalpark {
     width: 5rem;
     height: 5rem;
     fill: #228B22
 
+  }
+
+  .tripcontainer {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 80%;
+    width: 98%;
+    border-radius: 1%;
+  }
+
+  .flagboxtext {
+    color: white;
+    background-color: #9ebb92;
+    margin-top: 5%;
+    border-width: 1%;
+  }
+
+  .beachcontainer {
+    margin-top: 5%;
+  }
+
+  .coolcontainer a {
+    color: white;
+  }
+
+  .coolcontainer a:hover {
+    color: rgb(202, 224, 192);
   }

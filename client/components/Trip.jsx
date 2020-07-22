@@ -6,7 +6,7 @@ import DirectionsMap from './DirectionsMap'
 class Trip extends React.Component {
   render () {
     return (
-      <div>
+      <div className='tripcontainer'>
         <CoolStuff />
         <DirectionsMap />
       </div>
