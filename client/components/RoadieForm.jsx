@@ -21,11 +21,11 @@ function RoadieForm (props) {
     setEnd(e)
   }
 
-  const [daysaway, setDays] = useState('')
-  const handleDays = (e) => {
-    console.log(e)
-    setDays(e)
-  }
+  // const [daysaway, setDays] = useState('')
+  // const handleDays = (e) => {
+  //   console.log(e)
+  //   setDays(e)
+  // }
 
   return (
     <>
@@ -76,7 +76,7 @@ function RoadieForm (props) {
         <h3>Your roadie will be {daysaway}</h3>
       </div> */}
       <div className='submitbutton'>
-        <span className="fas fa-arrow-circle-right" onClick={() => props.dispatch(acquireTripDetails([startcity, endcity, daysaway]))}></span>
+        <span className="fas fa-arrow-circle-right" onClick={() => props.dispatch(acquireTripDetails([startcity, endcity]))}></span>
       </div>
     </div>
       }
@@ -91,8 +91,7 @@ const mapStateToProps = state => {
     roadie: state.roadie,
     name: state.name,
     startcity: state.startcity,
-    endcity: state.endcity,
-    daysaway: state.daysaway
+    endcity: state.endcity
   }
 }
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import 'regenerator-runtime/runtime'
 
-import ReactMapGL, { NavigationControl, Marker } from 'react-map-gl'
+import ReactMapGL, { NavigationControl } from 'react-map-gl'
 import { _goToWellington, _goToAuckland, _goToRaglan, _goToThames, _goToWhangarei } from './goTo.js'
 // import { point } from 'leaflet'
 
@@ -19,13 +19,13 @@ const navStyle = {
 }
 
 // maker styling
-const style = {
-  padding: '10px',
-  color: '#fff',
-  cursor: 'pointer',
-  background: '#1978c8',
-  borderRadius: '6px'
-}
+// const style = {
+//   padding: '10px',
+//   color: '#fff',
+//   cursor: 'pointer',
+//   background: '#1978c8',
+//   borderRadius: '6px'
+// }
 
 class MainMap extends Component {
   state= {
