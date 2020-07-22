@@ -12,7 +12,7 @@ Kiwi Roadies is a road trip planner like no other.
 
  **Kiwi Roadies was created using the following tech stack:**
  
- **JavaScript, Node.js, Bootstrap, React, Redux, Redux Thunk, Cypress (E2E testing), Heroku, Express, Superagent, Jest, React Map GL, D3, Webpack**
+ **JavaScript, Node.js, Bootstrap, React, Redux, Redux Thunk, Cypress (E2E testing), Heroku, Express, Superagent, Jest, React Map GL, D3, Webpack, GitHub Actions, MapBox, Proj4**
 
 
 ## How to use
