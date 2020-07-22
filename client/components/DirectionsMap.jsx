@@ -7,6 +7,10 @@ import 'mapbox-gl/dist/mapbox-gl.css'
 import MapBoxDirections from '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions'
 import '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions.css'
 
+// our data
+import beaches from '../../data/beachData'
+import bikeTracks from '../../data/bikeData'
+
 require('dotenv').config()
 
 mapboxgl.accessToken = process.env.ACCESS_TOKEN
@@ -82,11 +86,39 @@ class DirectionsMap extends Component {
     })
   }
 
+  addBeaches = () => {
+    beaches.map((beach) => {
+      var popup = new mapboxgl.Popup({ offset: 25 }).setText(
+        beach.name
+      )
+
+      new mapboxgl.Marker()
+        .setLngLat([beach.startlong, beach.startlat])
+        .setPopup(popup)
+        .addTo(this.map)
+    })
+  }
+
+  addTracks = () => {
+    bikeTracks.map((track) => {
+      var popup = new mapboxgl.Popup({ offset: 25 }).setText(
+        track.name
+      )
+
+      new mapboxgl.Marker()
+        .setLngLat([track.startlong, track.startlat])
+        .setPopup(popup)
+        .addTo(this.map)
+    })
+  }
+
   render () {
     if (this.map) {
       this.addNationalParks()
       this.addCampsites()
       this.addHuts()
+      this.addBeaches()
+      this.addTracks()
     }
 
     return (
