@@ -48,7 +48,7 @@ class DirectionsMap extends Component {
       var elMarkerPark = document.createElement('div')
       elMarkerPark.id = 'park'
       var popup = new mapboxgl.Popup({ closeOnClick: false }).setText(
-        name
+        park.name
       )
 
       new mapboxgl.Marker(elMarkerPark)
