@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1595398015671" clover="3.2.0">
-  <project timestamp="1595398015672" name="All files">
-    <metrics statements="92" coveredstatements="59" conditionals="38" coveredconditionals="24" methods="39" coveredmethods="21" elements="169" coveredelements="104" complexity="0" loc="92" ncloc="92" packages="6" files="26" classes="26"/>
+<coverage generated="1595403207365" clover="3.2.0">
+  <project timestamp="1595403207365" name="All files">
+    <metrics statements="136" coveredstatements="80" conditionals="46" coveredconditionals="27" methods="63" coveredmethods="29" elements="245" coveredelements="136" complexity="0" loc="136" ncloc="136" packages="6" files="31" classes="31"/>
     <package name="client.actions">
-      <metrics statements="26" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="13" coveredmethods="0"/>
+      <metrics statements="26" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="13" coveredmethods="4"/>
       <file name="campsites.js" path="/home/eda/workspace/Kiwi-Roadies/client/actions/campsites.js">
-        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="1" count="4" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="7" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
       </file>
       <file name="error.js" path="/home/eda/workspace/Kiwi-Roadies/client/actions/error.js">
         <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="1" count="4" type="stmt"/>
+        <line num="1" count="6" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
       </file>
       <file name="huts.js" path="/home/eda/workspace/Kiwi-Roadies/client/actions/huts.js">
         <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="1" count="4" type="stmt"/>
+        <line num="1" count="6" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
       </file>
       <file name="index.js" path="/home/eda/workspace/Kiwi-Roadies/client/actions/index.js">
-        <metrics statements="18" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="0"/>
-        <line num="1" count="4" type="stmt"/>
-        <line num="2" count="4" type="stmt"/>
-        <line num="3" count="4" type="stmt"/>
-        <line num="4" count="4" type="stmt"/>
-        <line num="6" count="4" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="14" count="4" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="21" count="4" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
+        <metrics statements="18" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="3"/>
+        <line num="1" count="8" type="stmt"/>
+        <line num="2" count="8" type="stmt"/>
+        <line num="3" count="8" type="stmt"/>
+        <line num="4" count="8" type="stmt"/>
+        <line num="6" count="8" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="14" count="8" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="21" count="8" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
         <line num="32" count="0" type="stmt"/>
         <line num="33" count="0" type="stmt"/>
         <line num="34" count="0" type="stmt"/>
@@ -42,17 +42,23 @@
       </file>
       <file name="tracks.js" path="/home/eda/workspace/Kiwi-Roadies/client/actions/tracks.js">
         <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="1" count="4" type="stmt"/>
+        <line num="1" count="6" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
       </file>
     </package>
     <package name="client.components">
-      <metrics statements="22" coveredstatements="15" conditionals="6" coveredconditionals="3" methods="12" coveredmethods="7"/>
+      <metrics statements="66" coveredstatements="30" conditionals="14" coveredconditionals="4" methods="36" coveredmethods="11"/>
       <file name="Error.jsx" path="/home/eda/workspace/Kiwi-Roadies/client/components/Error.jsx">
         <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
         <line num="18" count="1" type="stmt"/>
+      </file>
+      <file name="Greeting.jsx" path="/home/eda/workspace/Kiwi-Roadies/client/components/Greeting.jsx">
+        <metrics statements="3" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
       </file>
       <file name="Header.jsx" path="/home/eda/workspace/Kiwi-Roadies/client/components/Header.jsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -67,6 +73,17 @@
         <line num="37" count="1" type="stmt"/>
         <line num="38" count="1" type="stmt"/>
       </file>
+      <file name="InfoReq.jsx" path="/home/eda/workspace/Kiwi-Roadies/client/components/InfoReq.jsx">
+        <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="3"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+      </file>
+      <file name="Loading.jsx" path="/home/eda/workspace/Kiwi-Roadies/client/components/Loading.jsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="6" count="1" type="stmt"/>
+      </file>
       <file name="RoadieForm.jsx" path="/home/eda/workspace/Kiwi-Roadies/client/components/RoadieForm.jsx">
         <metrics statements="12" coveredstatements="7" conditionals="2" coveredconditionals="1" methods="5" coveredmethods="2"/>
         <line num="12" count="1" type="stmt"/>
@@ -79,82 +96,124 @@
         <line num="21" count="0" type="stmt"/>
         <line num="30" count="1" type="stmt"/>
         <line num="79" count="0" type="stmt"/>
-        <line num="89" count="1" type="stmt"/>
+        <line num="89" count="2" type="stmt"/>
         <line num="90" count="1" type="stmt"/>
+      </file>
+      <file name="RoadieMap.jsx" path="/home/eda/workspace/Kiwi-Roadies/client/components/RoadieMap.jsx">
+        <metrics statements="21" coveredstatements="4" conditionals="4" coveredconditionals="0" methods="13" coveredmethods="0"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="44" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="58" count="0" type="stmt"/>
+        <line num="62" count="0" type="stmt"/>
+        <line num="63" count="0" type="stmt"/>
+        <line num="67" count="0" type="stmt"/>
+        <line num="68" count="0" type="stmt"/>
+        <line num="69" count="0" type="stmt"/>
+        <line num="70" count="0" type="stmt"/>
+        <line num="71" count="0" type="stmt"/>
+        <line num="78" count="0" type="stmt"/>
+        <line num="93" count="1" type="stmt"/>
+        <line num="94" count="0" type="stmt"/>
+      </file>
+      <file name="goTo.js" path="/home/eda/workspace/Kiwi-Roadies/client/components/goTo.js">
+        <metrics statements="15" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="56" count="1" type="stmt"/>
+        <line num="57" count="0" type="stmt"/>
+        <line num="66" count="0" type="stmt"/>
       </file>
     </package>
     <package name="client.reducers">
-      <metrics statements="29" coveredstatements="18" conditionals="29" coveredconditionals="18" methods="10" coveredmethods="10"/>
+      <metrics statements="29" coveredstatements="20" conditionals="29" coveredconditionals="20" methods="10" coveredmethods="10"/>
       <file name="campsites.js" path="/home/eda/workspace/Kiwi-Roadies/client/reducers/campsites.js">
         <metrics statements="3" coveredstatements="2" conditionals="3" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="4" count="12" type="cond" truecount="1" falsecount="1"/>
+        <line num="4" count="18" type="cond" truecount="1" falsecount="1"/>
         <line num="6" count="0" type="stmt"/>
-        <line num="9" count="12" type="stmt"/>
+        <line num="9" count="18" type="stmt"/>
       </file>
       <file name="dataSet.js" path="/home/eda/workspace/Kiwi-Roadies/client/reducers/dataSet.js">
         <metrics statements="1" coveredstatements="1" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
-        <line num="4" count="13" type="stmt"/>
+        <line num="4" count="19" type="stmt"/>
       </file>
       <file name="error.js" path="/home/eda/workspace/Kiwi-Roadies/client/reducers/error.js">
         <metrics statements="3" coveredstatements="2" conditionals="3" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="4" count="12" type="cond" truecount="1" falsecount="1"/>
+        <line num="4" count="18" type="cond" truecount="1" falsecount="1"/>
         <line num="6" count="0" type="stmt"/>
-        <line num="9" count="12" type="stmt"/>
+        <line num="9" count="18" type="stmt"/>
       </file>
       <file name="huts.js" path="/home/eda/workspace/Kiwi-Roadies/client/reducers/huts.js">
         <metrics statements="3" coveredstatements="2" conditionals="3" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="4" count="12" type="cond" truecount="1" falsecount="1"/>
+        <line num="4" count="18" type="cond" truecount="1" falsecount="1"/>
         <line num="6" count="0" type="stmt"/>
-        <line num="9" count="12" type="stmt"/>
+        <line num="9" count="18" type="stmt"/>
       </file>
       <file name="index.js" path="/home/eda/workspace/Kiwi-Roadies/client/reducers/index.js">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
       <file name="name.js" path="/home/eda/workspace/Kiwi-Roadies/client/reducers/name.js">
-        <metrics statements="4" coveredstatements="2" conditionals="4" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="4" count="12" type="cond" truecount="1" falsecount="2"/>
-        <line num="6" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="11" count="12" type="stmt"/>
+        <metrics statements="4" coveredstatements="4" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="4" count="20" type="cond" truecount="3" falsecount="0"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="11" count="18" type="stmt"/>
       </file>
       <file name="nationalParks.js" path="/home/eda/workspace/Kiwi-Roadies/client/reducers/nationalParks.js">
         <metrics statements="1" coveredstatements="1" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
-        <line num="4" count="12" type="stmt"/>
+        <line num="4" count="18" type="stmt"/>
       </file>
       <file name="roadieform.js" path="/home/eda/workspace/Kiwi-Roadies/client/reducers/roadieform.js">
         <metrics statements="3" coveredstatements="2" conditionals="3" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="4" count="12" type="cond" truecount="1" falsecount="1"/>
+        <line num="4" count="18" type="cond" truecount="1" falsecount="1"/>
         <line num="6" count="0" type="stmt"/>
-        <line num="9" count="12" type="stmt"/>
+        <line num="9" count="18" type="stmt"/>
       </file>
       <file name="tracks.js" path="/home/eda/workspace/Kiwi-Roadies/client/reducers/tracks.js">
         <metrics statements="3" coveredstatements="2" conditionals="3" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="4" count="12" type="cond" truecount="1" falsecount="1"/>
+        <line num="4" count="18" type="cond" truecount="1" falsecount="1"/>
         <line num="6" count="0" type="stmt"/>
-        <line num="9" count="12" type="stmt"/>
+        <line num="9" count="18" type="stmt"/>
       </file>
       <file name="tripstatus.js" path="/home/eda/workspace/Kiwi-Roadies/client/reducers/tripstatus.js">
         <metrics statements="3" coveredstatements="2" conditionals="3" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="4" count="12" type="cond" truecount="1" falsecount="1"/>
+        <line num="4" count="18" type="cond" truecount="1" falsecount="1"/>
         <line num="6" count="0" type="stmt"/>
-        <line num="9" count="12" type="stmt"/>
+        <line num="9" count="18" type="stmt"/>
       </file>
       <file name="waiting.js" path="/home/eda/workspace/Kiwi-Roadies/client/reducers/waiting.js">
         <metrics statements="5" coveredstatements="2" conditionals="5" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="4" count="12" type="cond" truecount="1" falsecount="3"/>
+        <line num="4" count="18" type="cond" truecount="1" falsecount="3"/>
         <line num="6" count="0" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
-        <line num="13" count="12" type="stmt"/>
+        <line num="13" count="18" type="stmt"/>
       </file>
     </package>
     <package name="client.testing">
       <metrics statements="3" coveredstatements="3" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
       <file name="utils.jsx" path="/home/eda/workspace/Kiwi-Roadies/client/testing/utils.jsx">
         <metrics statements="3" coveredstatements="3" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
-        <line num="10" count="4" type="stmt"/>
-        <line num="12" count="4" type="stmt"/>
-        <line num="16" count="4" type="stmt"/>
+        <line num="10" count="6" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+        <line num="16" count="6" type="stmt"/>
       </file>
     </package>
     <package name="data">
