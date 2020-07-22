@@ -28,6 +28,11 @@
   transition: padding .3s, bottom .3s;
 }
 
+.kiwi-car {
+  width: 30%;
+  height: 30%;
+}
+
 @keyframes wobble {
   33% {
     transform: rotate(5deg);
