@@ -15,13 +15,27 @@ class InfoReq extends React.Component {
 
   render () {
     return (
-      <div>
-        <Greeting />
-        <RoadieForm />
-        <RoadieMap />
-      </div>
+      <>
+        { this.props.name &&
+        <div className="inforeq-container">
+          <div className="greet-form-container">
+            <div className="greet-content">
+              <Greeting />
+              <RoadieForm />
+            </div>
+          </div>
+          <RoadieMap />
+        </div>
+        }
+      </>
     )
   }
 }
 
-export default connect()(InfoReq)
+const mapStateToProps = state => {
+  return {
+    name: state.name
+  }
+}
+
+export default connect(mapStateToProps)(InfoReq)
