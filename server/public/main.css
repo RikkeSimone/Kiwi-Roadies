@@ -524,3 +524,57 @@ cursor: pointer;
   .coolcontainer a:hover {
     color: rgb(202, 224, 192);
   }
+
+  #bike {
+    background-image: url('https://cdn.imgbin.com/16/3/2/imgbin-track-bicycle-cycling-computer-icons-bikes-kMJEzQF6hYvVNtL9JuuWRy62d.jpg');
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    }
+
+    #beach {
+      background-image: url('https://img.favpng.com/3/23/25/beach-icon-design-icon-png-favpng-tsg27mYcht4f9ZqSJnuSH5Q0t.jpg');
+      background-size: cover;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      cursor: pointer;
+      }
+
+      #track {
+        background-image: url('https://www.clipartmax.com/png/middle/46-466782_walking-man-man-walking-icon-vector.png');
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+        }
+
+        #park {
+          background-image: url('https://i.pinimg.com/originals/6a/5f/a0/6a5fa00f52ef2e7f80c7a3041ce4552d.png');
+          background-size: cover;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          cursor: pointer;
+          }
+
+          #hut {
+            background-image: url('https://img.favpng.com/23/4/21/huts-icon-png-favpng-7VgTqC5PgskQNS0CWQP2pRxAp.jpg');
+            background-size: cover;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            }
+
+            #campsite {
+              background-image: url('https://www.freeiconspng.com/uploads/bonfire-fire-fire-bonfire-flame-png-image-and-clipart-14.png');
+              background-size: cover;
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+              cursor: pointer;
+              }
