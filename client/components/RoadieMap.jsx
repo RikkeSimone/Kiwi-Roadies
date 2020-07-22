@@ -41,15 +41,17 @@ class MainMap extends Component {
   }
 
   componentDidMount () {
-    setTimeout(() => {
-      document.getElementById('akl-btn').click()
-    }, 2000)
-    setTimeout(() => {
-      document.getElementById('rgl-btn').click()
-    }, 25000)
-    setTimeout(() => {
-      document.getElementById('wlgtn-btn').click()
-    }, 15000)
+    if (this.props.name) {
+      setTimeout(() => {
+        document.getElementById('akl-btn').click()
+      }, 2000)
+      setTimeout(() => {
+        document.getElementById('rgl-btn').click()
+      }, 25000)
+      setTimeout(() => {
+        document.getElementById('wlgtn-btn').click()
+      }, 15000)
+    }
   }
 
   updateView =(viewport) => {
@@ -61,7 +63,7 @@ class MainMap extends Component {
     return (
       <>
         { this.props.name &&
-      <div >
+      <div className="roadiemap-container">
         <button id="akl-btn" onClick={() => _goToAuckland(viewport, this.updateView)}>Go to Auckland</button>
         <button id="wlgtn-btn" onClick={() => _goToWellington(viewport, this.updateView)}>Go to Wellington</button>
         <button id="rgl-btn" onClick={() => _goToRaglan(viewport, this.updateView)}>Go to Raglan</button>
@@ -79,19 +81,6 @@ class MainMap extends Component {
           <div className="nav" style={navStyle}>
             <NavigationControl showCompass ={false} />
           </div>
-          {this.props.trips.map(trip => {
-            return (
-              <Marker
-                key={trip.id}
-                longitude={trip.longitude}
-                latitude={trip.latitude}
-              >
-                <div style={style}>👋</div>
-              </Marker>
-            )
-          })
-          }
-
         </ReactMapGL>
 
       </div>
