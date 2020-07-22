@@ -382,8 +382,9 @@ cursor: pointer;
 }
 
 .mapWrapper {
-  width:100vw;
-  height:100vh;
+  display: flexbox;
+  width:50vw;
+  height:50vh;
 }
 
 #geocoder {
