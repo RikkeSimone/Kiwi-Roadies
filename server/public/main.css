@@ -579,7 +579,7 @@ cursor: pointer;
         cursor: pointer;
         }
 
-        #nationalpark {
+        #park {
           background-image: url('https://i.pinimg.com/originals/6a/5f/a0/6a5fa00f52ef2e7f80c7a3041ce4552d.png');
           background-size: cover;
           width: 50px;
@@ -588,7 +588,7 @@ cursor: pointer;
           cursor: pointer;
           }
 
-          #huts {
+          #hut {
             background-image: url('https://img.favpng.com/23/4/21/huts-icon-png-favpng-7VgTqC5PgskQNS0CWQP2pRxAp.jpg');
             background-size: cover;
             width: 50px;
@@ -597,7 +597,7 @@ cursor: pointer;
             cursor: pointer;
             }
 
-            #campsites {
+            #campsite {
               background-image: url('https://www.freeiconspng.com/uploads/bonfire-fire-fire-bonfire-flame-png-image-and-clipart-14.png');
               background-size: cover;
               width: 50px;
