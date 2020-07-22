@@ -40,7 +40,6 @@ function RoadieForm (props) {
         >
           <Dropdown.Item eventKey="Auckland">Auckland</Dropdown.Item>
           <Dropdown.Item eventKey="Wellington">Wellington</Dropdown.Item>
-          <Dropdown.Item eventKey="Christchurch">Christchurch</Dropdown.Item>
           <Dropdown.Divider />
         </DropdownButton>
         <h3>Your roadie will start in {startcity}</h3>
