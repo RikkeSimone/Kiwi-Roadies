@@ -9,15 +9,9 @@ import '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions.css'
 
 require('dotenv').config()
 
-// console.log('mapbox token for Directions map', process.env.ACCESS_TOKEN)
-
 mapboxgl.accessToken = process.env.ACCESS_TOKEN
 
 class DirectionsMap extends Component {
-  updateView =(viewport) => {
-    this.setState({ viewport })
-  }
-
   componentDidMount () {
     const map = new mapboxgl.Map({
       container: this.mapWrapper,
@@ -26,16 +20,54 @@ class DirectionsMap extends Component {
       zoom: 4
     })
 
-    const directions = new MapBoxDirections({
-      accessToken: mapboxgl.accessToken,
-      unit: 'metric',
-      profile: 'mapbox/driving'
-    })
+    const start = this.props.roadieform[0][0].concat(', New Zealand')
+    const end = this.props.roadieform[0][1].concat(', New Zealand')
 
-    map.addControl(directions, 'top-right')
+    const parks = this.props.nationalParks.nationalParks
+
+    const campsites = this.props.campsites
+
+    console.log('campsites', campsites)
+
+    map.on('load', function () {
+      const directions = new MapBoxDirections({
+        accessToken: mapboxgl.accessToken,
+        unit: 'metric',
+        profile: 'mapbox/driving'
+      })
+
+      map.addControl(directions, 'top-left')
+
+      parks.map(park => {
+        var popup = new mapboxgl.Popup({ offset: 25 }).setText(
+          'National Park'
+        )
+
+        new mapboxgl.Marker()
+          .setLngLat([park.long, park.lat])
+          .setPopup(popup)
+          .addTo(map)
+      }
+      )
+
+      campsites.map(campsite => {
+        var popup = new mapboxgl.Popup({ offset: 25 }).setText(
+          'Campsites'
+        )
+
+        new mapboxgl.Marker()
+          .setLngLat([campsite.longlat[0], campsite.longlat[1]])
+          .setPopup(popup)
+          .addTo(map)
+      }
+      )
+
+      directions.setOrigin(start).setDestination(end)
+    })
   }
 
   render () {
+    console.log(this.props.roadieform)
     return (
       <>
         <p>Directions Map</p>
@@ -46,4 +78,10 @@ class DirectionsMap extends Component {
   }
 }
 
-export default connect()(DirectionsMap)
+const mapStateToProps = state => ({
+  roadieform: state.roadieform,
+  nationalParks: state.nationalParks,
+  campsites: state.campsites
+})
+
+export default connect(mapStateToProps)(DirectionsMap)

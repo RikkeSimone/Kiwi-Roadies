@@ -3,8 +3,6 @@ import { connect } from 'react-redux'
 import Greeting from './Greeting'
 import RoadieForm from './RoadieForm'
 import RoadieMap from './RoadieMap'
-// import DirectionsMap from './DirectionsMap'
-// import ScrollMap from './ScrollMap'
 
 class InfoReq extends React.Component {
   state = { isLoading: true }
