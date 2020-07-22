@@ -56,7 +56,7 @@ class CoolStuff extends Component {
                   <p><img className="beachimage" src={beach.image}></img></p>
                   <p>Name: {beach.name}</p>
                   <p>Start here: {beach.start}</p>
-                  <p>For more info: <a target="_blank" href={beach.url}>Click here</a></p>
+                  <p>For more info: <a rel=opener target="_blank" href={beach.url}>Click here</a></p>
                 </div>
               )
             }
@@ -73,14 +73,14 @@ class CoolStuff extends Component {
                   <p>Difficulty: {bike.grade}</p>
                   <p>Start here: {bike.start}</p>
                   <p>Total km: {bike.km}</p>
-                  <p>For more info: <a target="_blank" href={bike.url}>Click here</a></p>
+                  <p>For more info: <a rel=opener target="_blank" href={bike.url}>Click here</a></p>
                 </div>
               )
             }
           })}
 
           <p>On the map we have flagged some of the best Kiwi campsites, tracks and huts for you!
-            please visit <a target="_blank" href="https://www.doc.govt.nz/">Department of Conservation</a> for booking or more information.
+            please visit <a rel=opener target="_blank" href="https://www.doc.govt.nz/">Department of Conservation</a> for booking or more information.
           </p>
 
         </div>
