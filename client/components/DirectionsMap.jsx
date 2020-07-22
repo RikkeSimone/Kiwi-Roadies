@@ -101,11 +101,14 @@ class DirectionsMap extends Component {
 
   addTracks = () => {
     bikeTracks.map((track) => {
-      var popup = new mapboxgl.Popup({ offset: 25 }).setText(
+      // create DOM element for the marker
+      var elMarker = document.createElement('div')
+      elMarker.id = 'bike'
+      var popup = new mapboxgl.Popup({ closeOnClick: false }).setText(
         track.name
       )
 
-      new mapboxgl.Marker()
+      new mapboxgl.Marker(elMarker)
         .setLngLat([track.startlong, track.startlat])
         .setPopup(popup)
         .addTo(this.map)
