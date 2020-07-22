@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import 'regenerator-runtime/runtime'
 
-import ReactMapGL, { NavigationControl, Marker } from 'react-map-gl'
+import ReactMapGL, { NavigationControl } from 'react-map-gl'
 import { _goToWellington, _goToAuckland, _goToRaglan, _goToThames, _goToWhangarei } from './goTo.js'
 // import { point } from 'leaflet'
 
@@ -19,13 +19,13 @@ const navStyle = {
 }
 
 // maker styling
-const style = {
-  padding: '10px',
-  color: '#fff',
-  cursor: 'pointer',
-  background: '#1978c8',
-  borderRadius: '6px'
-}
+// const style = {
+//   padding: '10px',
+//   color: '#fff',
+//   cursor: 'pointer',
+//   background: '#1978c8',
+//   borderRadius: '6px'
+// }
 
 class MainMap extends Component {
   state= {
@@ -40,6 +40,20 @@ class MainMap extends Component {
     }
   }
 
+  componentDidMount () {
+    if (this.props.name) {
+      setTimeout(() => {
+        document.getElementById('akl-btn').click()
+      }, 2000)
+      setTimeout(() => {
+        document.getElementById('rgl-btn').click()
+      }, 25000)
+      setTimeout(() => {
+        document.getElementById('wlgtn-btn').click()
+      }, 15000)
+    }
+  }
+
   updateView =(viewport) => {
     this.setState({ viewport })
   }
@@ -49,12 +63,12 @@ class MainMap extends Component {
     return (
       <>
         { this.props.name &&
-      <div >
-        <button onClick={() => _goToAuckland(viewport, this.updateView)}>Go to Auckland</button>
-        <button onClick={() => _goToWellington(viewport, this.updateView)}>Go to Wellington</button>
-        <button onClick={() => _goToRaglan(viewport, this.updateView)}>Go to Raglan</button>
-        <button onClick={() => _goToThames(viewport, this.updateView)}>Go to Thames</button>
-        <button onClick={() => _goToWhangarei(viewport, this.updateView)}>Go to Whangarei</button>
+      <div className="roadiemap-container">
+        <button className="map-btn" id="akl-btn" onClick={() => _goToAuckland(viewport, this.updateView)}>Go to Auckland</button>
+        <button className="map-btn" id="wlgtn-btn" onClick={() => _goToWellington(viewport, this.updateView)}>Go to Wellington</button>
+        <button className="map-btn" id="rgl-btn" onClick={() => _goToRaglan(viewport, this.updateView)}>Go to Raglan</button>
+        <button className="map-btn" id="th-btn" onClick={() => _goToThames(viewport, this.updateView)}>Go to Thames</button>
+        <button className="map-btn" id="wh-btn" onClick={() => _goToWhangarei(viewport, this.updateView)}>Go to Whangarei</button>
 
         <ReactMapGL
           {...this.state.viewport}
@@ -67,19 +81,6 @@ class MainMap extends Component {
           <div className="nav" style={navStyle}>
             <NavigationControl showCompass ={false} />
           </div>
-          {this.props.trips.map(trip => {
-            return (
-              <Marker
-                key={trip.id}
-                longitude={trip.longitude}
-                latitude={trip.latitude}
-              >
-                <div style={style}>👋</div>
-              </Marker>
-            )
-          })
-          }
-
         </ReactMapGL>
 
       </div>

@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 
 // our actions
 import { addCampsites } from '../actions/campsites'
+// import proj4 from 'proj4'
 import { addHuts } from '../actions/huts'
 import { addTracks } from '../actions/tracks'
 
@@ -47,7 +48,7 @@ class CoolStuff extends Component {
       <>
         <div className="coolcontainer">
           <h3>Awesome choice!</h3>
-          <p>Your roadie will start in {this.props.startcity} heading to {this.props.endcity} for an incredible {this.props.daysaway}!</p>
+          <p>Your roadie will start in {this.props.startcity} heading to {this.props.endcity}!</p>
           <h3>While you&apos;re there, grab your togs and head off to one of these amazing beaches!</h3>
           {beaches.map(beach => {
             if (beach.cities.includes(this.props.endcity)) {
@@ -56,7 +57,7 @@ class CoolStuff extends Component {
                   <p><img className="beachimage" src={beach.image}></img></p>
                   <p>Name: {beach.name}</p>
                   <p>Start here: {beach.start}</p>
-                  <p>For more info: <a target="_blank" href={beach.url}>Click here</a></p>
+                  <p>For more info: <a rel="noreferrer noopener" target="_blank" href={beach.url}>Click here</a></p>
                 </div>
               )
             }
@@ -73,14 +74,14 @@ class CoolStuff extends Component {
                   <p>Difficulty: {bike.grade}</p>
                   <p>Start here: {bike.start}</p>
                   <p>Total km: {bike.km}</p>
-                  <p>For more info: <a target="_blank" href={bike.url}>Click here</a></p>
+                  <p>For more info: <a rel="noreferrer noopener" target="_blank" href={bike.url}>Click here</a></p>
                 </div>
               )
             }
           })}
 
           <p>On the map we have flagged some of the best Kiwi campsites, tracks and huts for you!
-            please visit <a target="_blank" href="https://www.doc.govt.nz/">Department of Conservation</a> for booking or more information.
+            please visit <a rel="noreferrer noopener" target="_blank" href="https://www.doc.govt.nz/">Department of Conservation</a> for booking or more information.
           </p>
 
         </div>
@@ -95,8 +96,7 @@ const mapStateToProps = state => {
     huts: state.huts,
     tracks: state.tracks,
     startcity: state.roadieform[0][0],
-    endcity: state.roadieform[0][1],
-    daysaway: state.roadieform[0][2]
+    endcity: state.roadieform[0][1]
   }
 }
 

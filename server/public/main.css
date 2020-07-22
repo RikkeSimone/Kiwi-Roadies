@@ -7,8 +7,6 @@
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
-  outline: 9px solid #819678;
-  outline-offset: -30px;
 }
 
 .loading-screen {
@@ -61,16 +59,16 @@ justify-content: center;
   text-align: center;
   color: white;
   font-family: 'Knewave', cursive;
-  font-size: 150px;
+  font-size: 180px;
   margin: 7%;
   transform: rotate(-10deg);
   line-height: 1;
 }
 
 .logo {
-  height: 90px;
+  height: 80px;
   width: 150px;
-  margin-top: 2.5%;
+  margin-top: 2%;
   margin-left: 5%;
 }
 
@@ -78,9 +76,34 @@ justify-content: center;
   display: flexbox;
 }
 
+.inforeq-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 80%;
+  width: 98%;
+  border-radius: 1%;
+}
+
 .name-q {
   display: flexbox;
   align-items: center;
+}
+
+.greet-form-container {
+  display: flexbox;
+  height: 100%;
+  text-align: left;
+  margin-top: 12%;
+}
+
+.greet-content {
+  background-color: #94ad89;
+  width: 147%;
+  border-radius: 1%;
+  box-shadow: 0px 1px 12px 5px rgba(0,0, 0,0.27);
+  height: 77%;
+  margin-top: -10%;
 }
 
 h1 {
@@ -119,6 +142,19 @@ h3 {
   white-space:nowrap;
   color: white;
   padding: 5%;
+  margin-top: 10%;
+  margin-left: 10%;
+  font-family: 'Bangers', cursive;
+}
+
+.greeting-text h2 {
+  font-size: 50px;
+}
+
+.greeting-text p {
+  color: white;
+  align-content: center;
+  font-size: 15px;
 }
 
 .greeting-text:first-of-type {
@@ -326,6 +362,7 @@ margin-top: 1%;
 .fa-arrow-circle-right {
   color: #FECB00;
   margin-left: 30px;
+  margin-top: 1%;
   font-size: 50px;
 }
 
@@ -337,14 +374,28 @@ cursor: pointer;
 
 /* RoadieForm buttons & text */
 
+.roadieformcontainer {
+  margin-top: 0;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 10%;
+}
+
+.roadieformcontainer h3 {
+  margin-top: 0;
+  margin-left: 15%;
+  margin-right: 10%;
+  margin-bottom: 10%;
+}
+
 .btn-primary {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px!important;
+  font-family: 'Bangers', cursive;
+  font-size: 14px!important;
   font-style: bold!important;
   color: white!important; 
   background-color: #657e5b!important;
-  width: 250px;
-  height: 50px;
+  width: 220px;
+  height: 40px;
   align-content: center;
   border-color: white;
   margin: 2%;
@@ -358,7 +409,7 @@ cursor: pointer;
 
 .dropdown-menu {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px!important;;
+  font-size: 10px!important;;
   background-color: white!important;
   width: 250px;
   height: auto;
@@ -378,7 +429,33 @@ cursor: pointer;
 }
 
 .submitbutton {
-  margin: 10%;
+  display: inline-flex;
+  margin-left: 25%;
+}
+
+.submitbutton h3 {
+  margin: auto;
+  display: inline-flex;
+  background-color: #657e5b;
+  border-radius: 10%;
+}
+
+.roadiemap-container {
+  background-color: #94ad89;
+  padding: 10px;
+  border-radius: 1%;
+  text-align: right;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0 , .1);
+}
+
+.map-btn {
+  display: inline-flex;
+  background-color: #657e5b;
+  color: white;
+  border-style: solid;
+  border-color: grey;
+  border-width: 0.3px;
+
 }
 
 .mapWrapper {
@@ -408,17 +485,39 @@ cursor: pointer;
   }
 
   .coolcontainer {
+    background-color: #94ad89;
     font-size: 14px;
-    display: flexbox;
     max-width: 350px;
     max-height: 350px;
     overflow: scroll;
     padding: 2%;
+    margin-top: 1;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+    /* align-items: center; */
+    display: flex;
+    /* justify-content: center; */
+  }
+
+  .coolcontainer h3 {
+    margin-top: 0;
+    margin-left: 15%;
+    margin-right: 10%;
+    margin-bottom: 10%;
   }
 
   .coolmap {
-    display: flexbox;
-    max-width: 150px;
-    max-height: 150px;
+    background-color: #94ad89;
+    padding: 10px;
+    border-radius: 1%;
+    text-align: right;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0 , .1);
   }
 
+  .nationalpark {
+    width: 5rem;
+    height: 5rem;
+    fill: #228B22
+
+  }
