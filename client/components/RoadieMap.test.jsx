@@ -3,7 +3,6 @@ import { renderWithRedux } from '../testing/utils'
 import '@testing-library/jest-dom'
 import 'regenerator-runtime/runtime'
 
-import RoadingMap from './RoadieMap'
 import RoadieMap from './RoadieMap'
 
 test('RoadieMap renders correctly', async () => {
