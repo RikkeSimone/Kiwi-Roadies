@@ -5,7 +5,7 @@ import * as nameAdding from '../actions/index'
 describe('Adding Name reducer', () => {
   it('returns the name of the person entered', () => {
     expect(
-      reducer([], {
+      reducer(null, {
         // needs fixing
         type: nameAdding.ADD_NAME
       })
@@ -13,7 +13,7 @@ describe('Adding Name reducer', () => {
   })
   it('should return undefined when user has entered their trip details', () => {
     expect(
-      reducer([], {
+      reducer(null, {
         type: nameAdding.ADD_TRIP
       })
     ).toEqual(undefined)

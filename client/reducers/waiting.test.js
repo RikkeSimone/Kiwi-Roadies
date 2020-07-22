@@ -6,7 +6,6 @@ describe('Waiting reducer', () => {
   it('Waiting becomes true when a name is added', () => {
     expect(
       reducer(false, {
-        // needs fixing
         type: waitingActions.ADD_NAME
       })
     ).toEqual(true)
