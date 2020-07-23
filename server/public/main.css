@@ -64,7 +64,7 @@ justify-content: center;
   text-align: center;
   color: white;
   font-family: 'Knewave', cursive;
-  font-size: 180px;
+  font-size: 160px;
   margin: 7%;
   transform: rotate(-10deg);
   line-height: 1;
@@ -73,7 +73,7 @@ justify-content: center;
 .logo {
   height: 80px;
   width: 150px;
-  margin-top: 2%;
+  margin-top: 10%;
   margin-left: 5%;
 }
 
@@ -107,8 +107,7 @@ justify-content: center;
   width: 147%;
   border-radius: 1%;
   box-shadow: 0px 1px 12px 5px rgba(0,0, 0,0.27);
-  height: 77%;
-  margin-top: -10%;
+  height: 75%;
 }
 
 h1 {
@@ -581,7 +580,7 @@ cursor: pointer;
             }
 
 #campsite {
-              background-image: url('https://www.freeiconspng.com/uploads/bonfire-fire-fire-bonfire-flame-png-image-and-clipart-14.png');
+              background-image: url('https://cdn.icon-icons.com/icons2/2283/PNG/512/camping_tent_icon_141147.png');
               background-size: cover;
               width: 50px;
               height: 50px;
